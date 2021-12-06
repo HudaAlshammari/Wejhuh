@@ -19,7 +19,7 @@ The application contains:
 ### Define the scenes :
 - login interface
 - Main interface "Discover"
-- Facade of historical monuments
+- Historical monuments interface
 - favorite interface
 - Terms and Conditions and Basics interface
 
