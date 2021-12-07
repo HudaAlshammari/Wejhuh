@@ -25,7 +25,9 @@ The application contains:
 
 
 ### User Stories :
-Log in .. and then see the home interface and discover the most important tourist cities in Saudi Arabia
-.. From the list of "historical monuments" discover the most important landmarks in Saudi Arabia
-In "My Trip" the user's favorite places and save them in order to visit
-In "Essentials" see the terms and conditions, public morals and culture in Saudi Arabia
+- Select Language
+- Sign in with Google
+- See the front of the house and discover the most important tourist cities in Saudi Arabia.
+- From the list of "Historic Landmarks" discover the most important landmarks in the Kingdom of Saudi Arabia
+- In "My Trip" the user's favorite places and save them for visiting
+- In "Basics" see Terms and Conditions, Public Etiquette and Culture in Saudi Arabia
