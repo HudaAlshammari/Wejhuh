@@ -26,7 +26,7 @@ The application contains:
 
 ### User Stories :
 - Select Language
-- Sign in with Google
+- Sign up with Email and Passowrd
 - See the front of the house and discover the most important tourist cities in Saudi Arabia.
 - From the list of "Historic Landmarks" discover the most important landmarks in the Kingdom of Saudi Arabia
 - In "My Trip" the user's favorite places and save them for visiting
