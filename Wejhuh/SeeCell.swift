@@ -10,7 +10,7 @@ import UIKit
 class SeeCell: UICollectionViewCell {
     
     @IBOutlet weak var seeView: UIView!
-    @IBOutlet weak var seeDic: UILabel!
+    @IBOutlet weak var seeCity: UILabel!
     @IBOutlet weak var seeName: UILabel!
     @IBOutlet weak var seeImage: UIImageView!
     
@@ -18,4 +18,9 @@ class SeeCell: UICollectionViewCell {
         seeImage.layer.cornerRadius = 12
         seeView.layer.cornerRadius = 12
     }
+    func setupCell(photo : UIImage ,city : String , name : String){
+        seeImage.image = photo
+        seeName.text = name
+        seeCity.text = city
+}
 }

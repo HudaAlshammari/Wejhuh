@@ -15,8 +15,13 @@ class Discover: UIViewController {
     
     @IBOutlet weak var details: UILabel!
     
+    var dataSend = ""
+//    var image = UIImage
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        detailsTitle.text = dataSend
+        details.text = dataSend
+//        detailsImage.image = image
     }
-
 }

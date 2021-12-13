@@ -9,9 +9,13 @@ import UIKit
 
 class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     
+    
+    
     @IBOutlet weak var homeCollectionView: UICollectionView!
     @IBOutlet var naturalCities: UICollectionView!
     @IBOutlet weak var ancientCities: UICollectionView!
+    
+    
     
     
     override func viewDidLoad() {
@@ -26,7 +30,15 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
         setNaturalCities()
         setAncientCities()
         
+//        naturalCities.layer.shadowColor = UIColor.black.cgColor
+//        naturalCities.layer.shadowOpacity = 1
+//        naturalCities.layer.shadowOffset = .zero
+//        naturalCities.layer.shadowRadius = 8
     }
+    
+    
+    
+    var dataSend = ""
     
     var cityArray = [City]()
     var naturalCity = [NaturalCities]()
@@ -35,6 +47,10 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
     var selectedCityArray:City?
     var selectedNaturalCity:NaturalCities?
     var selectedAncientCity: AncientCities?
+    
+    
+    
+    
     
     func setCity(){
         cityArray.append(City(name: "Al-Suwdah", photo: UIImage(named: "sudah")!))
@@ -58,14 +74,15 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
         ancientCity.append(AncientCities(name: "Al-Ula", photo: UIImage(named: "O")!))
     }
     
+    
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         if (collectionView == homeCollectionView ){
             return cityArray.count
-            
         }else if (collectionView == naturalCities ){
             return naturalCity.count
-            
         }else{
             return ancientCity.count
         }
@@ -96,6 +113,8 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
         }
     }
     
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         switch collectionView {
         case homeCollectionView :
@@ -109,7 +128,10 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
             
         }
         performSegue(withIdentifier: "h", sender: nil)
-        
+    }
+    
+    @IBAction func profile(_ sender: UIButton) {
+        performSegue(withIdentifier: "toProfile", sender: nil)
     }
 }
 
