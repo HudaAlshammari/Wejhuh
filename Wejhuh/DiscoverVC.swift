@@ -25,11 +25,16 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
         setCity()
         setNaturalCities()
         setAncientCities()
+        
     }
     
     var cityArray = [City]()
     var naturalCity = [NaturalCities]()
     var ancientCity = [AncientCities]()
+    
+    var selectedCityArray:City?
+    var selectedNaturalCity:NaturalCities?
+    var selectedAncientCity: AncientCities?
     
     func setCity(){
         cityArray.append(City(name: "Al-Suwdah", photo: UIImage(named: "sudah")!))
@@ -49,8 +54,8 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
     }
     
     func setAncientCities(){
-        ancientCity.append(AncientCities(name: "Riyadh", photo: UIImage(named: "990")!))
-        ancientCity.append(AncientCities(name: "Al-Ula", photo: UIImage(named: "900")!))
+        ancientCity.append(AncientCities(name: "Riyadh", photo: UIImage(named: "R")!))
+        ancientCity.append(AncientCities(name: "Al-Ula", photo: UIImage(named: "O")!))
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -91,16 +96,21 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
         }
     }
     
-        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            
-            if (collectionView == naturalCities){
-                performSegue(withIdentifier: "h", sender: nil)
-            }
-            else{
-                print("ggg")
-            }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        switch collectionView {
+        case homeCollectionView :
+            selectedCityArray = cityArray[indexPath.row]
+        case naturalCities :
+            selectedNaturalCity = naturalCity[indexPath.row]
+        case ancientCities :
+            selectedAncientCity = ancientCity[indexPath.row]
+        default :
+            print("......")
             
         }
+        performSegue(withIdentifier: "h", sender: nil)
+        
+    }
 }
 
 
@@ -121,3 +131,27 @@ struct AncientCities{
     let name : String
     let photo : UIImage
 }
+
+//switch collectionView {
+//case <#pattern#>:
+//    <#code#>
+//default:
+//    <#code#>
+//}
+
+
+//performSegue(withIdentifier: "h", sender: nil)
+//
+//else{
+//    print("ggg")
+//}
+
+//(collectionView == homeCollectionView){
+// case 0:
+//     selectedCityArray = cityArray[indexPath.row]
+// case 1:
+//     selectedNaturalCity = naturalCity[indexPath.row]
+// default :
+//    switch
+//     selectedAncientCity = ancientCity[indexPath.row]
+//

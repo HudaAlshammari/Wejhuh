@@ -20,7 +20,7 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     }
     
     
-    let SeeImages = ["b" , "f" , "th" , "g" , "s" , "kh" , "c" , "d"]
+    let SeeImages = ["see1" , "see2" , "see3" , "see4" , "see5" , "see6" , "see7" , "see8"]
     
     
     let SeeCity = ["Sea Experiences" , "Formula" , "Athra" , "Dakar Rally" , "Safari" , "Khobar Corniche" , "Combat Filed" , "Dakakin"]
