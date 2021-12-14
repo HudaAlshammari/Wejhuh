@@ -13,6 +13,7 @@
 		4F5B8B49275E7AD300AEAC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5B8B47275E7AD300AEAC0A /* Main.storyboard */; };
 		4F5B8B4B275E7AD400AEAC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5B8B4A275E7AD400AEAC0A /* Assets.xcassets */; };
 		4F5B8B4E275E7AD400AEAC0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5B8B4C275E7AD400AEAC0A /* LaunchScreen.storyboard */; };
+		4F5BEDCB2768743B006E495A /* LogOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5BEDCA2768743B006E495A /* LogOutVC.swift */; };
 		4F60332727671CF2008EE389 /* Essentals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60332627671CF2008EE389 /* Essentals.swift */; };
 		4F60332927672CAE008EE389 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60332827672CAE008EE389 /* Discover.swift */; };
 		4F653CE5275F46680002AB9B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4F653CE4275F46680002AB9B /* FirebaseAnalytics */; };
@@ -39,6 +40,7 @@
 		4F5B8B4A275E7AD400AEAC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F5B8B4D275E7AD400AEAC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F5B8B4F275E7AD400AEAC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F5BEDCA2768743B006E495A /* LogOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutVC.swift; sourceTree = "<group>"; };
 		4F60332627671CF2008EE389 /* Essentals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Essentals.swift; sourceTree = "<group>"; };
 		4F60332827672CAE008EE389 /* Discover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
 		4F653CF0275F61D70002AB9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -86,8 +88,8 @@
 		4F5B8B40275E7AD300AEAC0A /* Wejhuh */ = {
 			isa = PBXGroup;
 			children = (
-				4F60332A27673CCF008EE389 /* Essental */,
 				4F8C5AFC27620A8800D24189 /* account */,
+				4F60332A27673CCF008EE389 /* Essental */,
 				4F5B8B41275E7AD300AEAC0A /* AppDelegate.swift */,
 				4F5B8B43275E7AD300AEAC0A /* SceneDelegate.swift */,
 				4F5B8B47275E7AD300AEAC0A /* Main.storyboard */,
@@ -121,6 +123,7 @@
 			children = (
 				4F8A5CE8276093AB008BE65A /* SignIn.swift */,
 				4F8A5CEA276093EC008BE65A /* Signup.swift */,
+				4F5BEDCA2768743B006E495A /* LogOutVC.swift */,
 			);
 			path = account;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				4F8A5CE9276093AB008BE65A /* SignIn.swift in Sources */,
 				4FD4AF612763B5AB0095152F /* EssentalsCell.swift in Sources */,
 				4F60332727671CF2008EE389 /* Essentals.swift in Sources */,
+				4F5BEDCB2768743B006E495A /* LogOutVC.swift in Sources */,
 				4F60332927672CAE008EE389 /* Discover.swift in Sources */,
 				4F8C5AFB2761F97800D24189 /* naturalCitiesCell.swift in Sources */,
 				4F653CF3275F78CC0002AB9B /* DiscoverCell.swift in Sources */,

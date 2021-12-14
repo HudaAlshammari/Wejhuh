@@ -24,6 +24,9 @@ class Signup: UIViewController {
     }
 
     @IBAction func signup(_ sender: Any) {
+       
+        
+        
         if email.text?.isEmpty == true {
             print("pleas full Email")
             return
@@ -35,24 +38,17 @@ class Signup: UIViewController {
             signUP()
         }
         
-        performSegue(withIdentifier: "toApp", sender: nil)
+       
     }
     
-    
-    @IBAction func haveAccount(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "signIn")
-        vc.modalPresentationStyle = .overFullScreen
-        signUP()
-        present(vc , animated: false)
-    }
-    
+ 
     func signUP(){
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (authResult, error) in
-            guard let user = authResult?.user, error == nil else {
-                print("Error \(error?.localizedDescription)")
+            guard error == nil else {
+                print("Error \(String(describing: error?.localizedDescription))")
                 return
             }
+            self.performSegue(withIdentifier: "toApp", sender: nil)
         }
     }
     

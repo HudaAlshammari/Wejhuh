@@ -11,19 +11,22 @@ import FirebaseAuth
 
 
 class SignIn: UIViewController {
-
+    
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if Auth.auth().currentUser != nil {
+           performSegue(withIdentifier: "toApp", sender: nil)
+        }
     }
     
     @IBAction func creatAccount(_ sender: UIButton) {
-//        performSegue(withIdentifier: "signup", sender: nil)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "signup")
-        vc.modalPresentationStyle = .overFullScreen
-        present(vc , animated: false)
+        performSegue(withIdentifier: "toSignup", sender: nil)
     }
     
     
@@ -40,25 +43,15 @@ class SignIn: UIViewController {
     
     func signIn(){
         Auth.auth().signIn(withEmail: email.text!, password: password.text!) { [weak self] authResult, error in
-            if let error = error {
+            if error != nil {
                 let alert = UIAlertController(title: "Error", message: "Sorry , we could not find your account." , preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK" , style: .default , handler: nil))
                 self?.present(alert, animated : true)
             } else {
                 self?.performSegue(withIdentifier: "toApp", sender: nil)
             }
-            self!.checkUserInfo()
-        }
-}
-    
-    
-    func checkUserInfo(){
-        if Auth.auth().currentUser != nil {
-            print(Auth.auth().currentUser?.uid)
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let vc = storyboard.instantiateViewController(withIdentifier: "signup")
-//            vc.modalPresentationStyle = .overFullScreen
-//            present(vc , animated: true)
+            
         }
     }
+    
 }

@@ -15,6 +15,9 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
     @IBOutlet var naturalCities: UICollectionView!
     @IBOutlet weak var ancientCities: UICollectionView!
     
+    var selectedSetDetails : SetDetails?
+//    var selectedSetDetails2 : SetDetails2!
+//    var selectedSetDetails3 : SetDetails3!
     
     
     
@@ -38,11 +41,10 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
     
     
     
-    var dataSend = ""
-    
     var cityArray = [City]()
     var naturalCity = [NaturalCities]()
     var ancientCity = [AncientCities]()
+    
     
     var selectedCityArray:City?
     var selectedNaturalCity:NaturalCities?
@@ -51,28 +53,73 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
     
     
     
-    
     func setCity(){
-        cityArray.append(City(name: "Al-Suwdah", photo: UIImage(named: "sudah")!))
-        cityArray.append(City(name: "Al-Ula", photo: UIImage(named: "Ula")!))
-        cityArray.append(City(name: "Riyadh", photo: UIImage(named: "Riyadh")!))
-        cityArray.append(City(name: "Al-Baha", photo: UIImage(named: "Baha")!))
-        cityArray.append(City(name: "Rijal Almae", photo: UIImage(named: "Rijalalmae")!))
-        cityArray.append(City(name: "Hail", photo: UIImage(named: "Hail")!))
-        cityArray.append(City(name: "Jeddah", photo: UIImage(named: "Jeddah")!))
+        cityArray.append(City(name: "Al-Suwdah",
+                              photo: UIImage(named: "sudah")!,
+                              photo2: UIImage(named: "details3")!,
+                              detail: "Al-Soudah is a tourist village in the Asir region of the Kingdom of Saudi Arabia, 20 km from the city of Abha, at an altitude of 3015 meters above sea level, and its mountains are covered with dense juniper trees, forming beautiful natural forests .. Al-Soudah overlooks the Tihama region, so magnifying glasses have been installed in some of its parts as views to see the wonderful views of those valleys, valleys and neighboring villages located in the Tihama plains. The village records temperatures that do not exceed 15 degrees Celsius in the summer, while the temperatures in the winter are very low. Compared to the surrounding areas, the Al-Soudah tourist village was built, which includes a range of services, and the park was linked to the village of Rijal Alma in the Tihama region by cable car, which is about 40 km from Abha city .."))
+        
+        cityArray.append(City(name: "Al-Ula",
+                              photo: UIImage(named: "Ula")!,
+                              photo2: UIImage(named: "Ula")!,
+                              detail: ""))
+        cityArray.append(City(name: "Riyadh",
+                              photo: UIImage(named: "Riyadh")!,
+                              photo2: UIImage(named: "Ula")!,
+                              detail: ""))
+        cityArray.append(City(name: "Al-Baha",
+                              photo: UIImage(named: "Baha")!,
+                              photo2: UIImage(named: "Ula")!,
+                              detail: ""))
+        cityArray.append(City(name: "Rijal Almae",
+                              photo: UIImage(named: "Rijalalmae")!,
+                              photo2: UIImage(named: "Ula")!,
+                              detail: ""))
+        cityArray.append(City(name: "Hail",
+                              photo: UIImage(named: "Hail")!,
+                              photo2: UIImage(named: "Ula")!,
+                              detail: ""))
+        cityArray.append(City(name: "Jeddah",
+                              photo: UIImage(named: "Jeddah")!,
+                              photo2: UIImage(named: "Ula")!,
+                              detail: ""))
     }
     
+    
+    
+    
     func setNaturalCities(){
-        naturalCity.append(NaturalCities(name: "Asir", photo: UIImage(named: "3seer")!))
-        naturalCity.append(NaturalCities(name: "Hail", photo: UIImage(named: "hail2")!))
-        naturalCity.append(NaturalCities(name: "Al-Suwdah", photo: UIImage(named: "sudah2")!))
-        naturalCity.append(NaturalCities(name: "Abha", photo: UIImage(named: "abha")!))
+        naturalCity.append(NaturalCities(name: "Asir",
+                                         photo: UIImage(named: "3seer")!,
+                                         photo2: UIImage(named: "sudah2")!,
+                                         detail: "...."))
+        naturalCity.append(NaturalCities(name: "Hail",
+                                         photo: UIImage(named: "hail2")!,
+                                         photo2: UIImage(named: "sudah2")!,
+                                         detail: ".."))
+        naturalCity.append(NaturalCities(name: "Al-Suwdah",
+                                         photo: UIImage(named: "sudah2")!,
+                                         photo2: UIImage(named: "sudah2")!,
+                                         detail: ""))
+        naturalCity.append(NaturalCities(name: "Abha",
+                                         photo: UIImage(named: "abha")!,
+                                         photo2: UIImage(named: "sudah2")!,
+                                         detail: ""))
     }
     
     func setAncientCities(){
-        ancientCity.append(AncientCities(name: "Riyadh", photo: UIImage(named: "R")!))
-        ancientCity.append(AncientCities(name: "Al-Ula", photo: UIImage(named: "O")!))
+        ancientCity.append(AncientCities(name: "Riyadh",
+                                         photo: UIImage(named: "R")!,
+                                         photo2: UIImage(named: "sudah2")!,
+                                         detail: "[[[[]]]]]"))
+        ancientCity.append(AncientCities(name: "Al-Ula",
+                                         photo: UIImage(named: "O")!,
+                                         photo2: UIImage(named: "sudah2")!,
+                                         detail: "-------"))
     }
+    
+    
+
     
     
     
@@ -118,11 +165,23 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         switch collectionView {
         case homeCollectionView :
-            selectedCityArray = cityArray[indexPath.row]
+            let city = cityArray[indexPath.row]
+            selectedSetDetails = SetDetails(photo: city.photo2,
+                                            title: city.name,
+                                            details: city.detail)
+            
         case naturalCities :
-            selectedNaturalCity = naturalCity[indexPath.row]
+            let natural = naturalCity[indexPath.row]
+            selectedSetDetails = SetDetails(photo: natural.photo2 ,
+                                              title: natural.name,
+                                              details: natural.detail)
+            
         case ancientCities :
-            selectedAncientCity = ancientCity[indexPath.row]
+            let ancient = ancientCity[indexPath.row]
+            selectedSetDetails = SetDetails(photo: ancient.photo2 ,
+                                              title: ancient.name,
+                                              details: ancient.detail)
+            
         default :
             print("......")
             
@@ -133,6 +192,21 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
     @IBAction func profile(_ sender: UIButton) {
         performSegue(withIdentifier: "toProfile", sender: nil)
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        if segue.identifier == "h" {
+            
+            let dest = segue.destination as! Discover
+            dest.selectedSetData = selectedSetDetails
+            
+        }
+        
+    }
+    
+    
 }
 
 
@@ -142,38 +216,40 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
 struct City {
     let name : String
     let photo : UIImage
+    let photo2 : UIImage
+    let detail : String
 }
 
 struct NaturalCities {
     let name : String
     let photo : UIImage
+    let photo2 : UIImage
+    let detail : String
 }
 
 struct AncientCities{
     let name : String
     let photo : UIImage
+    let photo2 : UIImage
+    let detail : String
 }
 
-//switch collectionView {
-//case <#pattern#>:
-//    <#code#>
-//default:
-//    <#code#>
-//}
 
 
-//performSegue(withIdentifier: "h", sender: nil)
-//
-//else{
-//    print("ggg")
-//}
+struct SetDetails {
+    let photo : UIImage
+    let title : String
+    let details : String
+}
 
-//(collectionView == homeCollectionView){
-// case 0:
-//     selectedCityArray = cityArray[indexPath.row]
-// case 1:
-//     selectedNaturalCity = naturalCity[indexPath.row]
-// default :
-//    switch
-//     selectedAncientCity = ancientCity[indexPath.row]
-//
+struct SetDetails2 {
+    let photo : UIImage
+    let title : String
+    let details : String
+}
+
+struct SetDetails3 {
+    let photo : UIImage
+    let title : String
+    let details : String
+}
