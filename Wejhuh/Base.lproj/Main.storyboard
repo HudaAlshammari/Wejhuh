@@ -946,14 +946,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="360"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="63" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZ4-dq-Qxi">
-                                <rect key="frame" x="20" y="418.5" width="374" height="396.5"/>
+                                <rect key="frame" x="20" y="472" width="374" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="343" id="y3h-QO-kgP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="PingFangTC-Light" family="PingFang TC" pointSize="14"/>
                                 <color key="textColor" name="ColorWriting"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQd-2r-yc2">
-                                <rect key="frame" x="20" y="368" width="374" height="42"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="36"/>
+                                <rect key="frame" x="20" y="410.5" width="374" height="53.5"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="46"/>
                                 <color key="textColor" name="ColorWriting"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -961,16 +964,15 @@
                         <viewLayoutGuide key="safeArea" id="E9a-KV-MRB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="XZ4-dq-Qxi" secondAttribute="bottom" constant="81" id="GO5-aX-iQv"/>
+                            <constraint firstItem="DQd-2r-yc2" firstAttribute="leading" secondItem="XZ4-dq-Qxi" secondAttribute="leading" id="OVI-Px-jpW"/>
+                            <constraint firstItem="DQd-2r-yc2" firstAttribute="trailing" secondItem="XZ4-dq-Qxi" secondAttribute="trailing" id="Pee-PT-bce"/>
+                            <constraint firstItem="XZ4-dq-Qxi" firstAttribute="top" secondItem="DQd-2r-yc2" secondAttribute="bottom" constant="8" id="QQD-Ln-xEk"/>
                             <constraint firstAttribute="bottom" secondItem="YUo-Av-O0I" secondAttribute="bottom" constant="536" id="Tdm-aK-Vp4"/>
+                            <constraint firstItem="E9a-KV-MRB" firstAttribute="trailing" secondItem="XZ4-dq-Qxi" secondAttribute="trailing" constant="20" id="Wzt-VU-IIo"/>
                             <constraint firstItem="YUo-Av-O0I" firstAttribute="trailing" secondItem="E9a-KV-MRB" secondAttribute="trailing" id="cnF-fu-pBH"/>
-                            <constraint firstItem="XZ4-dq-Qxi" firstAttribute="top" secondItem="DQd-2r-yc2" secondAttribute="bottom" constant="8.5" id="f58-FO-3dv"/>
                             <constraint firstItem="YUo-Av-O0I" firstAttribute="top" secondItem="bCt-wo-abk" secondAttribute="top" id="mZq-Iz-HRW"/>
-                            <constraint firstItem="E9a-KV-MRB" firstAttribute="trailing" secondItem="DQd-2r-yc2" secondAttribute="trailing" constant="20" id="mcN-Ar-9GS"/>
-                            <constraint firstItem="E9a-KV-MRB" firstAttribute="trailing" secondItem="XZ4-dq-Qxi" secondAttribute="trailing" constant="20" id="ngi-Yc-xgI"/>
-                            <constraint firstItem="DQd-2r-yc2" firstAttribute="leading" secondItem="E9a-KV-MRB" secondAttribute="leading" constant="20" id="oWn-gi-Gyp"/>
-                            <constraint firstItem="XZ4-dq-Qxi" firstAttribute="leading" secondItem="E9a-KV-MRB" secondAttribute="leading" constant="20" id="raR-RY-iqd"/>
-                            <constraint firstItem="DQd-2r-yc2" firstAttribute="top" secondItem="YUo-Av-O0I" secondAttribute="bottom" constant="8" id="s7Z-TI-pHy"/>
+                            <constraint firstAttribute="bottom" secondItem="XZ4-dq-Qxi" secondAttribute="bottom" constant="81" id="oiW-IP-QvQ"/>
+                            <constraint firstItem="XZ4-dq-Qxi" firstAttribute="leading" secondItem="E9a-KV-MRB" secondAttribute="leading" constant="20" id="rgC-EY-aUd"/>
                             <constraint firstItem="YUo-Av-O0I" firstAttribute="leading" secondItem="E9a-KV-MRB" secondAttribute="leading" id="t3c-XM-6Ql"/>
                         </constraints>
                     </view>
