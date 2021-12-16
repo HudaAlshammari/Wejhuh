@@ -8,7 +8,7 @@
 import UIKit
 
 class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
-    
+
     
     
     @IBOutlet weak var homeCollectionView: UICollectionView!
@@ -183,7 +183,7 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
             print("......")
             
         }
-        performSegue(withIdentifier: "h", sender: nil)
+        performSegue(withIdentifier: "toDetails", sender: nil)
     }
     
     @IBAction func profile(_ sender: UIButton) {
@@ -194,7 +194,7 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         
-        if segue.identifier == "h" {
+        if segue.identifier == "toDetails" {
             
             let dest = segue.destination as! Discover
             dest.selectedSetData = selectedSetDetails
@@ -225,8 +225,6 @@ struct AncientCities{
     let photo2 : UIImage
     let detail : String
 }
-
-
 
 struct SetDetails {
     let photo : UIImage

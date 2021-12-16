@@ -259,7 +259,7 @@
                         <outlet property="ancientCities" destination="ift-4v-UVt" id="5d1-Mh-0NR"/>
                         <outlet property="homeCollectionView" destination="dwu-58-mpi" id="BOB-48-dEd"/>
                         <outlet property="naturalCities" destination="vQC-7y-JY1" id="gbr-Gd-yv8"/>
-                        <segue destination="deX-xe-8ed" kind="show" identifier="h" id="TOJ-sP-im9"/>
+                        <segue destination="deX-xe-8ed" kind="show" identifier="toDetails" id="TOJ-sP-im9"/>
                         <segue destination="zng-HD-5vC" kind="showDetail" identifier="toProfile" id="PRV-Jh-zBq"/>
                     </connections>
                 </viewController>
@@ -553,10 +553,10 @@
             </objects>
             <point key="canvasLocation" x="-1848" y="-352"/>
         </scene>
-        <!--View Controller-->
+        <!--My Trip-->
         <scene sceneID="iSF-CT-Kkk">
             <objects>
-                <viewController id="OuU-Tp-ALa" sceneMemberID="viewController">
+                <viewController id="OuU-Tp-ALa" customClass="MyTrip" customModule="Wejhuh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D58-pg-zUH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -578,7 +578,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gur-cF-HmC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1849" y="1675"/>
+            <point key="canvasLocation" x="-1849.2753623188407" y="1674.7767857142856"/>
         </scene>
         <!--SeeVC-->
         <scene sceneID="SLr-9y-mIX">
@@ -630,9 +630,24 @@
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZK-Ih-vhz">
+                                                    <rect key="frame" x="177" y="0.0" width="35" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="35" id="B0E-dx-9jW"/>
+                                                        <constraint firstAttribute="height" constant="31" id="djw-JI-C0r"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
+                                                        <color key="baseForegroundColor" systemColor="systemGray4Color"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="addFavoritePlaces:" destination="KRD-hJ-r1d" eventType="touchUpInside" id="Hos-gm-rAV"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" name="View"/>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="gZK-Ih-vhz" secondAttribute="trailing" id="9Jj-Sf-Y7q"/>
                                                 <constraint firstAttribute="bottom" secondItem="H1x-v4-3pi" secondAttribute="bottom" constant="75" id="Gmf-5n-O6S"/>
                                                 <constraint firstAttribute="trailing" secondItem="Q6d-EP-GEb" secondAttribute="trailing" id="GqC-7y-USs"/>
                                                 <constraint firstItem="Q6d-EP-GEb" firstAttribute="top" secondItem="qCA-6E-N2w" secondAttribute="top" id="MOV-1L-0T9"/>
@@ -641,11 +656,13 @@
                                                 <constraint firstItem="M8V-Lp-EiW" firstAttribute="top" secondItem="H1x-v4-3pi" secondAttribute="bottom" constant="16" id="gtb-kU-RL6"/>
                                                 <constraint firstItem="H1x-v4-3pi" firstAttribute="leading" secondItem="M8V-Lp-EiW" secondAttribute="leading" id="hEd-3R-ScH"/>
                                                 <constraint firstItem="H1x-v4-3pi" firstAttribute="top" secondItem="Q6d-EP-GEb" secondAttribute="bottom" constant="15" id="mhv-pu-egb"/>
+                                                <constraint firstItem="gZK-Ih-vhz" firstAttribute="top" secondItem="qCA-6E-N2w" secondAttribute="top" id="pmg-N3-EP5"/>
                                                 <constraint firstItem="Q6d-EP-GEb" firstAttribute="leading" secondItem="qCA-6E-N2w" secondAttribute="leading" id="srB-XM-6qS"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="212" height="189"/>
                                         <connections>
+                                            <outlet property="btnAddToMyTrip" destination="gZK-Ih-vhz" id="Vco-eG-6sV"/>
                                             <outlet property="seeCity" destination="H1x-v4-3pi" id="dHj-98-JkG"/>
                                             <outlet property="seeImage" destination="Q6d-EP-GEb" id="wph-45-OkN"/>
                                             <outlet property="seeName" destination="M8V-Lp-EiW" id="xoR-gC-YWi"/>
@@ -955,7 +972,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQd-2r-yc2">
-                                <rect key="frame" x="20" y="410.5" width="374" height="53.5"/>
+                                <rect key="frame" x="20" y="411" width="286" height="54"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="46"/>
                                 <color key="textColor" name="ColorWriting"/>
                                 <nil key="highlightedColor"/>
@@ -965,8 +982,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DQd-2r-yc2" firstAttribute="leading" secondItem="XZ4-dq-Qxi" secondAttribute="leading" id="OVI-Px-jpW"/>
-                            <constraint firstItem="DQd-2r-yc2" firstAttribute="trailing" secondItem="XZ4-dq-Qxi" secondAttribute="trailing" id="Pee-PT-bce"/>
-                            <constraint firstItem="XZ4-dq-Qxi" firstAttribute="top" secondItem="DQd-2r-yc2" secondAttribute="bottom" constant="8" id="QQD-Ln-xEk"/>
+                            <constraint firstItem="DQd-2r-yc2" firstAttribute="trailing" secondItem="XZ4-dq-Qxi" secondAttribute="trailing" constant="-88" id="Pee-PT-bce"/>
+                            <constraint firstItem="XZ4-dq-Qxi" firstAttribute="top" secondItem="DQd-2r-yc2" secondAttribute="bottom" constant="7" id="QQD-Ln-xEk"/>
                             <constraint firstAttribute="bottom" secondItem="YUo-Av-O0I" secondAttribute="bottom" constant="536" id="Tdm-aK-Vp4"/>
                             <constraint firstItem="E9a-KV-MRB" firstAttribute="trailing" secondItem="XZ4-dq-Qxi" secondAttribute="trailing" constant="20" id="Wzt-VU-IIo"/>
                             <constraint firstItem="YUo-Av-O0I" firstAttribute="trailing" secondItem="E9a-KV-MRB" secondAttribute="trailing" id="cnF-fu-pBH"/>
@@ -1029,6 +1046,7 @@
         <image name="8" width="1124" height="2229"/>
         <image name="globe.americas" catalog="system" width="128" height="121"/>
         <image name="globe.americas.fill" catalog="system" width="128" height="121"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="login" width="629" height="1248"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
@@ -1049,6 +1067,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F1DB352276B2DD3008BA931 /* FavoriteModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DB350276B2DD3008BA931 /* FavoriteModel.xcdatamodeld */; };
+		4F1DB365276B5BE4008BA931 /* MyFavoriteModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DB363276B5BE4008BA931 /* MyFavoriteModel+CoreDataClass.swift */; };
+		4F1DB366276B5BE4008BA931 /* MyFavoriteModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DB364276B5BE4008BA931 /* MyFavoriteModel+CoreDataProperties.swift */; };
+		4F1DB38D276B6513008BA931 /* MyTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DB38C276B6513008BA931 /* MyTrip.swift */; };
 		4F5B8B42275E7AD300AEAC0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5B8B41275E7AD300AEAC0A /* AppDelegate.swift */; };
 		4F5B8B44275E7AD300AEAC0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5B8B43275E7AD300AEAC0A /* SceneDelegate.swift */; };
 		4F5B8B46275E7AD300AEAC0A /* DiscoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5B8B45275E7AD300AEAC0A /* DiscoverVC.swift */; };
@@ -21,6 +25,7 @@
 		4F653CE9275F46680002AB9B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4F653CE8275F46680002AB9B /* FirebaseFirestore */; };
 		4F653CF1275F61D70002AB9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F653CF0275F61D70002AB9B /* GoogleService-Info.plist */; };
 		4F653CF3275F78CC0002AB9B /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F653CF2275F78CC0002AB9B /* DiscoverCell.swift */; };
+		4F721E832769DF8F00B3511E /* ExtensionSeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F721E822769DF8F00B3511E /* ExtensionSeeVC.swift */; };
 		4F8A5CE9276093AB008BE65A /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A5CE8276093AB008BE65A /* SignIn.swift */; };
 		4F8A5CEB276093EC008BE65A /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A5CEA276093EC008BE65A /* Signup.swift */; };
 		4F8C5AFB2761F97800D24189 /* naturalCitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C5AFA2761F97800D24189 /* naturalCitiesCell.swift */; };
@@ -32,6 +37,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F1DB351276B2DD3008BA931 /* FavoriteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteModel.xcdatamodel; sourceTree = "<group>"; };
+		4F1DB363276B5BE4008BA931 /* MyFavoriteModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyFavoriteModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4F1DB364276B5BE4008BA931 /* MyFavoriteModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyFavoriteModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4F1DB38C276B6513008BA931 /* MyTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTrip.swift; sourceTree = "<group>"; };
 		4F5B8B3E275E7AD300AEAC0A /* Wejhuh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wejhuh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F5B8B41275E7AD300AEAC0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F5B8B43275E7AD300AEAC0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +54,7 @@
 		4F60332827672CAE008EE389 /* Discover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
 		4F653CF0275F61D70002AB9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F653CF2275F78CC0002AB9B /* DiscoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
+		4F721E822769DF8F00B3511E /* ExtensionSeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionSeeVC.swift; sourceTree = "<group>"; };
 		4F8A5CE8276093AB008BE65A /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		4F8A5CEA276093EC008BE65A /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		4F8C5AFA2761F97800D24189 /* naturalCitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naturalCitiesCell.swift; sourceTree = "<group>"; };
@@ -103,7 +113,12 @@
 				4F8C5AFA2761F97800D24189 /* naturalCitiesCell.swift */,
 				4FFC73082765CCAA00258F98 /* AncientCitiesCell.swift */,
 				4FFC730A2765E46400258F98 /* SeeVC.swift */,
+				4F721E822769DF8F00B3511E /* ExtensionSeeVC.swift */,
 				4FFC730C2765E5D300258F98 /* SeeCell.swift */,
+				4F1DB38C276B6513008BA931 /* MyTrip.swift */,
+				4F1DB350276B2DD3008BA931 /* FavoriteModel.xcdatamodeld */,
+				4F1DB363276B5BE4008BA931 /* MyFavoriteModel+CoreDataClass.swift */,
+				4F1DB364276B5BE4008BA931 /* MyFavoriteModel+CoreDataProperties.swift */,
 			);
 			path = Wejhuh;
 			sourceTree = "<group>";
@@ -208,8 +223,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F1DB366276B5BE4008BA931 /* MyFavoriteModel+CoreDataProperties.swift in Sources */,
+				4F1DB352276B2DD3008BA931 /* FavoriteModel.xcdatamodeld in Sources */,
 				4F5B8B46275E7AD300AEAC0A /* DiscoverVC.swift in Sources */,
 				4FFC730D2765E5D300258F98 /* SeeCell.swift in Sources */,
+				4F1DB365276B5BE4008BA931 /* MyFavoriteModel+CoreDataClass.swift in Sources */,
 				4F5B8B42275E7AD300AEAC0A /* AppDelegate.swift in Sources */,
 				4F8A5CE9276093AB008BE65A /* SignIn.swift in Sources */,
 				4FD4AF612763B5AB0095152F /* EssentalsCell.swift in Sources */,
@@ -217,10 +235,12 @@
 				4F5BEDCB2768743B006E495A /* LogOutVC.swift in Sources */,
 				4F60332927672CAE008EE389 /* Discover.swift in Sources */,
 				4F8C5AFB2761F97800D24189 /* naturalCitiesCell.swift in Sources */,
+				4F1DB38D276B6513008BA931 /* MyTrip.swift in Sources */,
 				4F653CF3275F78CC0002AB9B /* DiscoverCell.swift in Sources */,
 				4F5B8B44275E7AD300AEAC0A /* SceneDelegate.swift in Sources */,
 				4F8A5CEB276093EC008BE65A /* Signup.swift in Sources */,
 				4FFC730B2765E46400258F98 /* SeeVC.swift in Sources */,
+				4F721E832769DF8F00B3511E /* ExtensionSeeVC.swift in Sources */,
 				4FD4AF5F2763B3270095152F /* EssentalsVC.swift in Sources */,
 				4FFC73092765CCAA00258F98 /* AncientCitiesCell.swift in Sources */,
 			);
@@ -469,6 +489,19 @@
 			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		4F1DB350276B2DD3008BA931 /* FavoriteModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4F1DB351276B2DD3008BA931 /* FavoriteModel.xcdatamodel */,
+			);
+			currentVersion = 4F1DB351276B2DD3008BA931 /* FavoriteModel.xcdatamodel */;
+			path = FavoriteModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4F5B8B36275E7AD300AEAC0A /* Project object */;
 }

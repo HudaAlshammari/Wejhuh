@@ -6,21 +6,56 @@
 //
 
 import UIKit
+import CoreData
 
 class SeeCell: UICollectionViewCell {
+    
+    let persistentContainer : NSPersistentContainer = {
+      
+       let container = NSPersistentContainer(name: "FavoriteModel")
+       
+       container.loadPersistentStores(completionHandler: { desc, error in
+           
+           if let readError = error {
+               print(readError)
+           }
+       })
+       return container
+   }()
+    
     
     @IBOutlet weak var seeView: UIView!
     @IBOutlet weak var seeCity: UILabel!
     @IBOutlet weak var seeName: UILabel!
+    @IBOutlet weak var btnAddToMyTrip: UIButton!
     @IBOutlet weak var seeImage: UIImageView!
-    
+
     override func awakeFromNib() {
         seeImage.layer.cornerRadius = 12
         seeView.layer.cornerRadius = 12
     }
-    func setupCell(photo : UIImage ,city : String , name : String){
-        seeImage.image = photo
+    func setupCell(photo : String ,city : String , name : String){
+        seeImage.image = UIImage(named:photo)
         seeName.text = name
         seeCity.text = city
 }
+    
+    @IBAction func addFavoritePlaces(_ sender: UIButton) {
+        createContact(name: <#T##String#>, photo: <#T##String#>)
+    }
+    
+    func createContact(name : String, photo : String) {
+        let context = persistentContainer.viewContext
+        context.performAndWait {
+            let trips = MyFavoriteModel(context: context)
+            trips.name = name
+            trips.photo = photo
+        }
+
+        do {
+         try context.save()
+        } catch {
+            print(error)
+        }
+    }
 }

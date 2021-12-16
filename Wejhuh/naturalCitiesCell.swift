@@ -15,8 +15,8 @@ class naturalCitiesCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         imageView.layer.cornerRadius = 12
-//        naturalCitiesPhoto.layer.cornerRadius = 12
     }
+    
     func setupCell(photo : UIImage , name : String){
         naturalCitiesPhoto.image = photo
         naturalCitiesNames.text = name

@@ -13,10 +13,6 @@ class AncientCitiesCell: UICollectionViewCell {
     @IBOutlet weak var ancientName: UILabel!
     @IBOutlet weak var ancientImage: UIImageView!
     
-//    override func awakeFromNib() {
-//        ancientImage.layer.cornerRadius = 12
-//        naturalCitiesPhoto.layer.cornerRadius = 12
-//}
     func setupCell(photo : UIImage , name : String){
         ancientImage.image = photo
         ancientName.text = name

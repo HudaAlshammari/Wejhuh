@@ -6,11 +6,23 @@
 //
 
 import UIKit
+import CoreData
 
-class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource{
-   
+class SeeVC: UIViewController {
     
 
+    let persistentContainer : NSPersistentContainer = {
+        
+        let container = NSPersistentContainer(name: "FavoriteModel")
+        container.loadPersistentStores(completionHandler: { desc, error in
+            if let readError = error {
+                print(readError)
+            }
+        })
+        return container
+    }()
+    
+    
     @IBOutlet weak var seeCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,42 +32,24 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
         setSee()
     }
     
-    var see = [See]()
-    var selectedSee : See?
+    var favorite = [Event]()
+    var selectedSee : Event?
     
     func setSee(){
-        see.append(See(name: "Sea Experiences", city: "Jeddah", photo : UIImage(named: "see1")!))
-        see.append(See(name: "Formula", city: "Jeddah", photo : UIImage(named: "see2")!))
-        see.append(See(name: "Athra", city: "Khobar", photo : UIImage(named: "see3")!))
-        see.append(See(name: "Dakar Rally", city: "Hail" , photo : UIImage(named: "see4")!))
-        see.append(See(name: "Safari", city: "Riyadh", photo : UIImage(named: "see5")!))
-        see.append(See(name: "Khobar Corniche", city: "Khobar", photo : UIImage(named: "see6")!))
-        see.append(See(name: "Combat Filed", city: "Riyadh", photo : UIImage(named: "see7")!))
-        see.append(See(name: "Dakakin", city: "Riyadh", photo : UIImage(named: "see8")!))
-    }
-
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return see.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SeeCell
-        let data = see[indexPath.row]
-        cell.setupCell(photo: data.photo, city : data.city , name: data.name)
-        return cell
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        
-        selectedSee = see[indexPath.row]
-        performSegue(withIdentifier: "seeDetail", sender: nil)
+        favorite.append(Event(name: "Sea Experiences", city: "Jeddah", photo : "see1"))
+        favorite.append(Event(name: "Formula", city: "Jeddah", photo :  "see2"))
+        favorite.append(Event(name: "Athra", city: "Khobar", photo :  "see3"))
+        favorite.append(Event(name: "Dakar Rally", city: "Around the country" , photo :"see4"))
+        favorite.append(Event(name: "Safari", city: "Riyadh", photo :  "see5"))
+        favorite.append(Event(name: "Khobar Corniche", city: "Khobar", photo :  "see6"))
+        favorite.append(Event(name: "Combat Filed", city: "Riyadh", photo : "see7"))
+        favorite.append(Event(name: "Dakakin", city: "Riyadh", photo :  "see8"))
     }
 }
 
-struct See {
+
+struct Event {
     let name : String
     let city : String
-    let photo : UIImage
+    let photo : String
 }
