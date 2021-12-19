@@ -10,6 +10,7 @@ import Firebase
 import FirebaseAuth
 
 
+// MARK: - Signin
 class SignIn: UIViewController {
     
     @IBOutlet weak var email: UITextField!
@@ -24,12 +25,16 @@ class SignIn: UIViewController {
            performSegue(withIdentifier: "toApp", sender: nil)
         }
     }
-    
+    //creat New Account Button
     @IBAction func creatAccount(_ sender: UIButton) {
-        performSegue(withIdentifier: "toSignup", sender: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Signup")
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+//        performSegue(withIdentifier: "toSignup", sender: nil)
     }
     
-    
+    //Alert if the account has been created or not
     @IBAction func signIn(_ sender: UIButton) {
         if email.text?.isEmpty ?? true || password.text?.isEmpty ?? true {
             let alert = UIAlertController(title: "please full in Email and Password", message: "your email or passowrd is missing" , preferredStyle: .alert)
@@ -40,7 +45,7 @@ class SignIn: UIViewController {
         }
     }
     
-    
+    //Auth for signIn
     func signIn(){
         Auth.auth().signIn(withEmail: email.text!, password: password.text!) { [weak self] authResult, error in
             if error != nil {
@@ -50,8 +55,6 @@ class SignIn: UIViewController {
             } else {
                 self?.performSegue(withIdentifier: "toApp", sender: nil)
             }
-            
         }
     }
-    
 }

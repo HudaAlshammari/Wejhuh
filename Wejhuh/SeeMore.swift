@@ -1,14 +1,19 @@
 //
-//  SeeCell.swift
+//  SeeMore.swift
 //  Wejhuh
 //
-//  Created by Huda N S on 08/05/1443 AH.
+//  Created by Huda N S on 15/05/1443 AH.
 //
 
 import UIKit
 import CoreData
 
-class SeeCell: UICollectionViewCell {
+class SeeMore: UIViewController {
+
+    
+    @IBOutlet weak var seeImge: UIImageView!
+    
+    @IBOutlet weak var seeName: UILabel!
     
     var selectedArrayTrips : Trips!
     var arrayTrip = [Trips]()
@@ -22,32 +27,17 @@ class SeeCell: UICollectionViewCell {
        })
        return container
    }()
-    
-    
-    @IBOutlet weak var seeView: UIView!
-    @IBOutlet weak var seeCity: UILabel!
-    @IBOutlet weak var seeName: UILabel!
-    @IBOutlet weak var btnAddToMyTrip: UIButton!
-    @IBOutlet weak var seeImage: UIImageView!
-    
     var curentImageName: String?
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
     
 
-    override func awakeFromNib() {
-        seeImage.layer.cornerRadius = 12
-        seeView.layer.cornerRadius = 12
-    }
-    func setupCell(photo : String ,city : String , name : String){
-        seeImage.image = UIImage(named:photo)
-        seeName.text = name
-        seeCity.text = city
-}
-    
-    
-    @IBAction func addFavoritePlaces(_ sender: UIButton) {
+    @IBAction func addFavoritePlaces2(_ sender: Any) {
         createNewList(eventName: seeName.text ?? "" , eventPhoto: curentImageName ?? "")
     }
-    
     
     func createNewList(eventName: String, eventPhoto: String){
         let context = persistentContainer.viewContext
@@ -62,4 +52,14 @@ class SeeCell: UICollectionViewCell {
             }
         }
     }
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }

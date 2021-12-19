@@ -8,9 +8,15 @@
 import UIKit
 import CoreData
 
-class SeeVC: UIViewController {
+class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource  {
     
+    
+    
+    
+    var myFavoriteModel: [TripsList] = []
 
+    
+    //SAVE CORE DATA=================
     let persistentContainer : NSPersistentContainer = {
         
         let container = NSPersistentContainer(name: "FavoriteModel")
@@ -24,6 +30,8 @@ class SeeVC: UIViewController {
     
     
     @IBOutlet weak var seeCollectionView: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         seeCollectionView.delegate = self
@@ -45,7 +53,55 @@ class SeeVC: UIViewController {
         favorite.append(Event(name: "Combat Filed", city: "Riyadh", photo : "see7"))
         favorite.append(Event(name: "Dakakin", city: "Riyadh", photo :  "see8"))
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return favorite.count
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        
+        selectedSee = favorite[indexPath.row]
+        performSegue(withIdentifier: "seeDetail", sender: nil)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SeeCell
+        let data = favorite[indexPath.row]
+        cell.setupCell(photo: data.photo, city : data.city , name: data.name)
+        cell.curentImageName = data.photo
+        cell.btnAddToMyTrip.tag = indexPath.row
+        cell.btnAddToMyTrip.addTarget(self, action: #selector(addToMyTrip(sender:)), for: .touchUpInside )
+        return cell
+    }
+    
+    
+    @objc
+    func addToMyTrip(sender : UIButton){
+        sender.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+    }
+    
+    
+    
+    
+    //CORE-DATA
+    func createNewList(eventName: String, eventPhoto: String){
+        let context = persistentContainer.viewContext
+        context.performAndWait {
+            let list = TripsList(context: context)
+            list.name = eventName
+            list.photo = eventPhoto
+            do {
+                try context.save()
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    func storeFavorite(){
+    }
 }
+
 
 
 struct Event {
@@ -53,3 +109,6 @@ struct Event {
     let city : String
     let photo : String
 }
+
+
+

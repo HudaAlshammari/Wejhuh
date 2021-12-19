@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
+
+// MARK: - Signup
 class Signup: UIViewController {
 
     @IBOutlet weak var name: UITextField!
@@ -19,14 +21,10 @@ class Signup: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
+    
     @IBAction func signup(_ sender: Any) {
-       
-        
-        
         if email.text?.isEmpty == true {
             print("pleas full Email")
             return
@@ -35,14 +33,20 @@ class Signup: UIViewController {
             print("pleas full password")
             return
         }else{
-            signUP()
+            signup()
         }
-        
-       
     }
     
- 
-    func signUP(){
+    //if the user have accaount - Button
+    @IBAction func haveAccount(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
+    //Auth for signUP
+    func signup(){
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (authResult, error) in
             guard error == nil else {
                 print("Error \(String(describing: error?.localizedDescription))")
@@ -51,5 +55,4 @@ class Signup: UIViewController {
             self.performSegue(withIdentifier: "toApp", sender: nil)
         }
     }
-    
 }

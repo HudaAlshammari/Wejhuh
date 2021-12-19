@@ -178,7 +178,6 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
             selectedSetDetails = SetDetails(photo: ancient.photo2 ,
                                               title: ancient.name,
                                               details: ancient.detail)
-            
         default :
             print("......")
             
@@ -186,14 +185,13 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
         performSegue(withIdentifier: "toDetails", sender: nil)
     }
     
+    
     @IBAction func profile(_ sender: UIButton) {
         performSegue(withIdentifier: "toProfile", sender: nil)
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        
         if segue.identifier == "toDetails" {
             
             let dest = segue.destination as! Discover
@@ -205,41 +203,3 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
 
 
 
-struct City {
-    let name : String
-    let photo : UIImage
-    let photo2 : UIImage
-    let detail : String
-}
-
-struct NaturalCities {
-    let name : String
-    let photo : UIImage
-    let photo2 : UIImage
-    let detail : String
-}
-
-struct AncientCities{
-    let name : String
-    let photo : UIImage
-    let photo2 : UIImage
-    let detail : String
-}
-
-struct SetDetails {
-    let photo : UIImage
-    let title : String
-    let details : String
-}
-
-struct SetDetails2 {
-    let photo : UIImage
-    let title : String
-    let details : String
-}
-
-struct SetDetails3 {
-    let photo : UIImage
-    let title : String
-    let details : String
-}
