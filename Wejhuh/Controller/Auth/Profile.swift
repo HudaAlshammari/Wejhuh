@@ -7,16 +7,39 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 
-// MARK: - LogOut
-class LogOutVC: UIViewController {
+// MARK: - Profile
+class Profile: UIViewController {
 
+    @IBOutlet weak var name: UILabel!
+    
+    
+    @IBOutlet weak var email: UILabel!
+    
+    
+
+    
+    var profile : User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
 
-    //LogOut Button
+        
+       
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // MARK: - logOut Button
     @IBAction func logOut(_ sender: Any) {
         
         let firebaseAuth = Auth.auth()
@@ -27,4 +50,10 @@ class LogOutVC: UIViewController {
          print("Error signing out: %@", signOutError)
        }
     }
+}
+
+
+class User {
+    var name : String
+    var email : String
 }

@@ -12,12 +12,13 @@ class SeeMore: UIViewController {
 
     
     @IBOutlet weak var seeImge: UIImageView!
-    
     @IBOutlet weak var seeName: UILabel!
     
     var selectedArrayTrips : Trips!
     var arrayTrip = [Trips]()
+    var curentImageName: String?
     
+    //CORE-DATA
     let persistentContainer : NSPersistentContainer = {
        let container = NSPersistentContainer(name: "FavoriteModel")
        container.loadPersistentStores(completionHandler: { desc, error in
@@ -27,7 +28,9 @@ class SeeMore: UIViewController {
        })
        return container
    }()
-    var curentImageName: String?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,22 +39,23 @@ class SeeMore: UIViewController {
     
 
     @IBAction func addFavoritePlaces2(_ sender: Any) {
-        createNewList(eventName: seeName.text ?? "" , eventPhoto: curentImageName ?? "")
+//        createNewList(eventName: seeName.text ?? "" , eventPhoto: curentImageName ?? "")
     }
     
-    func createNewList(eventName: String, eventPhoto: String){
-        let context = persistentContainer.viewContext
-        context.performAndWait {
-            let list = TripsList(context: context)
-            list.name = eventName
-            list.photo = eventPhoto
-            do {
-                try context.save()
-            } catch {
-                print(error)
-            }
-        }
-    }
+//    //CORE-DATA
+//    func createNewList(eventName: String, eventPhoto: String){
+//        let context = persistentContainer.viewContext
+//        context.performAndWait {
+//            let list = TripsList(context: context)
+//            list.name = eventName
+//            list.photo = eventPhoto
+//            do {
+//                try context.save()
+//            } catch {
+//                print(error)
+//            }
+//        }
+//    }
     /*
     // MARK: - Navigation
 

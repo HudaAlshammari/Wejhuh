@@ -18,7 +18,7 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     
     //SAVE CORE DATA=================
     let persistentContainer : NSPersistentContainer = {
-        
+
         let container = NSPersistentContainer(name: "FavoriteModel")
         container.loadPersistentStores(completionHandler: { desc, error in
             if let readError = error {

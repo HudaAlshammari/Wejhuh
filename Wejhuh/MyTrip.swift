@@ -47,8 +47,8 @@ class MyTrip: UIViewController , UICollectionViewDelegate , UICollectionViewData
         cell.photo?.image = UIImage(named: myFavoriteModel[indexPath.row].photo ?? "")
         cell.name?.text = myFavoriteModel[indexPath.row].name
         return cell
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.fetchAllLists()
         self.favotiteList.reloadData()

@@ -10,7 +10,6 @@ import UIKit
 class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
 
     
-    
     @IBOutlet weak var homeCollectionView: UICollectionView!
     @IBOutlet var naturalCities: UICollectionView!
     @IBOutlet weak var ancientCities: UICollectionView!

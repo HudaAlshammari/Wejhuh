@@ -22,7 +22,7 @@
 		4F5B8B49275E7AD300AEAC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5B8B47275E7AD300AEAC0A /* Main.storyboard */; };
 		4F5B8B4B275E7AD400AEAC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5B8B4A275E7AD400AEAC0A /* Assets.xcassets */; };
 		4F5B8B4E275E7AD400AEAC0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5B8B4C275E7AD400AEAC0A /* LaunchScreen.storyboard */; };
-		4F5BEDCB2768743B006E495A /* LogOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5BEDCA2768743B006E495A /* LogOutVC.swift */; };
+		4F5BEDCB2768743B006E495A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5BEDCA2768743B006E495A /* Profile.swift */; };
 		4F60332727671CF2008EE389 /* Essentals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60332627671CF2008EE389 /* Essentals.swift */; };
 		4F60332927672CAE008EE389 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60332827672CAE008EE389 /* Discover.swift */; };
 		4F653CE5275F46680002AB9B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4F653CE4275F46680002AB9B /* FirebaseAnalytics */; };
@@ -33,6 +33,7 @@
 		4F8A5CE9276093AB008BE65A /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A5CE8276093AB008BE65A /* SignIn.swift */; };
 		4F8A5CEB276093EC008BE65A /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A5CEA276093EC008BE65A /* Signup.swift */; };
 		4F8C5AFB2761F97800D24189 /* naturalCitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C5AFA2761F97800D24189 /* naturalCitiesCell.swift */; };
+		4F93D4AE2770BBFE003A997C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F93D4AD2770BBFE003A997C /* User.swift */; };
 		4FD4AF5F2763B3270095152F /* EssentalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD4AF5E2763B3270095152F /* EssentalsVC.swift */; };
 		4FD4AF612763B5AB0095152F /* EssentalsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD4AF602763B5AB0095152F /* EssentalsCell.swift */; };
 		4FFC73092765CCAA00258F98 /* AncientCitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC73082765CCAA00258F98 /* AncientCitiesCell.swift */; };
@@ -58,7 +59,7 @@
 		4F5B8B4A275E7AD400AEAC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F5B8B4D275E7AD400AEAC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F5B8B4F275E7AD400AEAC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F5BEDCA2768743B006E495A /* LogOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutVC.swift; sourceTree = "<group>"; };
+		4F5BEDCA2768743B006E495A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		4F60332627671CF2008EE389 /* Essentals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Essentals.swift; sourceTree = "<group>"; };
 		4F60332827672CAE008EE389 /* Discover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
 		4F653CF0275F61D70002AB9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 		4F8A5CE8276093AB008BE65A /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		4F8A5CEA276093EC008BE65A /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		4F8C5AFA2761F97800D24189 /* naturalCitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naturalCitiesCell.swift; sourceTree = "<group>"; };
+		4F93D4AD2770BBFE003A997C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4FD4AF5E2763B3270095152F /* EssentalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentalsVC.swift; sourceTree = "<group>"; };
 		4FD4AF602763B5AB0095152F /* EssentalsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentalsCell.swift; sourceTree = "<group>"; };
 		4FFC73082765CCAA00258F98 /* AncientCitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AncientCitiesCell.swift; sourceTree = "<group>"; };
@@ -174,7 +176,8 @@
 			children = (
 				4F8A5CE8276093AB008BE65A /* SignIn.swift */,
 				4F8A5CEA276093EC008BE65A /* Signup.swift */,
-				4F5BEDCA2768743B006E495A /* LogOutVC.swift */,
+				4F5BEDCA2768743B006E495A /* Profile.swift */,
+				4F93D4AD2770BBFE003A997C /* User.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				4F1DB352276B2DD3008BA931 /* FavoriteModel.xcdatamodeld in Sources */,
 				4F5B8B46275E7AD300AEAC0A /* DiscoverVC.swift in Sources */,
 				4FFC730D2765E5D300258F98 /* SeeCell.swift in Sources */,
+				4F93D4AE2770BBFE003A997C /* User.swift in Sources */,
 				4F4D6935276F25AD00C95EFA /* Structs.swift in Sources */,
 				4F5B8B42275E7AD300AEAC0A /* AppDelegate.swift in Sources */,
 				4F4D6930276F04B300C95EFA /* structOfCoreData.swift in Sources */,
@@ -270,7 +274,7 @@
 				4F4D6937276F5BAD00C95EFA /* SeeMore.swift in Sources */,
 				4F417C1F276DFB4B0090DCAF /* TripsList+CoreDataClass.swift in Sources */,
 				4F60332727671CF2008EE389 /* Essentals.swift in Sources */,
-				4F5BEDCB2768743B006E495A /* LogOutVC.swift in Sources */,
+				4F5BEDCB2768743B006E495A /* Profile.swift in Sources */,
 				4F60332927672CAE008EE389 /* Discover.swift in Sources */,
 				4F417C20276DFB4B0090DCAF /* TripsList+CoreDataProperties.swift in Sources */,
 				4F8C5AFB2761F97800D24189 /* naturalCitiesCell.swift in Sources */,
