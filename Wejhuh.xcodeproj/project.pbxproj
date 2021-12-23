@@ -25,6 +25,7 @@
 		4F5BEDCB2768743B006E495A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5BEDCA2768743B006E495A /* Profile.swift */; };
 		4F60332727671CF2008EE389 /* Essentals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60332627671CF2008EE389 /* Essentals.swift */; };
 		4F60332927672CAE008EE389 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60332827672CAE008EE389 /* Discover.swift */; };
+		4F64CF532774A4E500D5B9A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64CF522774A4E500D5B9A0 /* User.swift */; };
 		4F653CE5275F46680002AB9B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4F653CE4275F46680002AB9B /* FirebaseAnalytics */; };
 		4F653CE7275F46680002AB9B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4F653CE6275F46680002AB9B /* FirebaseAuth */; };
 		4F653CE9275F46680002AB9B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4F653CE8275F46680002AB9B /* FirebaseFirestore */; };
@@ -33,7 +34,7 @@
 		4F8A5CE9276093AB008BE65A /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A5CE8276093AB008BE65A /* SignIn.swift */; };
 		4F8A5CEB276093EC008BE65A /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A5CEA276093EC008BE65A /* Signup.swift */; };
 		4F8C5AFB2761F97800D24189 /* naturalCitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C5AFA2761F97800D24189 /* naturalCitiesCell.swift */; };
-		4F93D4AE2770BBFE003A997C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F93D4AD2770BBFE003A997C /* User.swift */; };
+		4F93D4AE2770BBFE003A997C /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F93D4AD2770BBFE003A997C /* UserApi.swift */; };
 		4FD4AF5F2763B3270095152F /* EssentalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD4AF5E2763B3270095152F /* EssentalsVC.swift */; };
 		4FD4AF612763B5AB0095152F /* EssentalsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD4AF602763B5AB0095152F /* EssentalsCell.swift */; };
 		4FFC73092765CCAA00258F98 /* AncientCitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC73082765CCAA00258F98 /* AncientCitiesCell.swift */; };
@@ -62,12 +63,13 @@
 		4F5BEDCA2768743B006E495A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		4F60332627671CF2008EE389 /* Essentals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Essentals.swift; sourceTree = "<group>"; };
 		4F60332827672CAE008EE389 /* Discover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
+		4F64CF522774A4E500D5B9A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4F653CF0275F61D70002AB9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F653CF2275F78CC0002AB9B /* DiscoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
 		4F8A5CE8276093AB008BE65A /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		4F8A5CEA276093EC008BE65A /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		4F8C5AFA2761F97800D24189 /* naturalCitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naturalCitiesCell.swift; sourceTree = "<group>"; };
-		4F93D4AD2770BBFE003A997C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4F93D4AD2770BBFE003A997C /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
 		4FD4AF5E2763B3270095152F /* EssentalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentalsVC.swift; sourceTree = "<group>"; };
 		4FD4AF602763B5AB0095152F /* EssentalsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentalsCell.swift; sourceTree = "<group>"; };
 		4FFC73082765CCAA00258F98 /* AncientCitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AncientCitiesCell.swift; sourceTree = "<group>"; };
@@ -177,7 +179,8 @@
 				4F8A5CE8276093AB008BE65A /* SignIn.swift */,
 				4F8A5CEA276093EC008BE65A /* Signup.swift */,
 				4F5BEDCA2768743B006E495A /* Profile.swift */,
-				4F93D4AD2770BBFE003A997C /* User.swift */,
+				4F93D4AD2770BBFE003A997C /* UserApi.swift */,
+				4F64CF522774A4E500D5B9A0 /* User.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -262,10 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F64CF532774A4E500D5B9A0 /* User.swift in Sources */,
 				4F1DB352276B2DD3008BA931 /* FavoriteModel.xcdatamodeld in Sources */,
 				4F5B8B46275E7AD300AEAC0A /* DiscoverVC.swift in Sources */,
 				4FFC730D2765E5D300258F98 /* SeeCell.swift in Sources */,
-				4F93D4AE2770BBFE003A997C /* User.swift in Sources */,
+				4F93D4AE2770BBFE003A997C /* UserApi.swift in Sources */,
 				4F4D6935276F25AD00C95EFA /* Structs.swift in Sources */,
 				4F5B8B42275E7AD300AEAC0A /* AppDelegate.swift in Sources */,
 				4F4D6930276F04B300C95EFA /* structOfCoreData.swift in Sources */,

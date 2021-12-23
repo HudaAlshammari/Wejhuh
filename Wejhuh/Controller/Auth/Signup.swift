@@ -48,11 +48,23 @@ class Signup: UIViewController {
     //Auth for signUP
     func signup(){
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (authResult, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }else{
+                UserApi.addUser(name: self.name.text ?? "" , uid: authResult?.user.uid ?? "" , email: self.email.text ?? "" , completion: { check in
+                    if check {
+                        print(".....")
+                        self.performSegue(withIdentifier: "toApp", sender: nil)
+                    }
+                })
+                
+            }
             guard error == nil else {
                 print("Error \(String(describing: error?.localizedDescription))")
                 return
+
             }
-            self.performSegue(withIdentifier: "toApp", sender: nil)
+            
         }
     }
 }

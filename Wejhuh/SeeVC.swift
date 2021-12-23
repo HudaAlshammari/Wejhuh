@@ -10,9 +10,7 @@ import CoreData
 
 class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource  {
     
-    
-    
-    
+
     var myFavoriteModel: [TripsList] = []
 
     
@@ -77,7 +75,14 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     
     @objc
     func addToMyTrip(sender : UIButton){
-        sender.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        print("")
+        let currentImage = sender.imageView?.image
+        
+        if currentImage == UIImage(systemName: "heart.circle.fill"){
+            sender.setImage(UIImage(systemName: "heart.circle"), for: .normal)
+        }else{
+            sender.setImage(UIImage(systemName: "heart.circle.fill"), for: .normal)
+        }
     }
     
     

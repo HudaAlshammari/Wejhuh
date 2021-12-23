@@ -14,30 +14,29 @@ import FirebaseAuth
 class Profile: UIViewController {
 
     @IBOutlet weak var name: UILabel!
-    
-    
     @IBOutlet weak var email: UILabel!
     
-    
-
     
     var profile : User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") {profile in
+            self.profile = profile
+            self.name.text = profile.name
+            self.email.text = profile.email
+        }
+        if Auth.auth().currentUser?.uid == nil {
+            
+        }else{
+            
+        }
         
        
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
+
     
     // MARK: - logOut Button
     @IBAction func logOut(_ sender: Any) {
@@ -53,7 +52,4 @@ class Profile: UIViewController {
 }
 
 
-class User {
-    var name : String
-    var email : String
-}
+

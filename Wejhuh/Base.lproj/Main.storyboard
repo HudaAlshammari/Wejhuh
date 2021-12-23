@@ -731,15 +731,15 @@
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZK-Ih-vhz">
+                                                <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZK-Ih-vhz">
                                                     <rect key="frame" x="177" y="0.0" width="35" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="B0E-dx-9jW"/>
                                                         <constraint firstAttribute="height" constant="31" id="djw-JI-C0r"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
-                                                        <color key="baseForegroundColor" systemColor="systemGray4Color"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="heart.circle" catalog="system">
+                                                        <color key="baseForegroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                                     </buttonConfiguration>
                                                     <connections>
                                                         <action selector="addFavoritePlaces:" destination="KRD-hJ-r1d" eventType="touchUpInside" id="Hos-gm-rAV"/>
@@ -802,42 +802,65 @@
             <objects>
                 <viewController id="Tia-1l-LFe" customClass="SeeMore" customModule="Wejhuh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JwJ-Lc-g9m">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="11" translatesAutoresizingMaskIntoConstraints="NO" id="RYO-iq-XBe">
-                                <rect key="frame" x="20" y="105" width="374" height="208"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QnC-og-yvn">
-                                <rect key="frame" x="20" y="321" width="374" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rv-dz-0nH">
-                                <rect key="frame" x="331" y="338" width="63" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
-                                <connections>
-                                    <action selector="addFavoritePlaces2:" destination="Tia-1l-LFe" eventType="touchUpInside" id="81X-2p-3Af"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUJ-d9-XwW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="36" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeE-dC-JsY">
+                                        <rect key="frame" x="8" y="321" width="398" height="345"/>
+                                        <mutableString key="text">"Al-Soudah is a tourist village in the Asir region of the Kingdom of Saudi Arabia, 20 km from the city of Abha, at an altitude of 3015 meters above sea level, and its mountains are covered with dense juniper trees, forming beautiful natural forests .. Al-Soudah overlooks the Tihama region, so magnifying glasses have been installed in some of its parts as views to see the wonderful views of those valleys, valleys and neighboring villages located in the Tihama plains. The village records temperatures that do not exceed 15 degrees Celsius in the summer, while the temperatures in the winter are very low. Compared to the surrounding areas, the Al-Soudah tourist village was built, which includes a range of services, and the park was linked to the village of Rijal Alma in the Tihama region by cable car, which is about 40 km from Abha city .."</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="111" translatesAutoresizingMaskIntoConstraints="NO" id="N1w-X1-B6F">
+                                        <rect key="frame" x="0.0" y="-56" width="414" height="311"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="311" id="Enc-Aw-xkA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lYg-Te-99v">
+                                        <rect key="frame" x="8" y="1179" width="398" height="281"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="281" id="heI-sj-odm"/>
+                                        </constraints>
+                                    </mapView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lYg-Te-99v" firstAttribute="top" secondItem="SeE-dC-JsY" secondAttribute="bottom" constant="513" id="3qB-ab-cTP"/>
+                                    <constraint firstAttribute="trailing" secondItem="lYg-Te-99v" secondAttribute="trailing" constant="8" id="4Am-lY-w0j"/>
+                                    <constraint firstItem="SeE-dC-JsY" firstAttribute="leading" secondItem="WUJ-d9-XwW" secondAttribute="leading" constant="8" id="4NS-0h-7vn"/>
+                                    <constraint firstAttribute="bottom" secondItem="lYg-Te-99v" secondAttribute="bottom" constant="123" id="BnC-ox-p3s"/>
+                                    <constraint firstItem="N1w-X1-B6F" firstAttribute="leading" secondItem="WUJ-d9-XwW" secondAttribute="leading" id="DaC-Vb-hbD"/>
+                                    <constraint firstItem="SeE-dC-JsY" firstAttribute="top" secondItem="N1w-X1-B6F" secondAttribute="bottom" constant="66" id="PEG-oK-vMN"/>
+                                    <constraint firstItem="lYg-Te-99v" firstAttribute="leading" secondItem="WUJ-d9-XwW" secondAttribute="leading" constant="8" id="Qta-mg-Kaq"/>
+                                    <constraint firstItem="N1w-X1-B6F" firstAttribute="top" secondItem="WUJ-d9-XwW" secondAttribute="top" constant="-56" id="iTH-aQ-tgb"/>
+                                    <constraint firstItem="N1w-X1-B6F" firstAttribute="centerX" secondItem="WUJ-d9-XwW" secondAttribute="centerX" id="ueO-SU-rFd"/>
+                                    <constraint firstAttribute="trailing" secondItem="SeE-dC-JsY" secondAttribute="trailing" constant="8" id="wZi-MJ-3a0"/>
+                                    <constraint firstAttribute="trailing" secondItem="N1w-X1-B6F" secondAttribute="trailing" id="wrD-UK-pf0"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="86f-vz-7Rc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WUJ-d9-XwW" firstAttribute="top" secondItem="JwJ-Lc-g9m" secondAttribute="top" id="4cE-Zd-DC4"/>
+                            <constraint firstItem="WUJ-d9-XwW" firstAttribute="trailing" secondItem="86f-vz-7Rc" secondAttribute="trailing" id="O9x-L2-xUg"/>
+                            <constraint firstItem="WUJ-d9-XwW" firstAttribute="leading" secondItem="86f-vz-7Rc" secondAttribute="leading" id="T69-Zg-rXU"/>
+                            <constraint firstAttribute="bottom" secondItem="WUJ-d9-XwW" secondAttribute="bottom" id="TnQ-Gg-ycw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Zx-Wy-PtN"/>
+                    <size key="freeformSize" width="414" height="1500"/>
                     <connections>
-                        <outlet property="seeImge" destination="RYO-iq-XBe" id="Jmb-cj-RXO"/>
-                        <outlet property="seeName" destination="QnC-og-yvn" id="6BI-t6-ol3"/>
+                        <outlet property="seeImge" destination="N1w-X1-B6F" id="Xl7-Qq-ACv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byf-Hp-xBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1146.376811594203" y="1745.7589285714284"/>
+            <point key="canvasLocation" x="-1146.376811594203" y="1923.8839285714284"/>
         </scene>
         <!--Sign In-->
         <scene sceneID="f1I-ir-w7P">
@@ -1231,14 +1254,14 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="0B0D7B19-923F-469A-B230-B1B5EEA9677D_1_105_c" width="1078" height="729"/>
-        <image name="11" width="1024" height="766"/>
+        <image name="111" width="2048" height="1244"/>
         <image name="2" width="625" height="1256"/>
         <image name="3" width="629" height="1248"/>
         <image name="6" width="629" height="1248"/>
         <image name="8" width="1124" height="2229"/>
         <image name="globe.americas" catalog="system" width="128" height="121"/>
         <image name="globe.americas.fill" catalog="system" width="128" height="121"/>
-        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.circle" catalog="system" width="128" height="121"/>
         <image name="login" width="629" height="1248"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
@@ -1260,11 +1283,11 @@
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

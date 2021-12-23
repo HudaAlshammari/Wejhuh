@@ -18,30 +18,31 @@ class SeeMore: UIViewController {
     var arrayTrip = [Trips]()
     var curentImageName: String?
     
-    //CORE-DATA
-    let persistentContainer : NSPersistentContainer = {
-       let container = NSPersistentContainer(name: "FavoriteModel")
-       container.loadPersistentStores(completionHandler: { desc, error in
-           if let readError = error {
-               print(readError)
-           }
-       })
-       return container
-   }()
+//    //CORE-DATA
+//    let persistentContainer : NSPersistentContainer = {
+//       let container = NSPersistentContainer(name: "FavoriteModel")
+//       container.loadPersistentStores(completionHandler: { desc, error in
+//           if let readError = error {
+//               print(readError)
+//           }
+//       })
+//       return container
+//   }()
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        seeImge.layer.cornerRadius = 35
 
         // Do any additional setup after loading the view.
     }
     
 
-    @IBAction func addFavoritePlaces2(_ sender: Any) {
-//        createNewList(eventName: seeName.text ?? "" , eventPhoto: curentImageName ?? "")
-    }
-    
+//    @IBAction func addFavoritePlaces2(_ sender: Any) {
+////        createNewList(eventName: seeName.text ?? "" , eventPhoto: curentImageName ?? "")
+//    }
+//    
 //    //CORE-DATA
 //    func createNewList(eventName: String, eventPhoto: String){
 //        let context = persistentContainer.viewContext
