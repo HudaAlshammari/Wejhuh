@@ -36,3 +36,21 @@ struct SetDetails {
     let title : String
     let details : String
 }
+
+
+// MARK: - Struct for user data
+class User {
+    var name:String?
+    var email: String?
+}
+
+
+
+enum Segues: String {
+    case toProfile = "toDetiles"
+    case toOverviewOfTheSities = "toOverviewOfTheSities"
+    case toEssentals = "toEssentals"
+    case toSeeMore = "toSeeMore"
+}
+
+

@@ -16,8 +16,6 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
     
     var selectedSetDetails : SetDetails?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -42,14 +40,11 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
     var naturalCity = [NaturalCities]()
     var ancientCity = [AncientCities]()
     
-    
     var selectedCityArray:City?
     var selectedNaturalCity:NaturalCities?
     var selectedAncientCity: AncientCities?
     
-    
-    
-    
+
     func setCity(){
         cityArray.append(City(name: "Al-Suwdah",
                               photo: UIImage(named: "sudah")!,
@@ -181,23 +176,24 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
             print("......")
             
         }
-        performSegue(withIdentifier: "toDetails", sender: nil)
+        performSegue(withIdentifier: Segues.toOverviewOfTheSities.rawValue , sender: nil)
     }
     
     
     @IBAction func profile(_ sender: UIButton) {
-        performSegue(withIdentifier: "toProfile", sender: nil)
+        performSegue(withIdentifier: Segues.toProfile.rawValue, sender: nil)
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toDetails" {
+        if segue.identifier == Segues.toOverviewOfTheSities.rawValue {
             
             let dest = segue.destination as! Discover
             dest.selectedSetData = selectedSetDetails
         }
     }
 }
+
 
 
 

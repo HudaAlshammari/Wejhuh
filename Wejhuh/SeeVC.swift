@@ -59,7 +59,7 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         
         selectedSee = favorite[indexPath.row]
-        performSegue(withIdentifier: "seeDetail", sender: nil)
+        performSegue(withIdentifier: Segues.toSeeMore.rawValue , sender: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -114,6 +114,5 @@ struct Event {
     let city : String
     let photo : String
 }
-
 
 

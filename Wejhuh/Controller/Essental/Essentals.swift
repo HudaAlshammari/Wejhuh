@@ -10,9 +10,7 @@ import UIKit
 class Essentals: UIViewController {
 
     @IBOutlet weak var essentalPhoto: UIImageView!
-    
     @IBOutlet weak var essentalTitle: UILabel!
-    
     @IBOutlet weak var essentalDes: UILabel!
     
     var imageEssentaltSet: UIImage?
@@ -26,9 +24,5 @@ class Essentals: UIViewController {
         essentalPhoto.image = imageEssentaltSet
         essentalTitle.text = nameEssentalSet
         essentalDes.text = desEssentalSet
-
-//        print("essentalDes .......")
-//        print(desEssentalSet ?? "")
     }
-
 }

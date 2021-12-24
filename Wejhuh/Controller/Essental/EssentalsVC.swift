@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class EssentalsVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
     
@@ -55,9 +56,9 @@ class EssentalsVC: UIViewController , UICollectionViewDelegate , UICollectionVie
             nameEssentalSet = "About  eVisa"
             desEssentalSet = "The Kingdom of Saudi Arabia has opened its doors to visitors from all over the world with the electronic visa system as of September 2019. Visitors can obtain a one-year entry visa that entitles them to enter the country multiple times and allows them to stay for a maximum of 90 days during its validity period. This visa can be used for tourism and Umrah activities (except for the Hajj season), and it does not include other activities such as studying.. The visa system was a milestone that opened the doors of the Kingdom of Saudi Arabia to tourists. Visitors from all over the world can discover the hospitality of the Saudi people with its rich heritage, vibrant culture and stunning natural landscapes, from the mountains of Abha to the shores of the Red Sea all the way to the shifting sands of the Empty Quarter desert .."
         default:
-            print("bbbbbb")
+            print("")
         }
-        performSegue(withIdentifier: "details", sender: nil)
+        performSegue(withIdentifier: Segues.toEssentals.rawValue , sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -81,3 +82,7 @@ class EssentalsVC: UIViewController , UICollectionViewDelegate , UICollectionVie
         return cell
     }
 }
+
+
+
+

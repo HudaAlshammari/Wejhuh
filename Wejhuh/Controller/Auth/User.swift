@@ -7,12 +7,6 @@
 import Foundation
 import UIKit
 
-class User {
-    
-    var name:String?
-    var email: String?
-
-}
 extension User {
     
     static func getUser(dict: [String: Any]) -> User {

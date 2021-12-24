@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9si-G1-4be">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pwm-Zx-qsP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -259,7 +259,7 @@
                         <outlet property="ancientCities" destination="ift-4v-UVt" id="5d1-Mh-0NR"/>
                         <outlet property="homeCollectionView" destination="dwu-58-mpi" id="BOB-48-dEd"/>
                         <outlet property="naturalCities" destination="vQC-7y-JY1" id="gbr-Gd-yv8"/>
-                        <segue destination="deX-xe-8ed" kind="show" identifier="toDetails" id="TOJ-sP-im9"/>
+                        <segue destination="deX-xe-8ed" kind="show" identifier="toOverviewOfTheSities" id="TOJ-sP-im9"/>
                         <segue destination="zng-HD-5vC" kind="showDetail" identifier="toProfile" id="PRV-Jh-zBq"/>
                     </connections>
                 </viewController>
@@ -418,7 +418,7 @@
                     <navigationItem key="navigationItem" id="wsO-Dn-DIH"/>
                     <connections>
                         <outlet property="Essentals" destination="KXF-Wy-xjE" id="I8z-xa-Z6e"/>
-                        <segue destination="4Lv-1a-6D6" kind="show" identifier="details" id="GSf-AB-8J8"/>
+                        <segue destination="4Lv-1a-6D6" kind="show" identifier="toEssentals" id="GSf-AB-8J8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t3y-cG-GSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -739,7 +739,7 @@
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="heart.circle" catalog="system">
-                                                        <color key="baseForegroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
                                                     <connections>
                                                         <action selector="addFavoritePlaces:" destination="KRD-hJ-r1d" eventType="touchUpInside" id="Hos-gm-rAV"/>
@@ -790,7 +790,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="seeCollectionView" destination="KyQ-EP-00h" id="bgG-8s-cwD"/>
-                        <segue destination="Tia-1l-LFe" kind="show" identifier="seeDetail" id="7vs-dW-YUx"/>
+                        <segue destination="Tia-1l-LFe" kind="show" identifier="toSeeMore" id="7vs-dW-YUx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gms-cf-hCr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -810,7 +810,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="36" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeE-dC-JsY">
                                         <rect key="frame" x="8" y="321" width="398" height="345"/>
-                                        <mutableString key="text">"Al-Soudah is a tourist village in the Asir region of the Kingdom of Saudi Arabia, 20 km from the city of Abha, at an altitude of 3015 meters above sea level, and its mountains are covered with dense juniper trees, forming beautiful natural forests .. Al-Soudah overlooks the Tihama region, so magnifying glasses have been installed in some of its parts as views to see the wonderful views of those valleys, valleys and neighboring villages located in the Tihama plains. The village records temperatures that do not exceed 15 degrees Celsius in the summer, while the temperatures in the winter are very low. Compared to the surrounding areas, the Al-Soudah tourist village was built, which includes a range of services, and the park was linked to the village of Rijal Alma in the Tihama region by cable car, which is about 40 km from Abha city .."</mutableString>
+                                        <string key="text">"Al-Soudah is a tourist village in the Asir region of the Kingdom of Saudi Arabia, 20 km from the city of Abha, at an altitude of 3015 meters above sea level, and its mountains are covered with dense juniper trees, forming beautiful natural forests .. Al-Soudah overlooks the Tihama region, so magnifying glasses have been installed in some of its parts as views to see the wonderful views of those valleys, valleys and neighboring villages located in the Tihama plains. The village records temperatures that do not exceed 15 degrees Celsius in the summer, while the temperatures in the winter are very low. Compared to the surrounding areas, the Al-Soudah tourist village was built, which includes a range of services, and the park was linked to the village of Rijal Alma in the Tihama region by cable car, which is about 40 km from Abha city .."</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1285,9 +1285,6 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiarySystemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

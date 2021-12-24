@@ -12,13 +12,9 @@ import FirebaseAuth
 
 // MARK: - Profile
 class Profile: UIViewController {
-
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
-    
-    
     var profile : User?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,10 +26,7 @@ class Profile: UIViewController {
         if Auth.auth().currentUser?.uid == nil {
             
         }else{
-            
         }
-        
-       
     }
     
 
@@ -50,6 +43,3 @@ class Profile: UIViewController {
        }
     }
 }
-
-
-
