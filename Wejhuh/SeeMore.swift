@@ -40,7 +40,7 @@ class SeeMore: UIViewController {
     
 
 //    @IBAction func addFavoritePlaces2(_ sender: Any) {
-////        createNewList(eventName: seeName.text ?? "" , eventPhoto: curentImageName ?? "")
+//        createNewList(eventName: seeName.text ?? "" , eventPhoto: curentImageName ?? "")
 //    }
 //    
 //    //CORE-DATA

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pwm-Zx-qsP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tia-1l-LFe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -241,18 +241,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="LEG-H2-Gxe">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="wXh-aa-zGQ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Cta-lk-wFp">
-                                <rect key="frame" x="302" y="5" width="92" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="person.circle" catalog="system" title="">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="profile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yga-Rz-q9b"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" image="line.3.horizontal" catalog="system" id="TWo-ul-FmX">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="profileButton:" destination="BYZ-38-t0r" id="Npn-DL-0mr"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -266,6 +259,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="399" y="1026"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="L7v-r0-RFc">
+            <objects>
+                <viewController id="Ock-SC-H14" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q4f-Uo-69r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3mw-lm-Y9K"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="9Kv-pe-MdM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UXX-ZZ-Mxv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1121.7391304347827" y="1746.4285714285713"/>
         </scene>
         <!--Essentals-->
         <scene sceneID="gbC-ah-EHO">
@@ -322,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBO-hS-PIY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1849.2753623188407" y="1745.7589285714284"/>
+            <point key="canvasLocation" x="-2636" y="1026"/>
         </scene>
         <!--EssentalsVC-->
         <scene sceneID="6Jc-Xl-0wL">
@@ -802,41 +811,41 @@
             <objects>
                 <viewController id="Tia-1l-LFe" customClass="SeeMore" customModule="Wejhuh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JwJ-Lc-g9m">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1272"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUJ-d9-XwW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1185"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="36" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeE-dC-JsY">
-                                        <rect key="frame" x="8" y="321" width="398" height="345"/>
+                                        <rect key="frame" x="8" y="366" width="398" height="345"/>
                                         <string key="text">"Al-Soudah is a tourist village in the Asir region of the Kingdom of Saudi Arabia, 20 km from the city of Abha, at an altitude of 3015 meters above sea level, and its mountains are covered with dense juniper trees, forming beautiful natural forests .. Al-Soudah overlooks the Tihama region, so magnifying glasses have been installed in some of its parts as views to see the wonderful views of those valleys, valleys and neighboring villages located in the Tihama plains. The village records temperatures that do not exceed 15 degrees Celsius in the summer, while the temperatures in the winter are very low. Compared to the surrounding areas, the Al-Soudah tourist village was built, which includes a range of services, and the park was linked to the village of Rijal Alma in the Tihama region by cable car, which is about 40 km from Abha city .."</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="111" translatesAutoresizingMaskIntoConstraints="NO" id="N1w-X1-B6F">
-                                        <rect key="frame" x="0.0" y="-56" width="414" height="311"/>
+                                        <rect key="frame" x="0.0" y="-11" width="414" height="311"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="311" id="Enc-Aw-xkA"/>
                                         </constraints>
                                     </imageView>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lYg-Te-99v">
-                                        <rect key="frame" x="8" y="1179" width="398" height="281"/>
+                                        <rect key="frame" x="8" y="896" width="398" height="281"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="281" id="heI-sj-odm"/>
                                         </constraints>
                                     </mapView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="lYg-Te-99v" firstAttribute="top" secondItem="SeE-dC-JsY" secondAttribute="bottom" constant="513" id="3qB-ab-cTP"/>
+                                    <constraint firstItem="lYg-Te-99v" firstAttribute="top" secondItem="SeE-dC-JsY" secondAttribute="bottom" constant="185" id="3qB-ab-cTP"/>
                                     <constraint firstAttribute="trailing" secondItem="lYg-Te-99v" secondAttribute="trailing" constant="8" id="4Am-lY-w0j"/>
                                     <constraint firstItem="SeE-dC-JsY" firstAttribute="leading" secondItem="WUJ-d9-XwW" secondAttribute="leading" constant="8" id="4NS-0h-7vn"/>
-                                    <constraint firstAttribute="bottom" secondItem="lYg-Te-99v" secondAttribute="bottom" constant="123" id="BnC-ox-p3s"/>
+                                    <constraint firstAttribute="bottom" secondItem="lYg-Te-99v" secondAttribute="bottom" constant="8" id="BnC-ox-p3s"/>
                                     <constraint firstItem="N1w-X1-B6F" firstAttribute="leading" secondItem="WUJ-d9-XwW" secondAttribute="leading" id="DaC-Vb-hbD"/>
                                     <constraint firstItem="SeE-dC-JsY" firstAttribute="top" secondItem="N1w-X1-B6F" secondAttribute="bottom" constant="66" id="PEG-oK-vMN"/>
                                     <constraint firstItem="lYg-Te-99v" firstAttribute="leading" secondItem="WUJ-d9-XwW" secondAttribute="leading" constant="8" id="Qta-mg-Kaq"/>
-                                    <constraint firstItem="N1w-X1-B6F" firstAttribute="top" secondItem="WUJ-d9-XwW" secondAttribute="top" constant="-56" id="iTH-aQ-tgb"/>
+                                    <constraint firstItem="N1w-X1-B6F" firstAttribute="top" secondItem="WUJ-d9-XwW" secondAttribute="top" constant="-11" id="iTH-aQ-tgb"/>
                                     <constraint firstItem="N1w-X1-B6F" firstAttribute="centerX" secondItem="WUJ-d9-XwW" secondAttribute="centerX" id="ueO-SU-rFd"/>
                                     <constraint firstAttribute="trailing" secondItem="SeE-dC-JsY" secondAttribute="trailing" constant="8" id="wZi-MJ-3a0"/>
                                     <constraint firstAttribute="trailing" secondItem="N1w-X1-B6F" secondAttribute="trailing" id="wrD-UK-pf0"/>
@@ -849,18 +858,18 @@
                             <constraint firstItem="WUJ-d9-XwW" firstAttribute="top" secondItem="JwJ-Lc-g9m" secondAttribute="top" id="4cE-Zd-DC4"/>
                             <constraint firstItem="WUJ-d9-XwW" firstAttribute="trailing" secondItem="86f-vz-7Rc" secondAttribute="trailing" id="O9x-L2-xUg"/>
                             <constraint firstItem="WUJ-d9-XwW" firstAttribute="leading" secondItem="86f-vz-7Rc" secondAttribute="leading" id="T69-Zg-rXU"/>
-                            <constraint firstAttribute="bottom" secondItem="WUJ-d9-XwW" secondAttribute="bottom" id="TnQ-Gg-ycw"/>
+                            <constraint firstAttribute="bottom" secondItem="WUJ-d9-XwW" secondAttribute="bottom" constant="87" id="TnQ-Gg-ycw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Zx-Wy-PtN"/>
-                    <size key="freeformSize" width="414" height="1500"/>
+                    <size key="freeformSize" width="414" height="1272"/>
                     <connections>
                         <outlet property="seeImge" destination="N1w-X1-B6F" id="Xl7-Qq-ACv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byf-Hp-xBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1146.376811594203" y="1923.8839285714284"/>
+            <point key="canvasLocation" x="-2639.130434782609" y="1872.3214285714284"/>
         </scene>
         <!--Sign In-->
         <scene sceneID="f1I-ir-w7P">
@@ -1136,7 +1145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyo-Ka-if6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="398.55072463768118" y="1745.7589285714284"/>
+            <point key="canvasLocation" x="2231.8840579710145" y="1389.5089285714284"/>
         </scene>
         <!--Profile-->
         <scene sceneID="9Kx-UA-MmP">
@@ -1228,7 +1237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDn-fA-qKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202.8985507246377" y="1025.8928571428571"/>
+            <point key="canvasLocation" x="1249" y="729"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Drf-sr-G3m">
@@ -1250,7 +1259,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qHw-Lg-AOj"/>
+        <segue reference="Oke-1L-ecN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="0B0D7B19-923F-469A-B230-B1B5EEA9677D_1_105_c" width="1078" height="729"/>
@@ -1262,10 +1271,10 @@
         <image name="globe.americas" catalog="system" width="128" height="121"/>
         <image name="globe.americas.fill" catalog="system" width="128" height="121"/>
         <image name="heart.circle" catalog="system" width="128" height="121"/>
+        <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
         <image name="login" width="629" height="1248"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="signup" width="629" height="1248"/>
         <image name="suit.heart" catalog="system" width="128" height="109"/>
         <image name="suit.heart.fill" catalog="system" width="128" height="109"/>

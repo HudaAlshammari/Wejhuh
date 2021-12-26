@@ -47,7 +47,7 @@ class User {
 
 
 enum Segues: String {
-    case toProfile = "toDetiles"
+    case toProfile = "toProfile"
     case toOverviewOfTheSities = "toOverviewOfTheSities"
     case toEssentals = "toEssentals"
     case toSeeMore = "toSeeMore"

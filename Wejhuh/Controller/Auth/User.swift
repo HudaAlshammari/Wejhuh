@@ -15,9 +15,9 @@ extension User {
         
         user.name = dict["name"] as? String
         user.email = dict["email"] as? String
-       
         return user
     }
+    
     static func CreateUser(name:String,email:String) -> [String: Any] {
        
         let newUser = ["name":name,

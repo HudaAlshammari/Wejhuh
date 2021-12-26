@@ -176,8 +176,8 @@
 		4F8C5AFC27620A8800D24189 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				4F8A5CE8276093AB008BE65A /* SignIn.swift */,
 				4F8A5CEA276093EC008BE65A /* Signup.swift */,
+				4F8A5CE8276093AB008BE65A /* SignIn.swift */,
 				4F5BEDCA2768743B006E495A /* Profile.swift */,
 				4F93D4AD2770BBFE003A997C /* UserApi.swift */,
 				4F64CF522774A4E500D5B9A0 /* User.swift */,

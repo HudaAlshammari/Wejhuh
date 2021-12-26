@@ -77,8 +77,6 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
     }
     
     
-    
-    
     func setNaturalCities(){
         naturalCity.append(NaturalCities(name: "Asir",
                                          photo: UIImage(named: "3seer")!,
@@ -179,10 +177,11 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
         performSegue(withIdentifier: Segues.toOverviewOfTheSities.rawValue , sender: nil)
     }
     
-    
-    @IBAction func profile(_ sender: UIButton) {
+    @IBAction func profileButton(_ sender: Any) {
         performSegue(withIdentifier: Segues.toProfile.rawValue, sender: nil)
     }
+    
+
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -197,4 +196,4 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
 
 
 
-
+//performSegue(withIdentifier: Segues.toProfile.rawValue, sender: nil)

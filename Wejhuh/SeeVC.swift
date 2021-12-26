@@ -103,8 +103,8 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
         }
     }
     
-    func storeFavorite(){
-    }
+//    func storeFavorite(){
+//    }
 }
 
 
