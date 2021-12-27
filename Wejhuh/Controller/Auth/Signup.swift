@@ -12,15 +12,39 @@ import FirebaseAuth
 
 // MARK: - Signup
 class Signup: UIViewController {
+    
+    
 
     @IBOutlet weak var name: UITextField!
-    
     @IBOutlet weak var email: UITextField!
-    
     @IBOutlet weak var password: UITextField!
+    
+    //eye icon pass
+    let button = UIButton(type: .custom)
+    var btnColor = UIButton(type: .custom)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        password.rightViewMode = .unlessEditing
+        button.setImage(UIImage(named: "closeEye"), for: .normal)
+        button.imageEdgeInsets = UIEdgeInsets(top: 5, left: -5 , bottom: 5, right: 15)
+        button.alpha = 5
+        button.frame = CGRect(x: CGFloat(password.frame.size.width - 25), y: CGFloat(5), width: CGFloat(15), height: CGFloat(25))
+        button.addTarget(self, action: #selector(self.btnPasswordVisiblityClicked), for: .touchUpInside)
+        password.rightView = button
+        password.rightViewMode = .always
+    }
+    
+    
+    @IBAction func btnPasswordVisiblityClicked(_ sender: Any) {
+        (sender as! UIButton).isSelected = !(sender as! UIButton).isSelected
+        if (sender as! UIButton).isSelected {
+            self.password.isSecureTextEntry = false
+            button.setImage(UIImage(named: "openEye"), for: .normal)
+        } else {
+            self.password.isSecureTextEntry = true
+            button.setImage(UIImage(named: "closeEye"), for: .normal)
+        }
     }
 
     
@@ -57,14 +81,12 @@ class Signup: UIViewController {
                         self.performSegue(withIdentifier: "toApp", sender: nil)
                     }
                 })
-                
             }
             guard error == nil else {
                 print("Error \(String(describing: error?.localizedDescription))")
                 return
 
             }
-            
         }
     }
 }

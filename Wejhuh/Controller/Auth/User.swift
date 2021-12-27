@@ -8,7 +8,6 @@ import Foundation
 import UIKit
 
 extension User {
-    
     static func getUser(dict: [String: Any]) -> User {
        
         let user = User()
@@ -17,7 +16,6 @@ extension User {
         user.email = dict["email"] as? String
         return user
     }
-    
     static func CreateUser(name:String,email:String) -> [String: Any] {
        
         let newUser = ["name":name,

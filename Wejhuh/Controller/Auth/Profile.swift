@@ -24,7 +24,6 @@ class Profile: UIViewController {
             self.email.text = profile.email
         }
         if Auth.auth().currentUser?.uid == nil {
-            
         }else{
         }
     }

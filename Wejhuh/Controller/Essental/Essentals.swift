@@ -19,7 +19,7 @@ class Essentals: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        essentalPhoto.layer.cornerRadius = 35
+//        essentalPhoto.layer.cornerRadius = 35
         
         essentalPhoto.image = imageEssentaltSet
         essentalTitle.text = nameEssentalSet
