@@ -16,6 +16,11 @@ class EssentalsVC: UIViewController , UICollectionViewDelegate , UICollectionVie
         Essentals.dataSource = self
         Essentals.delegate = self
         Essentals.backgroundColor = UIColor.clear
+        
+        Essentals.layer.shadowColor = UIColor.placeholderText.cgColor
+        Essentals.layer.shadowOpacity = 10
+        Essentals.layer.shadowOffset = .zero
+        Essentals.layer.shadowRadius = 3
     }
     
     
@@ -80,6 +85,15 @@ class EssentalsVC: UIViewController , UICollectionViewDelegate , UICollectionVie
         cell.EssentalsTitle.text = EssentalsTitles[indexPath.row]
         cell.EssentalsDic.text = EssentalsaDicc[indexPath.row]
         return cell
+    }
+    
+    
+    @IBAction func URLVisitSaudi(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.visitsaudi.com/en")! as URL , options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func SaudiTourismAuthority(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.sta.gov.sa/ar/")! as URL , options: [:], completionHandler: nil)
     }
 }
 

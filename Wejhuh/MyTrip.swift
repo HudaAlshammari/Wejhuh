@@ -7,17 +7,23 @@
 
 import UIKit
 import CoreData
+import FirebaseAuth
 
 class MyTrip: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource {
    
     @IBOutlet weak var favotiteList: UICollectionView!
     
+    var myFavorite = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
         favotiteList.backgroundColor = UIColor.clear
         // Do any additional setup after loading the view.
     }
+    
+
     
     var myFavoriteModel: [TripsList] = []
     
@@ -25,7 +31,6 @@ class MyTrip: UIViewController , UICollectionViewDelegate , UICollectionViewData
     //CORE-DATA=========================
     let persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "FavoriteModel")
-        
         container.loadPersistentStores (completionHandler: { desc, error in
             if let readError = error {
                 print(readError)
@@ -38,20 +43,30 @@ class MyTrip: UIViewController , UICollectionViewDelegate , UICollectionViewData
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return myFavoriteModel.count
+       return myFavorite.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tripsCell", for: indexPath) as! favoriteListCell
         
-        cell.photo?.image = UIImage(named: myFavoriteModel[indexPath.row].photo ?? "")
-        cell.name?.text = myFavoriteModel[indexPath.row].name
+        cell.photo?.image = UIImage(named: myFavorite[indexPath.row])
+        cell.name?.text = myFavorite[indexPath.row]
+        
         return cell
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.fetchAllLists()
         self.favotiteList.reloadData()
+        
+        UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { user in
+            DispatchQueue.main.async {
+                self.myFavorite = user.trips ?? [""]
+                self.favotiteList.reloadData()
+            }
+        }
+        
     }
     
     

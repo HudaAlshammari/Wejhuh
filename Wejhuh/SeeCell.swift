@@ -7,6 +7,8 @@
 
 import UIKit
 import CoreData
+import FirebaseAuth
+import FirebaseFirestore
 
 class SeeCell: UICollectionViewCell {
     
@@ -31,6 +33,7 @@ class SeeCell: UICollectionViewCell {
     @IBOutlet weak var seeImage: UIImageView!
     
     var curentImageName: String?
+    var myFavorite = [String]()
     
 
     override func awakeFromNib() {
@@ -45,7 +48,21 @@ class SeeCell: UICollectionViewCell {
     
     
     @IBAction func addFavoritePlaces(_ sender: UIButton) {
-        createNewList(eventName: seeName.text ?? "" , eventPhoto: curentImageName ?? "")
+        UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { user in
+            DispatchQueue.main.async {
+                self.myFavorite =  user.trips ?? [""]
+                self.myFavorite.append(self.seeName.text ?? "")
+                UserApi.addLikes(uid: Auth.auth().currentUser?.uid ?? "", likes: self.myFavorite)
+                print("favs")
+                print(self.myFavorite)
+            }
+        }
+        
+        
+        
+        
+        
+        //createNewList(eventName: seeName.text ?? "" , eventPhoto: curentImageName ?? "")
     }
     
     

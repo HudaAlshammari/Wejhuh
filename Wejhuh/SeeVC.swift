@@ -7,6 +7,8 @@
 
 import UIKit
 import CoreData
+import Firebase
+import FirebaseFirestore
 
 class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource  {
     
@@ -30,26 +32,36 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     @IBOutlet weak var seeCollectionView: UICollectionView!
     
     
+    var myFavorite = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         seeCollectionView.delegate = self
         seeCollectionView.dataSource = self
         seeCollectionView.backgroundColor = UIColor.clear
         setSee()
+        
+        UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { user in
+            DispatchQueue.main.async {
+                self.myFavorite =  user.trips ?? [""]
+                print("favs")
+                print(self.myFavorite)
+            }
+        }
     }
     
     var favorite = [Event]()
     var selectedSee : Event?
     
     func setSee(){
-        favorite.append(Event(name: "Sea Experiences", city: "Jeddah", photo : "see1"))
-        favorite.append(Event(name: "Formula", city: "Jeddah", photo :  "see2"))
-        favorite.append(Event(name: "Athra", city: "Khobar", photo :  "see3"))
-        favorite.append(Event(name: "Dakar Rally", city: "Around the country" , photo :"see4"))
-        favorite.append(Event(name: "Safari", city: "Riyadh", photo :  "see5"))
-        favorite.append(Event(name: "Khobar Corniche", city: "Khobar", photo :  "see6"))
-        favorite.append(Event(name: "Combat Filed", city: "Riyadh", photo : "see7"))
-        favorite.append(Event(name: "Dakakin", city: "Riyadh", photo :  "see8"))
+        favorite.append(Event(name: "Sea Experiences", city: "Jeddah", photo : "Sea Experiences"))
+        favorite.append(Event(name: "Formula", city: "Jeddah", photo :  "Formula"))
+        favorite.append(Event(name: "Athra", city: "Khobar", photo :  "Athra"))
+        favorite.append(Event(name: "Dakar Rally", city: "Around the country" , photo :"Dakar Rally"))
+        favorite.append(Event(name: "Safari", city: "Riyadh", photo :  "Safari"))
+        favorite.append(Event(name: "Khobar Corniche", city: "Khobar", photo :  "Khobar Corniche"))
+        favorite.append(Event(name: "Combat Filed", city: "Riyadh", photo : "Combat Filed"))
+        favorite.append(Event(name: "Dakakin", city: "Riyadh", photo :  "Dakakin"))
     }
     
     
@@ -69,6 +81,7 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
         cell.curentImageName = data.photo
         cell.btnAddToMyTrip.tag = indexPath.row
         cell.btnAddToMyTrip.addTarget(self, action: #selector(addToMyTrip(sender:)), for: .touchUpInside )
+        cell.myFavorite = myFavorite
         return cell
     }
     
@@ -102,17 +115,9 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
             }
         }
     }
-    
-//    func storeFavorite(){
-//    }
 }
 
 
 
-struct Event {
-    let name : String
-    let city : String
-    let photo : String
-}
 
 

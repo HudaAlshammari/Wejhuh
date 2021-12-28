@@ -28,10 +28,10 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
         setNaturalCities()
         setAncientCities()
         
-//        naturalCities.layer.shadowColor = UIColor.black.cgColor
-//        naturalCities.layer.shadowOpacity = 1
+//        naturalCities.layer.shadowColor = UIColor.placeholderText.cgColor
+//        naturalCities.layer.shadowOpacity = 10
 //        naturalCities.layer.shadowOffset = .zero
-//        naturalCities.layer.shadowRadius = 8
+//        naturalCities.layer.shadowRadius = 3
     }
     
     

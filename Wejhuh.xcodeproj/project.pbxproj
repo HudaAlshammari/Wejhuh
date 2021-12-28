@@ -154,11 +154,11 @@
 				4F653CF0275F61D70002AB9B /* GoogleService-Info.plist */,
 				4FFC730A2765E46400258F98 /* SeeVC.swift */,
 				4FFC730C2765E5D300258F98 /* SeeCell.swift */,
+				4F4D6936276F5BAD00C95EFA /* SeeMore.swift */,
 				4F1DB38C276B6513008BA931 /* MyTrip.swift */,
 				4F417C21276E01B60090DCAF /* favoriteListCell.swift */,
 				4F4D692F276F04B300C95EFA /* structOfCoreData.swift */,
 				4F4D6934276F25AD00C95EFA /* Structs.swift */,
-				4F4D6936276F5BAD00C95EFA /* SeeMore.swift */,
 			);
 			path = Wejhuh;
 			sourceTree = "<group>";

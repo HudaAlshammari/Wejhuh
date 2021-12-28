@@ -16,6 +16,6 @@ class EssentalsCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         EssentalsView.layer.cornerRadius = 12
-        EssentalsPhoto.layer.cornerRadius = 12
+//        EssentalsPhoto.layer.cornerRadius = 12
     }
 }

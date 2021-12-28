@@ -37,12 +37,21 @@ struct SetDetails {
     let details : String
 }
 
+struct Event {
+    let name : String
+    let city : String
+    let photo : String
+}
+
+
 
 // MARK: - Struct for user data
 class User {
     var name:String?
     var email: String?
+    var trips : [String]?
 }
+
 
 
 
