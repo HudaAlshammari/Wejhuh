@@ -20,7 +20,5 @@ extension TripsList {
     @NSManaged public var photo: String?
 
 }
-
 extension TripsList : Identifiable {
-
 }

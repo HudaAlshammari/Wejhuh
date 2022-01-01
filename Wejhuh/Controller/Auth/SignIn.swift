@@ -16,11 +16,9 @@ class SignIn: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    
+    //eye icon password
     let button = UIButton(type: .custom)
     var btnColor = UIButton(type: .custom)
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         password.rightViewMode = .unlessEditing
@@ -33,7 +31,7 @@ class SignIn: UIViewController {
         password.rightViewMode = .always
     }
     
-    
+    //Function of the button to hide and show the password
     @IBAction func btnPasswordVisiblityClicked(_ sender: Any) {
         (sender as! UIButton).isSelected = !(sender as! UIButton).isSelected
         if (sender as! UIButton).isSelected {
@@ -45,9 +43,10 @@ class SignIn: UIViewController {
         }
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        //Confirm the existence of the account
         if Auth.auth().currentUser != nil {
            performSegue(withIdentifier: "toApp", sender: nil)
         }
@@ -59,10 +58,9 @@ class SignIn: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "Signup")
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
-//        performSegue(withIdentifier: "toSignup", sender: nil)
     }
     
-    //Alert if the account has been created or not
+    //Alert if the account has been created or not and if the data is filled out or not
     @IBAction func signIn(_ sender: UIButton) {
         if email.text?.isEmpty ?? true || password.text?.isEmpty ?? true {
             let alert = UIAlertController(title: "please full in Email and Password", message: "your email or passowrd is missing" , preferredStyle: .alert)

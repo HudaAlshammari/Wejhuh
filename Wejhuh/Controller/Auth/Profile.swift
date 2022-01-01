@@ -18,6 +18,7 @@ class Profile: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // for save certain data on the Internet
         UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") {profile in
             self.profile = profile
             self.name.text = profile.name
@@ -27,8 +28,6 @@ class Profile: UIViewController {
         }else{
         }
     }
-    
-
     
     // MARK: - logOut Button
     @IBAction func logOut(_ sender: Any) {

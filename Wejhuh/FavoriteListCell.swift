@@ -7,17 +7,15 @@
 
 import UIKit
 
-class favoriteListCell: UICollectionViewCell {
+class FavoriteListCell: UICollectionViewCell {
     
-    
+    // Outlet of items in cells
     @IBOutlet weak var photo: UIImageView!
-    
     @IBOutlet weak var name: UILabel!
-    
     @IBOutlet weak var view: UIView!
     
     override func awakeFromNib() {
-//        background.layer.cornerRadius = 12
+        //Formats for cell
         view.layer.cornerRadius = 12
     }
 }

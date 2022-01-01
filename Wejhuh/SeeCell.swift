@@ -10,11 +10,13 @@ import CoreData
 import FirebaseAuth
 import FirebaseFirestore
 
+
 class SeeCell: UICollectionViewCell {
+    
+    // MARK: -CORE DATA
     
     var selectedArrayTrips : Trips!
     var arrayTrip = [Trips]()
-    
     let persistentContainer : NSPersistentContainer = {
        let container = NSPersistentContainer(name: "FavoriteModel")
        container.loadPersistentStores(completionHandler: { desc, error in
@@ -25,28 +27,35 @@ class SeeCell: UICollectionViewCell {
        return container
    }()
     
+    var curentImageName: String?
+    var myFavorite = [String]()
     
+    // MARK: - Cell
+    
+    // Outlet of items in cells
     @IBOutlet weak var seeView: UIView!
     @IBOutlet weak var seeCity: UILabel!
     @IBOutlet weak var seeName: UILabel!
     @IBOutlet weak var btnAddToMyTrip: UIButton!
     @IBOutlet weak var seeImage: UIImageView!
-    
-    var curentImageName: String?
-    var myFavorite = [String]()
-    
+
 
     override func awakeFromNib() {
+        //Formats for cell
         seeImage.layer.cornerRadius = 12
         seeView.layer.cornerRadius = 12
     }
+    
+    //Function to setup items in cells
     func setupCell(photo : String ,city : String , name : String){
         seeImage.image = UIImage(named:photo)
         seeName.text = name
         seeCity.text = city
 }
     
+    // MARK: - button
     
+    // button for add to list of trips
     @IBAction func addFavoritePlaces(_ sender: UIButton) {
         UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { user in
             DispatchQueue.main.async {
@@ -57,15 +66,12 @@ class SeeCell: UICollectionViewCell {
                 print(self.myFavorite)
             }
         }
-        
-        
-        
-        
-        
-        //createNewList(eventName: seeName.text ?? "" , eventPhoto: curentImageName ?? "")
     }
     
     
+    // MARK: -CORE DATA
+    
+    //to save data
     func createNewList(eventName: String, eventPhoto: String){
         let context = persistentContainer.viewContext
         context.performAndWait {

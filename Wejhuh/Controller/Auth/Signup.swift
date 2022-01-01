@@ -10,16 +10,16 @@ import Firebase
 import FirebaseAuth
 
 
+
 // MARK: - Signup
 class Signup: UIViewController {
     
     
-
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    //eye icon pass
+    //eye icon password
     let button = UIButton(type: .custom)
     var btnColor = UIButton(type: .custom)
     
@@ -35,7 +35,7 @@ class Signup: UIViewController {
         password.rightViewMode = .always
     }
     
-    
+    //Function of the button to hide and display the password
     @IBAction func btnPasswordVisiblityClicked(_ sender: Any) {
         (sender as! UIButton).isSelected = !(sender as! UIButton).isSelected
         if (sender as! UIButton).isSelected {
@@ -48,6 +48,7 @@ class Signup: UIViewController {
     }
 
     
+    //button signup
     @IBAction func signup(_ sender: Any) {
         if email.text?.isEmpty == true {
             print("pleas full Email")
@@ -85,7 +86,6 @@ class Signup: UIViewController {
             guard error == nil else {
                 print("Error \(String(describing: error?.localizedDescription))")
                 return
-
             }
         }
     }

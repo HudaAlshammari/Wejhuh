@@ -8,17 +8,23 @@
 import UIKit
 
 class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
-
     
+    
+    // MARK: - CollectionsView of the Discover
+    
+    // Outlet of CollectionView
     @IBOutlet weak var homeCollectionView: UICollectionView!
     @IBOutlet var naturalCities: UICollectionView!
     @IBOutlet weak var ancientCities: UICollectionView!
     
+    
+    //Variable to fill in details
     var selectedSetDetails : SetDetails?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        //Formats for CollectionView
         homeCollectionView.backgroundColor = UIColor.clear
         naturalCities.backgroundColor = UIColor.clear
         ancientCities.backgroundColor = UIColor.clear
@@ -27,29 +33,23 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
         setCity()
         setNaturalCities()
         setAncientCities()
-        
-//        naturalCities.layer.shadowColor = UIColor.placeholderText.cgColor
-//        naturalCities.layer.shadowOpacity = 10
-//        naturalCities.layer.shadowOffset = .zero
-//        naturalCities.layer.shadowRadius = 3
     }
     
-    
-    
+    //Arrays of pictures, names and details
     var cityArray = [City]()
     var naturalCity = [NaturalCities]()
     var ancientCity = [AncientCities]()
-    
-    var selectedCityArray:City?
-    var selectedNaturalCity:NaturalCities?
-    var selectedAncientCity: AncientCities?
-    
 
+    
+    // MARK: - Fill in the arrays with data
+    
+    //First Array :
     func setCity(){
         cityArray.append(City(name: "Al-Suwdah",
                               photo: UIImage(named: "sudah")!,
                               photo2: UIImage(named: "sudah2")!,
-                              detail: "Al-Soudah is a tourist village in the Asir region of the Kingdom of Saudi Arabia, 20 km from the city of Abha, at an altitude of 3015 meters above sea level, and its mountains are covered with dense juniper trees, forming beautiful natural forests .. Al-Soudah overlooks the Tihama region, so magnifying glasses have been installed in some of its parts as views to see the wonderful views of those valleys, valleys and neighboring villages located in the Tihama plains. The village records temperatures that do not exceed 15 degrees Celsius in the summer, while the temperatures in the winter are very low. Compared to the surrounding areas, the Al-Soudah tourist village was built, which includes a range of services, and the park was linked to the village of Rijal Alma in the Tihama region by cable car, which is about 40 km from Abha city .."))
+                              detail: "Jabal Al-Soudah Abha is the highest mountain peak in the Kingdom that combines the magic of place and time. God has blessed him with a beautiful nature, amazing views, and unparalleled beauty. Its height is 3015 meters above sea level, and it is covered with dense forests of juniper trees that add to its splendor. The magic makes it the most famous tourist attraction in Abha .. \nAl-Soudah Abha is also characterized by moderate weather throughout the year, where temperatures during the summer reach 15 degrees Celsius, accompanied by rain in August. Therefore, Jabal Al-Soudah is one of the most prominent tourist attractions in Saudi Arabia, and it attracts a huge number of visitors, both from inside and outside the Kingdom .. \n\nBEST ACTIVITIES : \n\n- Residential hotels \n- Chairlifts \n- Entertainment games \n- Glide \n- Residential Resorts"))
+        
         cityArray.append(City(name: "Al-Ula",
                               photo: UIImage(named: "Ula")!,
                               photo2: UIImage(named: "Ula2")!,
@@ -77,6 +77,7 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
     }
     
     
+    //Sacned Array :
     func setNaturalCities(){
         naturalCity.append(NaturalCities(name: "Asir",
                                          photo: UIImage(named: "3seer")!,
@@ -96,6 +97,7 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
                                          detail: "The city of Abha, where clouds and mountains embrace, and the rain washes it daily, and your hand touches its pure, cold mist, is the feeling of celebrating nature and its splendor.. Rain increases in the cities of Asir Tourism, as it has a role in attracting tourism in Asir, as it has the flavor of tourist enjoyment among visitors and vacationers of this region and the nature Breathtaking rain and clouds characterize this region and its tourist cities .."))
     }
     
+    // Third Array :
     func setAncientCities(){
         ancientCity.append(AncientCities(name: "Riyadh",
                                          photo: UIImage(named: "Riyadh3")!,
@@ -108,12 +110,9 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
     }
     
     
-
+    // MARK: - functions
     
-    
-    
-    
-    
+    //function to determine the number of rows of an array
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (collectionView == homeCollectionView ){
             return cityArray.count
@@ -124,12 +123,10 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
         }
     }
     
-
-    
+    //function to select the elements of an array
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         if (collectionView == naturalCities){
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! naturalCitiesCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! NaturalCitiesCell
             let data = naturalCity[indexPath.row]
             cell.setupCell(photo: data.photo, name: data.name)
             return cell
@@ -149,8 +146,7 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
         }
     }
     
-    
-    
+    //function that is didSelect on the cells
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         switch collectionView {
         case homeCollectionView :
@@ -172,28 +168,22 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
                                               details: ancient.detail)
         default :
             print("......")
-            
         }
         performSegue(withIdentifier: Segues.toOverviewOfTheSities.rawValue , sender: nil)
     }
     
-    @IBAction func profileButton(_ sender: Any) {
-        performSegue(withIdentifier: Segues.toProfile.rawValue, sender: nil)
-    }
-    
-
-    
-    
+    // prepare segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segues.toOverviewOfTheSities.rawValue {
-            
             let dest = segue.destination as! Discover
             dest.selectedSetData = selectedSetDetails
         }
     }
+    
+    // MARK: - button
+    
+    //button for go to profile
+    @IBAction func profileButton(_ sender: Any) {
+        performSegue(withIdentifier: Segues.toProfile.rawValue, sender: nil)
+    }
 }
-
-
-
-
-//performSegue(withIdentifier: Segues.toProfile.rawValue, sender: nil)

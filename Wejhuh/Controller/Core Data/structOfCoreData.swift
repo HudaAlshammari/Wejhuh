@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct Trips {
     var photo: String
     var name: String

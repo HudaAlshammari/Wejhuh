@@ -12,13 +12,12 @@ import FirebaseFirestore
 
 class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource  {
     
-
-    var myFavoriteModel: [TripsList] = []
-
     
-    //SAVE CORE DATA=================
+    // MARK: -CORE DATA
+    
+    var myFavoriteModel: [TripsList] = []
+    //SAVE CORE DATA
     let persistentContainer : NSPersistentContainer = {
-
         let container = NSPersistentContainer(name: "FavoriteModel")
         container.loadPersistentStores(completionHandler: { desc, error in
             if let readError = error {
@@ -29,9 +28,15 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     }()
     
     
+    // MARK: - CollectionView of the See
+    
+    //Outlet of CollectionView
     @IBOutlet weak var seeCollectionView: UICollectionView!
     
+    //Variable to fill in details
+    var selectedSee : Event?
     
+    //Variable to
     var myFavorite = [String]()
     
     override func viewDidLoad() {
@@ -41,18 +46,23 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
         seeCollectionView.backgroundColor = UIColor.clear
         setSee()
         
+        // To access with information about the user
         UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { user in
             DispatchQueue.main.async {
-                self.myFavorite =  user.trips ?? [""]
+                self.myFavorite = user.trips ?? [""]
                 print("favs")
                 print(self.myFavorite)
             }
         }
     }
     
-    var favorite = [Event]()
-    var selectedSee : Event?
     
+    // MARK: - Array
+    
+    //Array of pictures, names and details
+    var favorite = [Event]()
+    
+    // Fill in the array with data
     func setSee(){
         favorite.append(Event(name: "Sea Experiences", city: "Jeddah", photo : "Sea Experiences"))
         favorite.append(Event(name: "Formula", city: "Jeddah", photo :  "Formula"))
@@ -65,32 +75,38 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     }
     
     
+    // MARK: - functions
+    
+    //function to determine the number of rows of an array
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return favorite.count
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        
-        selectedSee = favorite[indexPath.row]
-        performSegue(withIdentifier: Segues.toSeeMore.rawValue , sender: nil)
-    }
     
+    //function to select the elements of an array
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SeeCell
         let data = favorite[indexPath.row]
         cell.setupCell(photo: data.photo, city : data.city , name: data.name)
+        
         cell.curentImageName = data.photo
         cell.btnAddToMyTrip.tag = indexPath.row
-        cell.btnAddToMyTrip.addTarget(self, action: #selector(addToMyTrip(sender:)), for: .touchUpInside )
+        cell.btnAddToMyTrip.addTarget(self, action: #selector(addToTrip(sender:)), for: .touchUpInside )
         cell.myFavorite = myFavorite
         return cell
     }
     
+    //function that is didSelect on the cells
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        selectedSee = favorite[indexPath.row]
+        performSegue(withIdentifier: Segues.toSeeMore.rawValue , sender: nil)
+    }
     
+    
+    //function to change the style of the button
     @objc
-    func addToMyTrip(sender : UIButton){
+    func addToTrip(sender : UIButton){
         print("")
         let currentImage = sender.imageView?.image
-        
         if currentImage == UIImage(systemName: "heart.circle.fill"){
             sender.setImage(UIImage(systemName: "heart.circle"), for: .normal)
         }else{
@@ -99,9 +115,9 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     }
     
     
+    // MARK: -CORE DATA
     
-    
-    //CORE-DATA
+    //to save data
     func createNewList(eventName: String, eventPhoto: String){
         let context = persistentContainer.viewContext
         context.performAndWait {

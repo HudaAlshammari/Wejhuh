@@ -9,20 +9,19 @@ import UIKit
 
 class Essentals: UIViewController {
 
+    //Variable to fill in details
+    var selectedSetData : SetDetails!
+    
+    //Outlet of items of CollectionView
     @IBOutlet weak var essentalPhoto: UIImageView!
     @IBOutlet weak var essentalTitle: UILabel!
     @IBOutlet weak var essentalDes: UILabel!
     
-    var imageEssentaltSet: UIImage?
-    var nameEssentalSet: String?
-    var desEssentalSet: String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        essentalPhoto.layer.cornerRadius = 35
-        
-        essentalPhoto.image = imageEssentaltSet
-        essentalTitle.text = nameEssentalSet
-        essentalDes.text = desEssentalSet
+        // for Set details
+        essentalPhoto.image = selectedSetData.photo
+        essentalTitle.text = selectedSetData.title
+        essentalDes.text = selectedSetData.details
     }
 }
