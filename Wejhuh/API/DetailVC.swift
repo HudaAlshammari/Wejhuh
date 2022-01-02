@@ -16,7 +16,7 @@ class DetailVC: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
     
-    @IBOutlet weak var textView: UITextView!
+
     
     var item : Item?
     
@@ -29,8 +29,7 @@ class DetailVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         titleLabel.text = ""
-        dateLabel.text = ""
-        textView.text = ""
+//        dateLabel.text = ""
         
         guard item != nil else {
             return
@@ -45,12 +44,9 @@ class DetailVC: UIViewController {
         titleLabel.text = item!.snippet.title
         
         
-        let df = DateFormatter()
-        df.dateFormat = "EEEE, MMM d, yyyy"
-        dateLabel.text = df.string(from: item!.snippet.publishedAt)
-        
-        
-        textView.text = item!.snippet.snippetDescription
+//        let df = DateFormatter()
+//        df.dateFormat = "EEEE, MMM d, yyyy"
+//        dateLabel.text = df.string(from: item!.snippet.publishedAt)
     }
 
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController , UITableViewDataSource , UITableViewDelegate , ModelDelegate{
+class VideoVC : UIViewController , UITableViewDataSource , UITableViewDelegate , ModelDelegate{
     
     @IBOutlet weak var tableViewVideos: UITableView!
     

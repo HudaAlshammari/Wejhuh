@@ -21,7 +21,7 @@ class Discover: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Formats for CollectionView
-        detailsImage.layer.cornerRadius = 35
+        detailsImage.layer.cornerRadius = 40
         
         // for Set details
         detailsImage.image = selectedSetData.photo

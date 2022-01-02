@@ -9,7 +9,7 @@ import Foundation
 
 struct Response : Decodable {
     
-    var items:[Video]?
+    var items:[Item]?
     
     enum CodingKyes:String, CodingKey {
         case items
@@ -17,6 +17,6 @@ struct Response : Decodable {
     
     init (from decoder : Decoder) throws{
         let container = try decoder.container(keyedBy: CodingKyes.self)
-        self.items = try container.decode([Video].self , forKey: .items)
+        self.items = try container.decode([Item].self , forKey: .items)
     }
 }

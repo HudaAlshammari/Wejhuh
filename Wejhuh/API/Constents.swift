@@ -16,4 +16,4 @@ struct Constents {
     static var videoCellId = "VideoCell"
     static var YTembedURL = "https://www.youtube.com/embed/"
 }
-//[YOUR_API_KEY]
+
