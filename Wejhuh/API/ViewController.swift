@@ -12,7 +12,7 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
     @IBOutlet weak var tableViewVideos: UITableView!
     
     var model = Model()
-    var videos = [Video]()
+    var videos = [Item]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +22,12 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
         
         
         model.gitVideos()
+        
     }
     //ModelDelegate
-    func videosFetched(_ videos: [Video]) {
+    func videosFetched(_ videos: [Item]) {
+        print(videos)
         self.videos = videos
-    
-        
-        
         tableViewVideos.reloadData()
     }
     
@@ -39,7 +38,7 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constents.videoCellId , for: indexPath)
-        let title = self.videos[indexPath.row].title
+        let title = self.videos[indexPath.row].snippet.title
         cell.textLabel?.text = title
         return cell
     }

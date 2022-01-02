@@ -11,7 +11,7 @@ import Foundation
 
 
 protocol ModelDelegate {
-    func videosFetched(_ videos:[Video])
+    func videosFetched(_ videos:[Item])
 }
 
 
@@ -31,27 +31,32 @@ class Model {
         
         let dataTask = session.dataTask(with: url!) { (data , response , error) in
             
+            
             if error != nil || data == nil {
+                print(error)
                 return
             }
             do {
+                
+                print(String(data: data!, encoding: .utf8) ?? "")
+                
                 let  decoder = JSONDecoder()
                 decoder.dataDecodingStrategy = .base64
                 
-                let response = try decoder.decode(Response.self, from: data!)
+                let response = try decoder.decode(VideoResponse.self, from: data!)
                 
                 if response.items != nil {
                     
                     DispatchQueue.main.async {
-                        self.delegate?.videosFetched(response.items!)
+                        self.delegate?.videosFetched(response.items)
                     }
                     
                 }
                 
-//                dump(response)
+               // dump(response)
             }
             catch {
-                
+                print(error)
             }
             
     }
