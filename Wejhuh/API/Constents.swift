@@ -14,5 +14,6 @@ struct Constents {
     static var API_URL = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=\(Constents.playListID)&key=\(Constents.API_Kay)"
     
     static var videoCellId = "VideoCell"
+    static var YTembedURL = "https://www.youtube.com/embed/"
 }
 //[YOUR_API_KEY]

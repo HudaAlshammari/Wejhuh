@@ -22,8 +22,21 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
         
         
         model.gitVideos()
-        
+
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard tableViewVideos.indexPathForSelectedRow != nil else {
+            return
+        }
+        let selectedVideo = videos[tableViewVideos.indexPathForSelectedRow!.row]
+        
+        let detailVC = segue.destination as! DetailVC
+        
+        detailVC.item = selectedVideo
+    }
+    
     //ModelDelegate
     func videosFetched(_ videos: [Item]) {
         print(videos)
@@ -33,16 +46,21 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        print("the videos \(videos.count)")
         return videos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constents.videoCellId , for: indexPath)
-        let title = self.videos[indexPath.row].snippet.title
-        cell.textLabel?.text = title
+//        print("the videos cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constents.videoCellId , for: indexPath) as! VideoTableViewCell
+        let video = self.videos[indexPath.row]
+        cell.setCell(video)
+        
         return cell
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 }
+//textLabel?.text = title
