@@ -5,7 +5,7 @@
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - VideoResponse
 struct VideoResponse: Codable {
     let kind, etag, nextPageToken: String
     let items: [Item]

@@ -63,4 +63,4 @@ class VideoVC : UIViewController , UITableViewDataSource , UITableViewDelegate ,
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 }
-//textLabel?.text = title
+

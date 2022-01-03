@@ -16,6 +16,9 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     // MARK: -CORE DATA
     
     var myFavoriteModel: [TripsList] = []
+    
+    
+    var dddd : EventDetails?
     //SAVE CORE DATA
     let persistentContainer : NSPersistentContainer = {
         let container = NSPersistentContainer(name: "FavoriteModel")
@@ -64,14 +67,14 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     
     // Fill in the array with data
     func setSee(){
-        favorite.append(Event(name: "Sea Experiences", city: "Jeddah", photo : "Sea Experiences"))
-        favorite.append(Event(name: "Formula", city: "Jeddah", photo :  "Formula"))
-        favorite.append(Event(name: "Athra", city: "Khobar", photo :  "Athra"))
-        favorite.append(Event(name: "Dakar Rally", city: "Around the country" , photo :"Dakar Rally"))
-        favorite.append(Event(name: "Safari", city: "Riyadh", photo :  "Safari"))
-        favorite.append(Event(name: "Khobar Corniche", city: "Khobar", photo :  "Khobar Corniche"))
-        favorite.append(Event(name: "Combat Filed", city: "Riyadh", photo : "Combat Filed"))
-        favorite.append(Event(name: "Dakakin", city: "Riyadh", photo :  "Dakakin"))
+        favorite.append(Event(name: "Sea Experiences", city: "Jeddah", photo : "Sea Experiences", photo2: UIImage(named: "Riyadh3")! , from: "11", to: "55", starting: "lflef", ending: "voo", audince: "kffkr", eventDetalis: "kfkdfkf"))
+//        favorite.append(Event(name: "Formula", city: "Jeddah", photo :  "Formula" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
+//        favorite.append(Event(name: "Athra", city: "Khobar", photo :  "Athra" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
+//        favorite.append(Event(name: "Dakar Rally", city: "Around the country" , photo :"Dakar Rally" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
+//        favorite.append(Event(name: "Safari", city: "Riyadh", photo :  "Safari" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
+//        favorite.append(Event(name: "Khobar Corniche", city: "Khobar", photo :  "Khobar Corniche" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
+//        favorite.append(Event(name: "Combat Filed", city: "Riyadh", photo : "Combat Filed" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
+//        favorite.append(Event(name: "Dakakin", city: "Riyadh", photo :  "Dakakin" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
     }
     
     
@@ -97,7 +100,8 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     
     //function that is didSelect on the cells
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        selectedSee = favorite[indexPath.row]
+        let events = favorite[indexPath.row]
+        dddd = EventDetails(photo: events.photo2, name: events.name, from: events.from, to: events.to, starting: events.starting, ending: events.ending, audince: events.audince, overview: events.eventDetalis)
         performSegue(withIdentifier: Segues.toSeeMore.rawValue , sender: nil)
     }
     
@@ -132,7 +136,6 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
         }
     }
 }
-
 
 
 

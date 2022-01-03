@@ -38,6 +38,24 @@ struct Event {
     let name : String
     let city : String
     let photo : String
+    let photo2 : UIImage
+    let from : String
+    let to : String
+    let starting : String
+    let ending : String
+    let audince : String
+    let eventDetalis : String
+}
+
+struct EventDetails {
+    let photo : UIImage
+    let name : String
+    let from : String
+    let to : String
+    let starting : String
+    let ending : String
+    let audince : String
+    let overview : String
 }
 //Essental
 struct Essental {

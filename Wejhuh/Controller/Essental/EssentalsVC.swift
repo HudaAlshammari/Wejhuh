@@ -67,9 +67,9 @@ class EssentalsVC: UIViewController , UICollectionViewDelegate , UICollectionVie
                                      details: ""))
         essentaltSet.append(Essental(Title: "About  eVisa",
                                      photo: UIImage(named: "essentals6")!,
-                                     photo2: UIImage(named: "essentals6")!,
+                                     photo2: UIImage(named: "111111111")!,
                                      dec: "The Kingdom of Saudi Arabia has ..",
-                                     details: ""))
+                                     details: "The Kingdom of Saudi Arabia has opened its doors to visitors from all over the world with the electronic visa system as of September 2019. Visitors can obtain a one-year entry visa that entitles them to enter the country multiple times and allows them to stay for a maximum of 90 days during its validity period. This visa can be used for tourism and Umrah activities (except for the Hajj season), and it does not include other activities such as studying .. \nEligible for a visa Tourists from the 49 eligible countries can apply for a tourist visa online through the quick and easy-to-use e-Visa platform before traveling, or upon arrival in Saudi Arabia through the visa offices of the Immigration Department."))
     }
     
     
