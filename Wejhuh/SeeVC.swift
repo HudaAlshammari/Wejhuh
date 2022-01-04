@@ -37,7 +37,7 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     @IBOutlet weak var seeCollectionView: UICollectionView!
     
     //Variable to fill in details
-    var selectedSee : Event?
+//    var selectedSee : Event?
     
     //Variable to
     var myFavorite = [String]()
@@ -67,7 +67,7 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     
     // Fill in the array with data
     func setSee(){
-        favorite.append(Event(name: "Sea Experiences", city: "Jeddah", photo : "Sea Experiences", photo2: UIImage(named: "Riyadh3")! , from: "11", to: "55", starting: "lflef", ending: "voo", audince: "kffkr", eventDetalis: "kfkdfkf"))
+        favorite.append(Event(name: "Sea Experiences", city: "Jeddah", photo : "Sea Experiences", photo2: UIImage(named: "Riyadh3")! , from: "4:00 PM", to: "12:00AM", starting: "3 OCT 2021", ending: "11 JAN 2021 ", audince: ".....", eventDetalis: "...."))
 //        favorite.append(Event(name: "Formula", city: "Jeddah", photo :  "Formula" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
 //        favorite.append(Event(name: "Athra", city: "Khobar", photo :  "Athra" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
 //        favorite.append(Event(name: "Dakar Rally", city: "Around the country" , photo :"Dakar Rally" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
@@ -87,6 +87,7 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     
     //function to select the elements of an array
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SeeCell
         let data = favorite[indexPath.row]
         cell.setupCell(photo: data.photo, city : data.city , name: data.name)
@@ -100,6 +101,7 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     
     //function that is didSelect on the cells
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        
         let events = favorite[indexPath.row]
         dddd = EventDetails(photo: events.photo2, name: events.name, from: events.from, to: events.to, starting: events.starting, ending: events.ending, audince: events.audince, overview: events.eventDetalis)
         performSegue(withIdentifier: Segues.toSeeMore.rawValue , sender: nil)

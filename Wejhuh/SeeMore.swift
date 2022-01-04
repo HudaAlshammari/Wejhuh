@@ -10,7 +10,7 @@ import CoreData
 
 class SeeMore: UIViewController {
 
-    var selectedData : EventDetails!
+    var selectedData : EventDetails?
     
     
     //Outlet of items of CollectionView
@@ -43,14 +43,14 @@ class SeeMore: UIViewController {
         //Formats for cell
         seeImge.layer.cornerRadius = 35
         
-        seeImge.image = selectedData.photo
-        seeName.text = selectedData.name
-        from.text = selectedData.from
-        to.text = selectedData.to
-        starting.text = selectedData.starting
-        ending.text = selectedData.ending
-        audience.text = selectedData.audince
-        overview.text = selectedData.overview
+        seeImge.image = selectedData?.photo
+        seeName.text = selectedData?.name
+        from.text = selectedData?.from
+        to.text = selectedData?.to
+        starting.text = selectedData?.starting
+        ending.text = selectedData?.ending
+        audience.text = selectedData?.audince
+        overview.text = selectedData?.overview
         
     }
 }

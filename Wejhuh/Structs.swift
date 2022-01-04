@@ -61,9 +61,9 @@ struct EventDetails {
 struct Essental {
     var Title : String
     var photo : UIImage
-    var photo2 : UIImage
+//    var photo2 : UIImage
     var dec : String
-    var details : String
+//    var details : String
 }
 
 //struct to put details
