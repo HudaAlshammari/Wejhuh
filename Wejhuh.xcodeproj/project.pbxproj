@@ -118,6 +118,7 @@
 				4F8C5AFC27620A8800D24189 /* Auth */,
 				4F5B8B45275E7AD300AEAC0A /* DiscoverVC.swift */,
 				4F60332827672CAE008EE389 /* Discover.swift */,
+				4F653CF2275F78CC0002AB9B /* DiscoverCell.swift */,
 				4F60332A27673CCF008EE389 /* Essental */,
 				4F4D6932276F22E900C95EFA /* Cells */,
 				4F4D6933276F232E00C95EFA /* Core Data */,
@@ -128,7 +129,6 @@
 		4F4D6932276F22E900C95EFA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4F653CF2275F78CC0002AB9B /* DiscoverCell.swift */,
 				4F8C5AFA2761F97800D24189 /* NaturalCitiesCell.swift */,
 				4FFC73082765CCAA00258F98 /* AncientCitiesCell.swift */,
 			);
@@ -176,8 +176,8 @@
 				4F5B8B4F275E7AD400AEAC0A /* Info.plist */,
 				4F653CF0275F61D70002AB9B /* GoogleService-Info.plist */,
 				4FFC730A2765E46400258F98 /* SeeVC.swift */,
-				4FFC730C2765E5D300258F98 /* SeeCell.swift */,
 				4F4D6936276F5BAD00C95EFA /* SeeMore.swift */,
+				4FFC730C2765E5D300258F98 /* SeeCell.swift */,
 				4F1DB38C276B6513008BA931 /* MyTrip.swift */,
 				4F417C21276E01B60090DCAF /* FavoriteListCell.swift */,
 				4F4D6934276F25AD00C95EFA /* Structs.swift */,

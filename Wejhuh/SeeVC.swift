@@ -18,7 +18,7 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     var myFavoriteModel: [TripsList] = []
     
     
-    var dddd : EventDetails?
+    var selectedDetails : EventDetails?
     //SAVE CORE DATA
     let persistentContainer : NSPersistentContainer = {
         let container = NSPersistentContainer(name: "FavoriteModel")
@@ -65,17 +65,95 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     //Array of pictures, names and details
     var favorite = [Event]()
     
+    
     // Fill in the array with data
     func setSee(){
-        favorite.append(Event(name: "Sea Experiences", city: "Jeddah", photo : "Sea Experiences", photo2: UIImage(named: "Riyadh3")! , from: "4:00 PM", to: "12:00AM", starting: "3 OCT 2021", ending: "11 JAN 2021 ", audince: ".....", eventDetalis: "...."))
-//        favorite.append(Event(name: "Formula", city: "Jeddah", photo :  "Formula" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
-//        favorite.append(Event(name: "Athra", city: "Khobar", photo :  "Athra" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
-//        favorite.append(Event(name: "Dakar Rally", city: "Around the country" , photo :"Dakar Rally" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
-//        favorite.append(Event(name: "Safari", city: "Riyadh", photo :  "Safari" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
-//        favorite.append(Event(name: "Khobar Corniche", city: "Khobar", photo :  "Khobar Corniche" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
-//        favorite.append(Event(name: "Combat Filed", city: "Riyadh", photo : "Combat Filed" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
-//        favorite.append(Event(name: "Dakakin", city: "Riyadh", photo :  "Dakakin" , from: <#T##String#>, to: <#T##String#>, starting: <#T##String#>, ending: <#T##String#>, audince: <#T##String#>, eventDetalis: <#T##String#>))
+        favorite.append(Event(name: "Sea Experiences",
+                              city: "Jeddah",
+                              photo : "Sea Experiences",
+                              photo2: "Riyadh3" ,
+                              from: "4:00 PM",
+                              to: "12:00AM",
+                              starting: "3 OCT 2021",
+                              ending: "11 JAN 2021 ",
+                              season: "All Season",
+                              audince: "All",
+                              eventDetalis: "This development phase is the largest development phase of the Jeddah waterfront, and there are services and elements that have been added for the first time at the level of Jeddah waterfronts, equipped with services suitable for all groups and ages .. "))
+        favorite.append(Event(name: "Formula",
+                              city: "Jeddah",
+                              photo :  "Formula",
+                              photo2: "Riyadh3" ,
+                              from: "",
+                              to: "",
+                              starting: "",
+                              ending: "",
+                              season: "",
+                              audince: "",
+                              eventDetalis: ""))
+        favorite.append(Event(name: "Athra",
+                              city: "Khobar",
+                              photo :  "Athra",
+                              photo2: "Riyadh3" ,
+                              from: ".....",
+                              to: ".....",
+                              starting: ".....",
+                              ending: "",
+                              season: "",
+                              audince: "",
+                              eventDetalis: ""))
+        favorite.append(Event(name: "Dakar Rally",
+                              city: "Around the country" ,
+                              photo :"Dakar Rally",
+                              photo2: "Riyadh3" ,
+                              from: ".....",
+                              to: ".....",
+                              starting: ".....",
+                              ending: ".....",
+                              season: "",
+                              audince: ".....",
+                              eventDetalis: "....."))
+        favorite.append(Event(name: "Safari",
+                              city: "Riyadh",
+                              photo :  "Safari",
+                              photo2: "Riyadh3" ,
+                              from: ".....",
+                              to: ".....",
+                              starting: ".....",
+                              ending: ".....", season: "",
+                              audince: ".....",
+                              eventDetalis: "....."))
+        favorite.append(Event(name: "Khobar Corniche",
+                              city: "Khobar",
+                              photo :  "Khobar Corniche",
+                              photo2: "Riyadh3" ,
+                              from: ".....",
+                              to: ".....",
+                              starting: ".....",
+                              ending: ".....", season: "",
+                              audince: ".....",
+                              eventDetalis: "....."))
+        favorite.append(Event(name: "Combat Filed",
+                              city: "Riyadh",
+                              photo : "Combat Filed",
+                              photo2: "Riyadh3",
+                              from: ".....",
+                              to: ".....",
+                              starting: ".....",
+                              ending: ".....", season: "",
+                              audince: ".....",
+                              eventDetalis: "....."))
+        favorite.append(Event(name: "Dakakin",
+                              city: "Riyadh",
+                              photo :  "Dakakin",
+                              photo2: "Riyadh3" ,
+                              from: ".....",
+                              to: ".....",
+                              starting: ".....",
+                              ending: ".....", season: "",
+                              audince: ".....",
+                              eventDetalis: "....."))
     }
+    
     
     
     // MARK: - functions
@@ -103,8 +181,15 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         
         let events = favorite[indexPath.row]
-        dddd = EventDetails(photo: events.photo2, name: events.name, from: events.from, to: events.to, starting: events.starting, ending: events.ending, audince: events.audince, overview: events.eventDetalis)
+        selectedDetails = EventDetails(photo: events.photo2, name: events.name, from: events.from, to: events.to, starting: events.starting, ending: events.ending, season: events.season , audince: events.audince, overview: events.eventDetalis)
         performSegue(withIdentifier: Segues.toSeeMore.rawValue , sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segues.toSeeMore.rawValue {
+            let dest = segue.destination as! SeeMore
+            dest.selectedData = selectedDetails
+        }
     }
     
     

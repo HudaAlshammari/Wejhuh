@@ -10,7 +10,7 @@ import CoreData
 
 class SeeMore: UIViewController {
 
-    var selectedData : EventDetails?
+    var selectedData : EventDetails!
     
     
     //Outlet of items of CollectionView
@@ -30,6 +30,7 @@ class SeeMore: UIViewController {
     @IBOutlet weak var audience: UILabel!
     @IBOutlet weak var season: UILabel!
     
+    
     @IBOutlet weak var overview: UILabel!
     
     
@@ -43,15 +44,15 @@ class SeeMore: UIViewController {
         //Formats for cell
         seeImge.layer.cornerRadius = 35
         
-        seeImge.image = selectedData?.photo
-        seeName.text = selectedData?.name
-        from.text = selectedData?.from
-        to.text = selectedData?.to
-        starting.text = selectedData?.starting
-        ending.text = selectedData?.ending
-        audience.text = selectedData?.audince
-        overview.text = selectedData?.overview
-        
+        seeImge.image = UIImage(named: selectedData.photo)
+        seeName.text = selectedData.name
+        from.text = selectedData.from
+        to.text = selectedData.to
+        starting.text = selectedData.starting
+        ending.text = selectedData.ending
+        season.text = selectedData.season
+        audience.text = selectedData.audince
+        overview.text = selectedData.overview
     }
 }
 

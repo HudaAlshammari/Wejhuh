@@ -38,22 +38,24 @@ struct Event {
     let name : String
     let city : String
     let photo : String
-    let photo2 : UIImage
+    let photo2 : String
     let from : String
     let to : String
     let starting : String
     let ending : String
+    let season : String
     let audince : String
     let eventDetalis : String
 }
 
 struct EventDetails {
-    let photo : UIImage
+    let photo : String
     let name : String
     let from : String
     let to : String
     let starting : String
     let ending : String
+    let season : String
     let audince : String
     let overview : String
 }
