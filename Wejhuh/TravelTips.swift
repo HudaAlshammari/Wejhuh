@@ -39,13 +39,13 @@ class TravelTips: UIViewController {
     
 
     @IBAction func mawidButton(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://visa.visitsaudi.com/?_ga=2.9985461.1077917050.1641209048-1425944593.1639381947")! as URL , options: [:], completionHandler: nil)
+        UIApplication.shared.open(URL(string: "https://www.moh.gov.sa/eServices/Pages/cassystem.aspx")! as URL , options: [:], completionHandler: nil)
     }
     
     
     
     
     @IBAction func ministryOfHealthButton(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://visa.visitsaudi.com/?_ga=2.9985461.1077917050.1641209048-1425944593.1639381947")! as URL , options: [:], completionHandler: nil)
+        UIApplication.shared.open(URL(string: "https://www.moh.gov.sa/Pages/default.aspx")! as URL , options: [:], completionHandler: nil)
     }
 }

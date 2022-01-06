@@ -41,34 +41,38 @@ class EssentalsVC: UIViewController , UICollectionViewDelegate , UICollectionVie
     // MARK: - Fill in the array with data
     func setEssentals(){
         essentaltSet.append(Essental(Title: "Safety travel tips",
-                                     photo: UIImage(named: "essentals1")!,
-//                                     photo2: UIImage(named: "essentals1")!,
+                                     photo: UIImage(named: "culture")!,
                                      dec: "stay informed .."))
-//                                     details: "kxmmlwqmwzl"
-        essentaltSet.append(Essental(Title: "Laws and etiqutte",
-                                     photo: UIImage(named: "essentals2")!,
-//                                     photo2: UIImage(named: "essentals2")!,
-                                     dec: "It is a rule in Saudi Arabia .."))
-//                                     details: ""))
-        essentaltSet.append(Essental(Title: "The seasonse and climate in KSA",
-                                     photo: UIImage(named: "essentals3")!,
-//                                     photo2: UIImage(named: "essentals3")!,
-                                     dec: "The spring season in the Kingdom .." ))
-//                                     details: ""))
-        essentaltSet.append(Essental(Title: "The culuter and language of KSA",
-                                     photo: UIImage(named: "essentals4")!,
-//                                     photo2: UIImage(named: "essentals4")!,
-                                     dec: "language in the Kingdom of .."))
-//                                     details: ""))
+        
         essentaltSet.append(Essental(Title: "Saudi currency and payments",
-                                     photo: UIImage(named: "essentals5")!,
+                                     photo: UIImage(named: "1212")!,
 //                                     photo2: UIImage(named: "essentals5")!,
                                      dec: "Currency exchange and transactions .."))
-//                                     details: ""))
+        
         essentaltSet.append(Essental(Title: "About  eVisa",
-                                     photo: UIImage(named: "essentals6")!,
+                                     photo: UIImage(named: "piano")!,
 //                                     photo2: UIImage(named: "111111111")!,
                                      dec: "The Kingdom of Saudi Arabia has .."))
+        
+        
+//        essentaltSet.append(Essental(Title: "Laws and etiqutte",
+//                                     photo: UIImage(named: "essentals2")!,
+////                                     photo2: UIImage(named: "essentals2")!,
+//                                     dec: "It is a rule in Saudi Arabia .."))
+////                                     details: ""))
+//        essentaltSet.append(Essental(Title: "The seasonse and climate in KSA",
+//                                     photo: UIImage(named: "essentals3")!,
+////                                     photo2: UIImage(named: "essentals3")!,
+//                                     dec: "The spring season in the Kingdom .." ))
+////                                     details: ""))
+//        essentaltSet.append(Essental(Title: "The culuter and language of KSA",
+//                                     photo: UIImage(named: "essentals4")!,
+////                                     photo2: UIImage(named: "essentals4")!,
+//                                     dec: "language in the Kingdom of .."))
+////                                     details: ""))
+//
+////                                     details: ""))
+        
 //                                     details: "The Kingdom of Saudi Arabia has opened its doors to visitors from all over the world with the electronic visa system as of September 2019. Visitors can obtain a one-year entry visa that entitles them to enter the country multiple times and allows them to stay for a maximum of 90 days during its validity period. This visa can be used for tourism and Umrah activities (except for the Hajj season), and it does not include other activities such as studying .. \nEligible for a visa Tourists from the 49 eligible countries can apply for a tourist visa online through the quick and easy-to-use e-Visa platform before traveling, or upon arrival in Saudi Arabia through the visa offices of the Immigration Department."))
     }
     
@@ -93,19 +97,19 @@ class EssentalsVC: UIViewController , UICollectionViewDelegate , UICollectionVie
 //        let essental = essentaltSet[indexPath.row]
         switch indexPath.row {
         case 0 :
-            performSegue(withIdentifier: "mmm", sender: nil)
+            performSegue(withIdentifier: "SafetyTravelTips", sender: nil)
         case 1 :
-            performSegue(withIdentifier: "nnn", sender: nil)
+            performSegue(withIdentifier: "SaudiCurrency", sender: nil)
         case 2 :
-            performSegue(withIdentifier: "bbb", sender: nil)
-        case 3 :
-            performSegue(withIdentifier: "Features", sender: nil)
-        case 4 :
-            performSegue(withIdentifier: "majors", sender: nil)
-        case 5 :
-            performSegue(withIdentifier: "Steps", sender: nil)
-        case 6 :
-            performSegue(withIdentifier: "success", sender: nil)
+            performSegue(withIdentifier: "AboutVisa", sender: nil)
+//        case 3 :
+//            performSegue(withIdentifier: "Features", sender: nil)
+//        case 4 :
+//            performSegue(withIdentifier: "majors", sender: nil)
+//        case 5 :
+//            performSegue(withIdentifier: "Steps", sender: nil)
+//        case 6 :
+//            performSegue(withIdentifier: "success", sender: nil)
         default :
             performSegue(withIdentifier: "...", sender: nil)
         }
