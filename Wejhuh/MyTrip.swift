@@ -83,12 +83,4 @@ class MyTrip: UIViewController , UICollectionViewDelegate , UICollectionViewData
     }
 
     
-    @IBAction func editng(_ sender: UIBarButtonItem) {
-        if favotiteList.isEditing {
-            favotiteList.isEditing = false
-        } else {
-            favotiteList.isEditing = true
-        }
-    }
-    
 }

@@ -178,11 +178,10 @@
 				4FFC730A2765E46400258F98 /* SeeVC.swift */,
 				4F4D6936276F5BAD00C95EFA /* SeeMore.swift */,
 				4FFC730C2765E5D300258F98 /* SeeCell.swift */,
+				4F4D6934276F25AD00C95EFA /* Structs.swift */,
 				4F1DB38C276B6513008BA931 /* MyTrip.swift */,
 				4F417C21276E01B60090DCAF /* FavoriteListCell.swift */,
-				4F4D6934276F25AD00C95EFA /* Structs.swift */,
 				4F7132D92780DE7A00B98A4D /* API */,
-				4F29253327846BC4004FC338 /* TravelTips.swift */,
 			);
 			path = Wejhuh;
 			sourceTree = "<group>";
@@ -194,6 +193,7 @@
 				4FD4AF602763B5AB0095152F /* EssentalsCell.swift */,
 				4F29252F27842354004FC338 /* Currency.swift */,
 				4F29253127843A9E004FC338 /* Visa.swift */,
+				4F29253327846BC4004FC338 /* TravelTips.swift */,
 			);
 			path = Essental;
 			sourceTree = "<group>";

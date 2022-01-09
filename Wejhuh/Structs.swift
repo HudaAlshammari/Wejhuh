@@ -46,6 +46,9 @@ struct Event {
     let season : String
     let audince : String
     let eventDetalis : String
+    let latitude : String
+    let longitude : String
+    
 }
 
 struct EventDetails {
@@ -58,7 +61,12 @@ struct EventDetails {
     let season : String
     let audince : String
     let overview : String
+    
+    let latitude : String
+    let longitude : String
 }
+
+
 //Essental
 struct Essental {
     var Title : String

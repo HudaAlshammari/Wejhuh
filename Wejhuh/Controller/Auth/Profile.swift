@@ -12,12 +12,26 @@ import FirebaseAuth
 
 // MARK: - Profile
 class Profile: UIViewController {
+    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
+    
+
+    @IBOutlet weak var languageButton: UIButton!
+    
+    
     var profile : User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        languageButton.layer.shadowColor = UIColor.placeholderText.cgColor
+        languageButton.layer.shadowOpacity = 1
+        languageButton.layer.shadowOffset = .zero
+        languageButton.layer.shadowRadius = 1
+        
+        
 
+        
         // for save certain data on the Internet
         UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") {profile in
             self.profile = profile
@@ -40,4 +54,7 @@ class Profile: UIViewController {
          print("Error signing out: %@", signOutError)
        }
     }
+    
+    
+   
 }

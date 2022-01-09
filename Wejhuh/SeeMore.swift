@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import MapKit
 
 class SeeMore: UIViewController {
 
@@ -34,9 +35,16 @@ class SeeMore: UIViewController {
     @IBOutlet weak var overview: UILabel!
     
     
+    @IBOutlet weak var location: MKMapView!
+    
+    
     var selectedArrayTrips : Trips!
     var arrayTrip = [Trips]()
     var curentImageName: String?
+    
+    var lat = ""
+    var lon = ""
+    
     
     
     override func viewDidLoad() {
@@ -53,6 +61,11 @@ class SeeMore: UIViewController {
         season.text = selectedData.season
         audience.text = selectedData.audince
         overview.text = selectedData.overview
+        
+        lat = selectedData.latitude
+        lon = selectedData.longitude
+        
+        
     }
 }
 

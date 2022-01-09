@@ -44,36 +44,23 @@ class EssentalsVC: UIViewController , UICollectionViewDelegate , UICollectionVie
                                      photo: UIImage(named: "culture")!,
                                      dec: "stay informed .."))
         
-        essentaltSet.append(Essental(Title: "Saudi currency and payments",
-                                     photo: UIImage(named: "1212")!,
-//                                     photo2: UIImage(named: "essentals5")!,
-                                     dec: "Currency exchange and transactions .."))
-        
         essentaltSet.append(Essental(Title: "About  eVisa",
                                      photo: UIImage(named: "piano")!,
 //                                     photo2: UIImage(named: "111111111")!,
                                      dec: "The Kingdom of Saudi Arabia has .."))
         
+        essentaltSet.append(Essental(Title: "Saudi currency and payments",
+                                     photo: UIImage(named: "currency")!,
+//                                     photo2: UIImage(named: "essentals5")!,
+                                     dec: "Currency exchange and transactions .."))
         
-//        essentaltSet.append(Essental(Title: "Laws and etiqutte",
-//                                     photo: UIImage(named: "essentals2")!,
-////                                     photo2: UIImage(named: "essentals2")!,
-//                                     dec: "It is a rule in Saudi Arabia .."))
-////                                     details: ""))
-//        essentaltSet.append(Essental(Title: "The seasonse and climate in KSA",
-//                                     photo: UIImage(named: "essentals3")!,
-////                                     photo2: UIImage(named: "essentals3")!,
-//                                     dec: "The spring season in the Kingdom .." ))
-////                                     details: ""))
-//        essentaltSet.append(Essental(Title: "The culuter and language of KSA",
-//                                     photo: UIImage(named: "essentals4")!,
-////                                     photo2: UIImage(named: "essentals4")!,
-//                                     dec: "language in the Kingdom of .."))
-////                                     details: ""))
-//
-////                                     details: ""))
+       
         
-//                                     details: "The Kingdom of Saudi Arabia has opened its doors to visitors from all over the world with the electronic visa system as of September 2019. Visitors can obtain a one-year entry visa that entitles them to enter the country multiple times and allows them to stay for a maximum of 90 days during its validity period. This visa can be used for tourism and Umrah activities (except for the Hajj season), and it does not include other activities such as studying .. \nEligible for a visa Tourists from the 49 eligible countries can apply for a tourist visa online through the quick and easy-to-use e-Visa platform before traveling, or upon arrival in Saudi Arabia through the visa offices of the Immigration Department."))
+        
+        essentaltSet.append(Essental(Title: "Saudi Heritage Journey to UNESCO",
+                                     photo: UIImage(named: "UNESCO")!,
+//                                     photo2: UIImage(named: "essentals2")!,
+                                     dec: "The trip of Saudi heritage to UNESCO was not a picnic .."))
     }
     
     
@@ -99,33 +86,16 @@ class EssentalsVC: UIViewController , UICollectionViewDelegate , UICollectionVie
         case 0 :
             performSegue(withIdentifier: "SafetyTravelTips", sender: nil)
         case 1 :
-            performSegue(withIdentifier: "SaudiCurrency", sender: nil)
-        case 2 :
             performSegue(withIdentifier: "AboutVisa", sender: nil)
-//        case 3 :
-//            performSegue(withIdentifier: "Features", sender: nil)
-//        case 4 :
-//            performSegue(withIdentifier: "majors", sender: nil)
-//        case 5 :
-//            performSegue(withIdentifier: "Steps", sender: nil)
-//        case 6 :
-//            performSegue(withIdentifier: "success", sender: nil)
+            
+        case 2 :
+            performSegue(withIdentifier: "SaudiCurrency", sender: nil)
+        case 3 :
+            performSegue(withIdentifier: "UNESCO", sender: nil)
         default :
             performSegue(withIdentifier: "...", sender: nil)
         }
-//        selectedDetails = SetDetails(photo: essental.photo2 , title: essental.Title
-//                                     , details: essental.details)
-//        performSegue(withIdentifier: Segues.toEssentals.rawValue , sender: nil)
     }
-    
-    // prepare segue
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == Segues.toEssentals.rawValue {
-////            let dest = segue.destination as! Essentals
-////            dest.selectedSetData = selectedDetails
-//        }
-//    }
-    
     
     // MARK: - buttons
     

@@ -57,17 +57,7 @@ class SeeCell: UICollectionViewCell {
     
     // button for add to list of trips
     @IBAction func addFavoritePlaces(_ sender: UIButton) {
-        
-//        let ccc = fetchAllLists()
-//        for nnn in ccc{
-//            if nnn.name == selectedArrayTrips.name {
-////                let alart = UIAlertController(title: "knaznkkzak", message: "hh", preferredStyle: .alert)
-////                alart.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
-////
-//                return
-//            }
-//        }
-        
+
         UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { user in
             DispatchQueue.main.async {
                 self.myFavorite =  user.trips ?? [""]
