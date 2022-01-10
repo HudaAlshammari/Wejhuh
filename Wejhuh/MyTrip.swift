@@ -12,6 +12,7 @@ import FirebaseAuth
 class MyTrip: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource {
     
     
+    
     // MARK: -CORE DATA
     var myFavoriteModel: [TripsList] = []
 
@@ -82,5 +83,4 @@ class MyTrip: UIViewController , UICollectionViewDelegate , UICollectionViewData
         }
     }
 
-    
 }

@@ -19,6 +19,7 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     
     
     var selectedDetails : EventDetails?
+    
     //SAVE CORE DATA
     let persistentContainer : NSPersistentContainer = {
         let container = NSPersistentContainer(name: "FavoriteModel")
@@ -40,7 +41,7 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     @IBOutlet weak var search: UISearchBar!
     
     //Variable to fill in details
-//    var selectedSee : Event?
+    var selectedSee : Event?
     
     //Variable to
     var myFavorite = [String]()
@@ -53,8 +54,7 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
         filterdata = favorite
         search.delegate = self
         setSee()
-    
-        // MARK: - ================
+
         
         
         
@@ -218,7 +218,6 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SeeCell
         let data = favorite[indexPath.row]
         cell.setupCell(photo: data.photo, city : data.city , name: data.name)
-        
         cell.curentImageName = data.photo
         cell.btnAddToMyTrip.tag = indexPath.row
         

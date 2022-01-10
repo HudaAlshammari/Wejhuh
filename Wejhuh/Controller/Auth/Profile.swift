@@ -16,19 +16,35 @@ class Profile: UIViewController {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
     
-
-    @IBOutlet weak var languageButton: UIButton!
     
+    @IBOutlet weak var langaugeButton: UIButton!
+    
+    @IBOutlet weak var callButton: UIButton!
+    
+    
+    @IBOutlet weak var usefulContactsButton: UIButton!
     
     var profile : User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        languageButton.layer.shadowColor = UIColor.placeholderText.cgColor
-        languageButton.layer.shadowOpacity = 1
-        languageButton.layer.shadowOffset = .zero
-        languageButton.layer.shadowRadius = 1
+        langaugeButton.layer.shadowColor = UIColor.placeholderText.cgColor
+        langaugeButton.layer.shadowOpacity = 10
+        langaugeButton.layer.shadowOffset = .zero
+        langaugeButton.layer.shadowRadius = 3
+        langaugeButton.layer.cornerRadius = 8
         
+        callButton.layer.shadowColor = UIColor.placeholderText.cgColor
+        callButton.layer.shadowOpacity = 10
+        callButton.layer.shadowOffset = .zero
+        callButton.layer.shadowRadius = 3
+        callButton.layer.cornerRadius = 8
+        
+        usefulContactsButton.layer.shadowColor = UIColor.placeholderText.cgColor
+        usefulContactsButton.layer.shadowOpacity = 10
+        usefulContactsButton.layer.shadowOffset = .zero
+        usefulContactsButton.layer.shadowRadius = 3
+        usefulContactsButton.layer.cornerRadius = 8
         
 
         
@@ -55,6 +71,44 @@ class Profile: UIViewController {
        }
     }
     
+    // MARK: - language Button
     
-   
+    @IBAction func language(_ sender: Any) {
+        
+        let chengelangu = UIAlertController(title: NSLocalizedString("The application will be restarted", comment: ""), message: NSLocalizedString( "Choose your preferred language",comment: ""), preferredStyle: .actionSheet)
+           chengelangu.addAction(UIAlertAction(title: "Einglish", style: .default, handler: { action in
+             let currentlang = Locale.current.languageCode
+             let newLanguage = currentlang == "en" ? "ar" : "en"
+             UserDefaults.standard.setValue([newLanguage], forKey: "AppleLanguages")
+             exit(0)
+           }))
+           chengelangu.addAction(UIAlertAction(title: "عربي ", style: .default, handler: {action in
+             let currentlang = Locale.current.languageCode
+             let newLanguage = currentlang == "en" ? "ar" : "ar"
+             UserDefaults.standard.setValue([newLanguage], forKey: "AppleLanguages")
+             exit(0)
+           }))
+           chengelangu.addAction(UIAlertAction(title:NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
+           present(chengelangu, animated: true, completion: nil)
+    }
+    
+    
+    // MARK: - call Button
+    
+    @IBAction func call(_ sender: Any) {
+        
+        let myUrl = "tel://930"
+              // or outside scope use this
+              guard let url = URL(string: "\(myUrl)"), !url.absoluteString.isEmpty else { return }
+               UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
+    
+    @IBAction func usefulContacts(_ sender: Any) {
+        
+    }
+    
 }
+
+
+

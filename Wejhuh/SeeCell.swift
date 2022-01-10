@@ -16,6 +16,8 @@ class SeeCell: UICollectionViewCell {
     // MARK: -CORE DATA
     
     var selectedArrayTrips : Trips!
+    var selectedSee : Event!
+    
     var arrayTrip = [Trips]()
     let persistentContainer : NSPersistentContainer = {
        let container = NSPersistentContainer(name: "FavoriteModel")
@@ -58,6 +60,20 @@ class SeeCell: UICollectionViewCell {
     // button for add to list of trips
     @IBAction func addFavoritePlaces(_ sender: UIButton) {
 
+        let x = fetchAllLists()
+        for y in x {
+            if y.name == selectedSee?.name {
+                print("okay")
+            }
+        }
+        
+//        createNewList(eventName:selectedSee.name , eventPhoto: selectedSee.photo)
+//        let alart = UIAlertController(title: "", message: "asma", preferredStyle: .alert)
+//        alart.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+//
+        
+        
+        
         UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { user in
             DispatchQueue.main.async {
                 self.myFavorite =  user.trips ?? [""]
@@ -71,7 +87,7 @@ class SeeCell: UICollectionViewCell {
     
     
     // MARK: -CORE DATA
-    
+
     //to save data
     func createNewList(eventName: String, eventPhoto: String){
         let context = persistentContainer.viewContext
@@ -89,17 +105,17 @@ class SeeCell: UICollectionViewCell {
     
     
     
-//    // MARK: -CORE DATA
-//    
-//    // function to fetch the saved data
-//    func fetchAllLists() -> [TripsList] {
-//        let context = persistentContainer.viewContext
-//        var mmm : [TripsList] = []
-//        do {
-//            mmm = try context.fetch(TripsList.fetchRequest())
-//        } catch {
-//            print(error)
-//        }
-//        return mmm
-//    }
+    // MARK: -CORE DATA
+    
+    // function to fetch the saved data
+    func fetchAllLists() -> [TripsList] {
+        let context = persistentContainer.viewContext
+        var mmm : [TripsList] = []
+        do {
+            mmm = try context.fetch(TripsList.fetchRequest())
+        } catch {
+            print(error)
+        }
+        return mmm
+    }
 }
