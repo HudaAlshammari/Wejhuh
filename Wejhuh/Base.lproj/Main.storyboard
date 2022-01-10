@@ -758,7 +758,7 @@ To obtain the visa through the official website:</string>
                                                         <constraint firstAttribute="height" constant="112" id="LJB-b2-aua"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="30"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" name="ColorWriting"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Learn more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFd-Yl-PIv">
@@ -771,7 +771,7 @@ To obtain the visa through the official website:</string>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="26" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksu-JQ-NzH">
                                                     <rect key="frame" x="3" y="319" width="309" height="45"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" name="ColorWriting"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -802,7 +802,7 @@ To obtain the visa through the official website:</string>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="53A-cV-xOc"/>
-                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                        <color key="backgroundColor" name="view"/>
                         <constraints>
                             <constraint firstItem="fqu-qy-r2e" firstAttribute="leading" secondItem="53A-cV-xOc" secondAttribute="leading" id="0ls-wk-QXX"/>
                             <constraint firstItem="fqu-qy-r2e" firstAttribute="top" secondItem="LCo-Yh-2mv" secondAttribute="bottom" constant="4" id="7RG-ko-Kyy"/>
@@ -842,6 +842,7 @@ To obtain the visa through the official website:</string>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c5d-tP-iX1">
                                 <rect key="frame" x="20" y="386" width="374" height="45"/>
+                                <color key="backgroundColor" name="ColorCell"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="ptp-pl-Tgc"/>
                                 </constraints>
@@ -853,6 +854,7 @@ To obtain the visa through the official website:</string>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1YT-jL-kf5">
                                 <rect key="frame" x="20" y="294" width="374" height="45"/>
+                                <color key="backgroundColor" name="ColorCell"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="C9C-Fc-nmr"/>
                                 </constraints>
@@ -890,6 +892,7 @@ To obtain the visa through the official website:</string>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zaE-uG-5yL">
                                 <rect key="frame" x="20" y="470" width="374" height="45"/>
+                                <color key="backgroundColor" name="ColorCell"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="bm4-Ry-3Sn"/>
                                 </constraints>
@@ -1475,6 +1478,7 @@ To obtain the visa through the official website:</string>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nT8-JI-JFu">
                                 <rect key="frame" x="20" y="386" width="374" height="45"/>
+                                <color key="backgroundColor" name="ColorCell"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="bDl-xA-35A"/>
                                 </constraints>
@@ -1535,6 +1539,7 @@ To obtain the visa through the official website:</string>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYa-eU-bfU">
                                 <rect key="frame" x="20" y="294" width="374" height="45"/>
+                                <color key="backgroundColor" name="ColorCell"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="YIj-JP-P1a"/>
                                 </constraints>
@@ -2156,7 +2161,7 @@ To obtain the visa through the official website:</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qHw-Lg-AOj"/>
+        <segue reference="Oke-1L-ecN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="0B0D7B19-923F-469A-B230-B1B5EEA9677D_1_105_c" width="1078" height="729"/>
@@ -2200,9 +2205,6 @@ To obtain the visa through the official website:</string>
         <namedColor name="view">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>
-        <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
