@@ -108,16 +108,16 @@ class SeeCell: UICollectionViewCell {
     // MARK: -CORE DATA
     
     // function to
-    func fetchAllLists() -> [TripsList] {
-        let context = persistentContainer.viewContext
-        var trip : [TripsList] = []
-        do {
-            trip = try context.fetch(TripsList.fetchRequest())
-        } catch {
-            print(error)
-        }
-        return trip
-    }
+//    func fetchAllLists() -> [TripsList] {
+//        let context = persistentContainer.viewContext
+//        var trip : [TripsList] = []
+//        do {
+//            trip = try context.fetch(TripsList.fetchRequest())
+//        } catch {
+//            print(error)
+//        }
+//        return trip
+//    }
 }
 
 

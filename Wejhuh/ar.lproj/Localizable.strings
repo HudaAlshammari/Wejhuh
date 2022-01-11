@@ -6,41 +6,126 @@
   
 */
 
-"" = "" ;
+
 
 "Al-Suwdah" = "السوده";
-
 "Jabal Al-Soudah Abha is the highest mountain peak in the Kingdom that combines the magic of place and time. God has blessed him with a beautiful nature, amazing views, and unparalleled beauty. Its height is 3015 meters above sea level, and it is covered with dense forests of juniper trees that add to its splendor. The magic makes it the most famous tourist attraction in Abha .. \nAl-Soudah Abha is also characterized by moderate weather throughout the year, where temperatures during the summer reach 15 degrees Celsius, accompanied by rain in August. Therefore, Jabal Al-Soudah is one of the most prominent tourist attractions in Saudi Arabia, and it attracts a huge number of visitors, both from inside and outside the Kingdom .. \n\nBEST ACTIVITIES : \n\n- Residential hotels \n- Chairlifts \n- Entertainment games \n- Glide \n- Residential Resorts." = "جبل السودة أبها هو أعلى قمة جبلية في المملكة تجمع بين سحر المكان والزمان. وقد رزقه الله بطبيعة جميلة ومناظر خلابة وجمال لا مثيل له. يبلغ ارتفاعها 3015 مترًا عن سطح البحر ، وتغطيها غابات كثيفة من أشجار العرعر التي تضيف إلى رونقها. السحر يجعلها أشهر مزار سياحي في أبها .. كما تتميز السودة أبها بطقس معتدل طوال العام ، حيث تصل درجات الحرارة خلال فصل الصيف إلى 15 درجة مئوية ، مصحوبة بأمطار في أغسطس. لذلك يعتبر جبل السودة من أبرز المعالم السياحية في المملكة العربية السعودية ، ويستقطب عددًا كبيرًا من الزوار سواء من داخل المملكة أو خارجها. أفضل الأنشطة: فنادق سكنية - تلفريك - ألعاب ترفيهية - منزلق - سكني منتجعات.";
 
 
-"Al-Ula" = "";
-
-"A great historical heritage..and charming nature and perfect weather, especially in winter. \nThe city of Al-Ula is one of the most important international tourist destinations because of its beautiful natural components, and the diversity of history and antiquities that go back to the back. Thousands of years ago, UNESCO registered the archaeological site of Al-Hajar in Al-Ula Governorate on the World Heritage List, thus becoming the first Saudi archaeological site to be inscribed on the World Heritage List .. It is characterized by a pleasant climate, especially in winter .. \n\nBEST ACTIVITIES : \n\n- Sea tripes \n- Air flights \n- Singing concerts and shows \n- Entertainment and games \n- Camping \n- Enrichment trips \n- Visiting Elephant Mountain \n- Dadan and Jabal Ikma tour \n- Star gazing experience" = "";
-
-"Riyadh" = "";
+"Al-Ula" = "العلا";
+"A great historical heritage..and charming nature and perfect weather, especially in winter. \nThe city of Al-Ula is one of the most important international tourist destinations because of its beautiful natural components, and the diversity of history and antiquities that go back to the back. Thousands of years ago, UNESCO registered the archaeological site of Al-Hajar in Al-Ula Governorate on the World Heritage List, thus becoming the first Saudi archaeological site to be inscribed on the World Heritage List .. It is characterized by a pleasant climate, especially in winter .. \n\nBEST ACTIVITIES : \n\n- Sea tripes \n- Air flights \n- Singing concerts and shows \n- Entertainment and games \n- Camping \n- Enrichment trips \n- Visiting Elephant Mountain \n- Dadan and Jabal Ikma tour \n- Star gazing experience" = "تراث تاريخي عظيم .. وطبيعة ساحرة وطقس مثالي ، خاصة في فصل الشتاء.  تعد مدينة العلا من أهم الوجهات السياحية العالمية لما تتمتع به من مكونات طبيعية خلابة ، وتنوع التاريخ والآثار التي تزورها. منذ آلاف السنين ، سجلت منظمة اليونسكو موقع الحجر الأثري في محافظة العلا على قائمة التراث العالمي ، ليصبح بذلك أول موقع أثري سعودي يتم إدراجه في قائمة التراث العالمي .. ويتميز بمناخ لطيف ، خاصة في فصل الشتاء .. أفضل الأنشطة:الرحلات البحرية -الرحلات الجوية - حفلات الغناء والعروض - الترفيه والألعاب - التخييم - رحلات الإثراء - زيارة جبل الفيل - جولة في دادان وجبل أكما - تجربة مشاهدة النجوم ";
 
 
-"Riyadh is the capital and largest city in the Kingdom of Saudi Arabia \nand the third largest Arab capital in terms of population.\nRiyadh is the most beautiful tourist city in the Kingdom of Saudi Arabia.\nOne of the restaurants that serve the most delicious types of food, in addition to hosting many tourist, recreational and historical places .. in addition to The luxurious accommodation provided by the city to its guests ..\nIn Riyadh, you can find ancient historical sites, wonderful museums, picturesque parks, and fun recreational places suitable for family tourism, as well as you can shop in the most luxurious malls \n\nBEST ACTIVITIES : \n\n- Stock field \n- Zoo \n- A wide street surrounded by trees \n- Campat Field \n- Camping \n- Paragliding \n- The shopping" = "";
+"Riyadh" = "الرياض";
+"Riyadh is the capital and largest city in the Kingdom of Saudi Arabia \nand the third largest Arab capital in terms of population.\nRiyadh is the most beautiful tourist city in the Kingdom of Saudi Arabia.\nOne of the restaurants that serve the most delicious types of food, in addition to hosting many tourist, recreational and historical places .. in addition to The luxurious accommodation provided by the city to its guests ..\nIn Riyadh, you can find ancient historical sites, wonderful museums, picturesque parks, and fun recreational places suitable for family tourism, as well as you can shop in the most luxurious malls \n\nBEST ACTIVITIES : \n\n- Stock field \n- Zoo \n- A wide street surrounded by trees \n- Campat Field \n- Camping \n- Paragliding \n- The shopping" = "الرياض هي عاصمة وأكبر مدينة في المملكة العربية السعودية وثالث أكبر عاصمة عربية من حيث عدد السكان .. الرياض هي أجمل مدينة سياحية في المملكة العربية السعودية .. من المطاعم التي تخدم أكثر أشهى المأكولات بالإضافة إلى احتوائها على العديد من الأماكن السياحية والترفيهية والتاريخية .. بالإضافة إلى الإقامة الفاخرة التي توفرها المدينة لضيوفها .. في الرياض يمكنك العثور على المواقع التاريخية القديمة والمتاحف الرائعة والحدائق الخلابة ، و أماكن ترفيهية ممتعة ومناسبة للسياحة العائلية ، كما يمكنك التسوق في أفخم مراكز التسوق .. أفضل الأنشطة: حقل مخزون - حديقة حيوانات - شارع واسع محاط بالأشجار - كامبات فيلد - التخييم - الطيران الشراعي - التسوق ";
 
 
-"Al-Baha" = "";
-
-
-"Tourism in Al Baha will give you everything you wish for; With its picturesque nature, scenic beauty, high mountains, deep valleys, and green forests ..\nAl Baha is located in the southwest of the Kingdom of Saudi Arabia, between Abha and Taif.\nIn addition to enjoying many tourist attractions, you will not find more beautiful than Al Baha parks, ancient villages, agricultural terraces, flowing waterfalls, in addition to many historical sites, and of course all modern tourist facilities, from resorts, cafes and restaurants ..\nAl Baha is also characterized by its beautiful climate and continuous rain .. \n\nBEST ACTIVITIES : \n\n- Residential hotels \n- Chairlifts \n- Entertainment games \n- Glide \n- Residential Resorts" = "";
+"Al-Baha" = "الباحة";
+"Tourism in Al Baha will give you everything you wish for; With its picturesque nature, scenic beauty, high mountains, deep valleys, and green forests ..\nAl Baha is located in the southwest of the Kingdom of Saudi Arabia, between Abha and Taif.\nIn addition to enjoying many tourist attractions, you will not find more beautiful than Al Baha parks, ancient villages, agricultural terraces, flowing waterfalls, in addition to many historical sites, and of course all modern tourist facilities, from resorts, cafes and restaurants ..\nAl Baha is also characterized by its beautiful climate and continuous rain .. \n\nBEST ACTIVITIES : \n\n- Residential hotels \n- Chairlifts \n- Entertainment games \n- Glide \n- Residential Resorts" = "السياحة في الباحة ستمنحك كل ما تتمناه ؛ بطبيعتها الخلابة وجمالها الخلاب وجبالها الشاهقة ووديانها العميقة وغاباتها الخضراء .. تقع الباحة جنوب غرب المملكة العربية السعودية بين أبها والطائف. .. بالإضافة إلى التمتع بالعديد من المعالم السياحية فلن تجد أجمل من حدائق الباحة والقرى القديمة والمدرجات الزراعية والشلالات المتدفقة بالإضافة إلى العديد من المواقع التاريخية وبالطبع جميع المرافق السياحية الحديثة من منتجعات ومقاهي و المطاعم .. كما تتميز الباحة بمناخها الجميل وأمطارها المستمرة .. أفضل الأنشطة: - الفنادق السكنية - الكراسي المتحركة - الألعاب الترفيهية - الانزلاق - المنتجعات السكنية ";
 
 
 
-"Rijal Almae" = "";
-"The city of Rijal Almae enjoys the waterfalls of the village of Al-Sail, which is located to the south of the city, which contributed to the recovery of the tourism sector in Rijal Almae .. \nThe village of Rijal is also distinguished as one of the most important and prominent tourist and natural places in the Kingdom of Saudi Arabia ..\nIt is the best hiking place in the south of Saudi Arabia, where it attracts local and foreign tourists .. It is also characterized by its beautiful climate ..\nTourism in Rijal Alma is characterized by the presence of many parks and their ancient monuments dating back thousands of years that are not found anywhere in the world such as the trees of brilliance .. \nIn this article we have learned about the nature of tourism in Rijal Almae .. \n\nBEST ACTIVITIES : \n\n- Singing concerts and shows \n- Camping \n- Chairlifts \n- Enrichment trips" = "";
+"Rijal Almae" = "رجال ألمع";
+"The city of Rijal Almae enjoys the waterfalls of the village of Al-Sail, which is located to the south of the city, which contributed to the recovery of the tourism sector in Rijal Almae .. \nThe village of Rijal is also distinguished as one of the most important and prominent tourist and natural places in the Kingdom of Saudi Arabia ..\nIt is the best hiking place in the south of Saudi Arabia, where it attracts local and foreign tourists .. It is also characterized by its beautiful climate ..\nTourism in Rijal Alma is characterized by the presence of many parks and their ancient monuments dating back thousands of years that are not found anywhere in the world such as the trees of brilliance .. \nIn this article we have learned about the nature of tourism in Rijal Almae .. \n\nBEST ACTIVITIES : \n\n- Singing concerts and shows \n- Camping \n- Chairlifts \n- Enrichment trips" = "تتمتع مدينة رجال علما بشلالات قرية السيل التي تقع جنوب المدينة مما ساهم في إنعاش قطاع السياحة في رجال ألمع .. كما تتميز قرية رجال بأنها واحدة من أهم وأبرز الأماكن السياحية والطبيعية في المملكة العربية السعودية .. وهي أفضل مكان للتنزه في جنوب المملكة العربية السعودية حيث تستقطب السياح المحليين والأجانب .. كما تتميز بمناخها الجميل .. تتميز السياحة في رجال علما بوجود العديد من المتنزهات وآثارها القديمة التي تعود إلى آلاف السنين والتي لا توجد في أي مكان في العالم مثل أشجار التألق .. في هذا المقال تعرفنا على طبيعة السياحة في رجال ألما .. أفضل الأنشطة: حفلات الغناء والعروض - التخييم - التلفريك - رحلات الإثراء ";
 
 
-"Hail" = "";
-"Tourism in Hail is considered one of the most beautiful tourist places in the Kingdom of Saudi Arabia, as it enjoys a moderate atmosphere and a charming nature ..\nIt extends around the mountains in the form of a beautiful arc, and is surrounded by many mountains from the east, west and north ..\nThe city of Hail is located in the north of the Kingdom of Saudi Arabia, and is famous It has generosity and generosity and is called the (capital of dates) ..\nThe city of Hail includes a variety of monuments and inscriptions, and has two sites included in the UNESCO World Heritage List ..\nThe city of Hail attracts many visitors and tourists, to enjoy its wonderful archaeological and tourist areas .. \n\nBEST ACTIVITIES : \n\n- Sahara Desert \n- Camping \n- Paragliding \n- contemplate the tall mountains \n- Rallies" = "";
+"Hail" = "حائل";
+"Tourism in Hail is considered one of the most beautiful tourist places in the Kingdom of Saudi Arabia, as it enjoys a moderate atmosphere and a charming nature ..\nIt extends around the mountains in the form of a beautiful arc, and is surrounded by many mountains from the east, west and north ..\nThe city of Hail is located in the north of the Kingdom of Saudi Arabia, and is famous It has generosity and generosity and is called the (capital of dates) ..\nThe city of Hail includes a variety of monuments and inscriptions, and has two sites included in the UNESCO World Heritage List ..\nThe city of Hail attracts many visitors and tourists, to enjoy its wonderful archaeological and tourist areas .. \n\nBEST ACTIVITIES : \n\n- Sahara Desert \n- Camping \n- Paragliding \n- contemplate the tall mountains \n- Rallies" = "تعتبر السياحة في حائل من أجمل الأماكن السياحية في المملكة العربية السعودية ، حيث تتمتع بأجواء معتدلة وطبيعة ساحرة .. فهي تمتد حول الجبال على شكل قوس جميل ، ويحيط بها الكثير. الجبال من الشرق والغرب والشمال .. تقع مدينة حائل في شمال المملكة العربية السعودية ، وتشتهر بها الكرم والكرم وتسمى (عاصمة التمور) .. وتضم مدينة حائل مجموعة من المعالم والنقوش ، ولها موقعان مدرجان في قائمة التراث العالمي لليونسكو .. تستقطب مدينة حائل العديد من الزوار والسياح ، للاستمتاع بمناطقها الأثرية والسياحية الرائعة .. أفضل الأنشطة: - الصحراء الكبرى - التخييم - الطيران الشراعي - تأمل الجبال الشاهقة - المسيرات ";
 
 
-"Jeddah" = "";
-"Jeddah is one of the most beautiful cities in the Kingdom of Saudi Arabia .. It is called the Bride of the Red Sea in the Kingdom of Saudi Arabia. It is the economic and tourist capital of the Kingdom. It has the largest sea port on the Red Sea. The city of Jeddah is famous for its towers and many skyscrapers, as well as many historical and modern tourist places .. The city of Jeddah is one of the first tourist cities in the Kingdom and is the oldest in civilization .. It is characterized by luxury hotels, restaurants and cafes .. It has many luxurious and distinctive markets \n\nBEST ACTIVITIES : \n\n- King Fahad's fountain \n- Jeddah Oasis for Entertainment Sciences  \n- Iceland amusement park \n- Fakih Aquarium \n- Desert sea divers \n- Sail island \n- Al Shallal Amusement Park \n- Water park" = "";
+"Jeddah" = "جدة";
+"Jeddah is one of the most beautiful cities in the Kingdom of Saudi Arabia .. It is called the Bride of the Red Sea in the Kingdom of Saudi Arabia. It is the economic and tourist capital of the Kingdom. It has the largest sea port on the Red Sea. The city of Jeddah is famous for its towers and many skyscrapers, as well as many historical and modern tourist places .. The city of Jeddah is one of the first tourist cities in the Kingdom and is the oldest in civilization .. It is characterized by luxury hotels, restaurants and cafes .. It has many luxurious and distinctive markets \n\nBEST ACTIVITIES : \n\n- King Fahad's fountain \n- Jeddah Oasis for Entertainment Sciences  \n- Iceland amusement park \n- Fakih Aquarium \n- Desert sea divers \n- Sail island \n- Al Shallal Amusement Park \n- Water park" = "جدة من اجمل مدن المملكة العربية السعودية .. يطلق عليها عروس البحر الاحمر في المملكة العربية السعودية وهي العاصمة الاقتصادية والسياحية للمملكة ولديها اكبر ميناء بحري. على البحر الأحمر تشتهر مدينة جدة بأبراجها والعديد من ناطحات السحاب ، فضلاً عن العديد من الأماكن السياحية التاريخية والحديثة .. تعد مدينة جدة من أوائل المدن السياحية في المملكة وهي أقدم مدنها في الحضارة. وتتميز بالفنادق والمطاعم والمقاهي الفخمة .. وفيها العديد من الأسواق الفخمة والمميزة .. أفضل الأنشطة: - نافورة الملك فهد واحة جدة لعلوم الترفيه - ملاهي آيسلندا - أكواريوم فقيه - غواصو بحر الصحراء - جزيرة الشراع - ملاهي الشلال - ملاهي مائية ";
 
 
-"Asir" = "";
-"Nature in Asir .. \n\nThe Asir region is characterized by its rainy weather, it is the perfect choice for a beautiful vacation during the months of September and October..\nWith its cool climate and panoramic views, Asir is the right place to enjoy the outdoors and the magical places that nature provides. Take the cable car to Jabal Al Akhdar to enjoy the charming views around you..\nor go on a trip to the Abha Dam, which combines the blueness of water and greenery of the plants..\nMount Montenegro is also one of the most important destinations that attract visitors, it is the highest peak in the kingdom\n n and part of the Sarawat mountain range..\nBecause Asir region always stands by nature, the scenery changes every day according to \nlight, wind or rain, as the landscape of the earth changes from \nshiny glowing on clear days\n to humid and refreshing After the rain,\nand the air tends\nto cool at the top up the \nwinding roads around \nthe mountains.." = "";
+"Asir" = "عسير";
+"Nature in Asir .. \n\nThe Asir region is characterized by its rainy weather, it is the perfect choice for a beautiful vacation during the months of September and October..\nWith its cool climate and panoramic views, Asir is the right place to enjoy the outdoors and the magical places that nature provides. Take the cable car to Jabal Al Akhdar to enjoy the charming views around you..\nor go on a trip to the Abha Dam, which combines the blueness of water and greenery of the plants..\nMount Montenegro is also one of the most important destinations that attract visitors, it is the highest peak in the kingdom\n n and part of the Sarawat mountain range..\nBecause Asir region always stands by nature, the scenery changes every day according to \nlight, wind or rain, as the landscape of the earth changes from \nshiny glowing on clear days\n to humid and refreshing After the rain,\nand the air tends\nto cool at the top up the \nwinding roads around \nthe mountains.." = "الطبيعة في عسير .. تتميز منطقة عسير بطقسها الممطر ، فهي الخيار الأمثل لقضاء إجازة جميلة خلال شهري سبتمبر وأكتوبر .. بمناخها البارد وإطلالاتها البانورامية ، عسير هي المكان المناسب للاستمتاع في الهواء الطلق والأماكن السحرية التي توفرها الطبيعة. استقل التلفريك إلى الجبل الأخضر للاستمتاع بالمناظر الساحرة من حولك .. أو اذهب في رحلة إلى سد أبها الذي يجمع بين زرقة المياه وخضرة النباتات .. الجبل تعد الجبل الأسود أيضًا من أهم الوجهات التي تجذب الزوار ، فهي أعلى قمة في المملكة وجزء من سلسلة جبال السروات .. ولأن منطقة عسير دائمًا ما تقف بجانب الطبيعة ، يتغير المشهد كل يوم حسب الضوء أو الرياح أو المطر حيث تتغير المناظر الطبيعية للأرض من متوهجة لامعة في الأيام الصافية إلى رطبة ومنعشة بعد المطر ، ويميل الهواء إلى البرودة في أعلى الطرق المتعرجة حول الجبال .. ";
+
+
+"Hail" = "حائل";
+"Nature in Hail .. \n\nHail is one of the most famous and most beautiful tourist cities \nin the Kingdom of Saudi Arabia, \ndue to its beauty and nature .. \nAmong the most famous natural attractions are the mountains of Aja and Salma \nand the great Nafud desert .. \nIt is also characterized by its wonderful climate .. \nand (Aqeedat Hail), the most famous tourist village in Hail .. \nIt was the main destination for visitors and tourists on all occasions as it was a major sign and was widely known outside Hail for its beautiful tourist atmosphere .. \nThe Araf castle, is one of the historical castles \nin the Kingdom of Saudi Arabia \nand the King of Saudi Arabia, \nrenovated it because it was the \nonly place, from which \nscholars could see The crescent \nof the blessed month \nof Ramadan" = "الطبيعة في حائل .. حائل من أشهر وأجمل المدن السياحية في المملكة العربية السعودية لما تتمتع به من جمال وطبيعية .. ومن أشهر معالمها الطبيعية جبال أجا وسلمى والنفود العظيمة. الصحراوية .. كما تتميز بمناخها الرائع .. و (عقده) أشهر قرية سياحية في حائل .. كانت الوجهة الرئيسية للزوار والسياح في جميع المناسبات حيث كانت علامة رئيسية وشتهرت على نطاق واسع خارج حائل لأجوائها السياحية الجميلة .. تعتبر قلعة عرفة من القلاع التاريخية في المملكة العربية السعودية وقد رممها ملك المملكة العربية السعودية لأنها كانت المكان الوحيد الذي استطاع العلماء من خلاله رؤية هلال العراف. شهر رمضان المبارك ";
+
+"Abha" = "أبها";
+"Nature in Abha .. \n\nThe city of Abha, where clouds \nand mountains embrace, and the rain washes it every day, and your hand touches its cool, \npure mist, you feel the celebration of nature and its splendor.. \nRains are increasing in the tourist cities of Asir, as they are .. \nIt has a role in attracting tourism in Asir \nbecause of its flavor of tourist pleasure among \nvisitors to this region and vacationers, and the picturesque nature, rain and clouds that characterize this region and its tourist cities.. It is one of the most beautiful tourist attractions in Abha thanks to its picturesque nature, where the clear water flows almost permanently over Granite stones covered with juniper, acacia and water moss plants, \nmaking the place as a whole an imaginary \nspot for photography and recreation \nenthusiasts .. If you are a fan \nof green medicine, \ndazzling mountain views \nand a waterfall, or moving \nbetween archaeological sites \nand commercial markets, \nthere is no doubt that \ntourism in Abha is the best \ndestination for you." = "الطبيعة في أبها .. مدينة أبها حيث تعانق السحاب والجبال ، والمطر يغسلها كل يوم ، وتلمس يدك ضبابها البارد النقي ، تشعر بالاحتفال بالطبيعة وروعتها .. الأمطار تتزايد في مدن عسير السياحية كما هي .. لها دور في جذب السياحة في منطقة عسير لما تتمتع به من نكهة المتعة السياحية بين زوار هذه المنطقة والمصطافين ، والطبيعة الخلابة والأمطار والغيوم التي تتميز بها هذه المنطقة والسياحية. المدن .. هي من أجمل مناطق الجذب السياحي في أبها بفضل طبيعتها الخلابة ، حيث تتدفق المياه الصافية بشكل شبه دائم فوق أحجار الجرانيت المغطاة بنباتات العرعر والسنط والطحالب المائية ، مما يجعل المكان ككل بقعة خيالية لـ هواة التصوير الفوتوغرافي والاستجمام .. إذا كنت من محبي الطب الأخضر ، وإطلالات جبلية خلابة وشلال ، أو التنقل بين المواقع الأثرية والأسواق التجارية ، فلا شك أن السياحة في أبها هي الأفضل. تقدير لك ";
+
+
+
+"Riyadh" = "الرياض";
+"Despite the great development \nthat the capital Riyadh \nis witnessing in all fields, especially the urban aspect, \nthe historical and heritage sites that date back thousands of years are still preserved, as the historical sites in Riyadh \nand its suburbs vary between museums, palaces and markets .. \nThe Al-Masmak Palace dates back to more than 185 years, \nand the historic city of Diriyah is the city \nof “Al-Samoud” through which the \nKingdom of Saudi Arabia was launched \nand was the capital in the first Saudi state .. \nOne of the beautiful sites in it is the Turaif neighborhood,\nwhich was the seat of the former government \nand one of the sites registered in the World \nHeritage and Al-Bujairi \nneighborhood as well .. \nAlso, Diriyah contains large antiquities \nand old houses made of mud .." = "على الرغم من التطور الكبير الذي تشهده العاصمة الرياض في كافة المجالات وخاصة الجانب العمراني ، إلا أن المواقع التاريخية والتراثية التي يعود تاريخها إلى آلاف السنين لا تزال محفوظة ، حيث تتنوع المواقع التاريخية في الرياض وضواحيها بين المتاحف والقصور. والأسواق .. يعود تاريخ قصر المصمك إلى أكثر من 185 عامًا ، ومدينة الدرعية التاريخية هي مدينة الصمود التي انطلقت من خلالها المملكة العربية السعودية وكانت عاصمة الدولة السعودية الأولى. .. ومن أجمل المواقع فيها حي طريف الذي كان مقر الحكومة السابقة وأحد المواقع المسجلة في التراث العالمي وحي البجيري أيضا .. كما تحتوي الدرعية على قطع أثرية كبيرة ومنازل قديمة. مصنوعة من (الطين) .. ";
+
+
+
+"Al-Ula" = "العلا";
+"Al-Ula is the first site of the Kingdom of Saudi Arabia \ninscribed on the UNESCO World Heritage List .. \nSpread over an area of ​​52 hectares, \nMada'in Saleh was the principal \nsouthern city of the Nabataean kingdom, \nand consists of more than 100 well-preserved tombs, with elaborate \nfacades cut from sandstone outcrops, surrounding the walled urban settlement .. \nRecent studies indicate that Mada'in Saleh is the southernmost location in the Roman Empire .. \nIn addition to Mada’in Saleh, Al-Ula is home to a series of fascinating historical \nand archaeological sites such as Al-Khuraybah (ancient Dadan) the capital of the Dedanese \nand Lihyanic kingdoms, which is today considered \none of the most developed \ncities during the first \nmillennium BC within the \nArabian Peninsula, \nand thousands of examples \nof rock art \nand inscriptions The old \nHejaz railway stations .." = "العلا هي أول موقع للمملكة العربية السعودية مدرج في قائمة اليونسكو للتراث العالمي .. تمتد على مساحة 52 هكتارًا ، وكانت مدائن صالح المدينة الجنوبية الرئيسية للمملكة النبطية ، وتتكون من أكثر من 100 مقبرة محفوظة جيدًا ، بواجهات متقنة مقطوعة من نتوءات من الحجر الرملي ، تحيط بالمستوطنة الحضرية المحاطة بالأسوار .. تشير الدراسات الحديثة إلى أن مدائن صالح هي أقصى الجنوب في الإمبراطورية الرومانية .. بالإضافة إلى مدائن صالح ، - تعد العلا موطنًا لسلسلة من المواقع التاريخية والأثرية الرائعة مثل الخريبة (دادان القديمة) عاصمة مملكتي الديدانية واللحيان ، والتي تعتبر اليوم واحدة من أكثر المدن تطوراً خلال الألفية الأولى قبل الميلاد داخل شبه الجزيرة العربية وآلاف الأمثلة من الفن الصخري والنقوش محطات سكة حديد الحجاز القديمة .. ";
+
+
+"Safety travel tips" = "نصائح السفر الامن";
+"stay informed .." = "كن مطلع ...";
+"About  eVisa" = "حول التأشيرة";
+"The Kingdom of Saudi Arabia has .." = "للمملكة العربية السعودية ..";
+"Saudi currency and payments" = "العمله السعودية والمدفوعات";
+"Currency exchange and transactions .." = "صرف العملات والمعاملات ..";
+"Saudi Heritage Journey to UNESCO" = "التراث السعودي في اليونسكو";
+"The trip of Saudi heritage to UNESCO was not a picnic .." = "رجلة السعوديه لليونسكو لم تكون رحلة ..";
+
+
+
+//"Sea Experiences" =
+//"Jeddah"
+//"All Season"
+//"All"
+//"This development phase is the largest development phase of the Jeddah waterfront, and there are services and elements that have been added for the first time at the level of Jeddah waterfronts, equipped with services suitable for all groups and ages .. "
+
+
+//
+//"Formula"
+//"Jeddah"
+//"Public"
+//"Jeddah season"
+//"The Kingdom will host the first-ever Formula 1 Grand Prix in an international motor racing championship considered by many to be the most famous sporting event in the world .. If you are a fan of this type of racing and yearn for great times of suspense, excitement and challenge, all you have to do is tighten your belts and prepare for a special event in which the city of Jeddah will present what the world has never seen before !"
+//
+//
+//
+//"Athra"
+//"Khobar"
+//"All season"
+//"Public"
+//"Ithra offers its visitors new and inspiring experiences that nurture creativity and a passion for learning, and enrich culture. Ithra is a beacon of change and a window to global experiences by encouraging creativity, inspiring minds, and empowering talent, and with the advancement of innovation and technology; The Kingdom of Saudi Arabia is keen to keep pace with this development at a harmonious pace .."
+//
+//
+//
+//"Dakar Rally"
+//"Around the country"
+//"Jeddah season"
+//"All"
+//"The starting point will be from the Hail region, towards the capital, Riyadh, and the stop in Riyadh will be a one-day break, then the contestants will continue their challenge to the city of Jeddah .. This year's rally track will include two circuit stages in addition to a marathon stage .."
+//
+//
+//
+//"Safari"
+//"Riyadh"
+//"Riyadh season"
+//"All"
+//"Wildlife Center on your trip to Safari Nova, to see a variety of indigenous and exotic animals, such as hawks, owls, reptiles, jerboas and other wild animals, but the most prominent thing that will attract your attention and hold your breath is watching the leopard animals, which will charm your senses with its beauty and steal your heart with its gracefulness away from you In just a few steps .."
+//
+//
+//
+//"Oasis"
+//"Riyadh"
+//"Riyadh season"
+//"All"
+//"A luxury entertainment project in the heart of the desert north of Riyadh; It includes a variety of different activities and activities such as shopping, music, culture and sports, in addition to luxury camps that accommodate up to eight people .."
+//
+//
+//
+//"Combat Filed"
+//"Riyadh"
+//"Riyadh season"
+//"An amusement park that simulates war and combat games, here in Riyadh! Combat field is a world where you live the meaning of action and excitement, prove to us your shooting skills and your heart strength as you descend from the top of the zipline. Unmissable adventures between the details of different historical areas, watch live shows and live the life of a cowboy and fight your opponents in virtual reality .."
+//
+//
+//
+//"MSC bellissima(Getaway.. Your Way)"
+//"Jeddah"
+//"All Seasons"
+//"All"
+//"The cruise ship, which is owned and operated by MSC Cruises, can accommodate 4,500 passengers and has a crew of about 1,500 .."

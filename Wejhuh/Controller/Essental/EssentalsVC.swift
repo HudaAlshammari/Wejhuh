@@ -40,27 +40,27 @@ class EssentalsVC: UIViewController , UICollectionViewDelegate , UICollectionVie
     
     // MARK: - Fill in the array with data
     func setEssentals(){
-        essentaltSet.append(Essental(Title: "Safety travel tips",
+        essentaltSet.append(Essental(Title: "Safety travel tips".localaized,
                                      photo: UIImage(named: "culture")!,
-                                     dec: "stay informed .."))
+                                     dec: "stay informed ..".localaized))
         
-        essentaltSet.append(Essental(Title: "About  eVisa",
+        essentaltSet.append(Essental(Title: "About  eVisa".localaized,
                                      photo: UIImage(named: "piano")!,
 //                                     photo2: UIImage(named: "111111111")!,
-                                     dec: "The Kingdom of Saudi Arabia has .."))
+                                     dec: "The Kingdom of Saudi Arabia has ..".localaized))
         
-        essentaltSet.append(Essental(Title: "Saudi currency and payments",
+        essentaltSet.append(Essental(Title: "Saudi currency and payments".localaized,
                                      photo: UIImage(named: "currency")!,
 //                                     photo2: UIImage(named: "essentals5")!,
-                                     dec: "Currency exchange and transactions .."))
+                                     dec: "Currency exchange and transactions ..".localaized))
         
        
         
         
-        essentaltSet.append(Essental(Title: "Saudi Heritage Journey to UNESCO",
+        essentaltSet.append(Essental(Title: "Saudi Heritage Journey to UNESCO".localaized,
                                      photo: UIImage(named: "UNESCO")!,
 //                                     photo2: UIImage(named: "essentals2")!,
-                                     dec: "The trip of Saudi heritage to UNESCO was not a picnic .."))
+                                     dec: "The trip of Saudi heritage to UNESCO was not a picnic ..".localaized))
     }
     
     

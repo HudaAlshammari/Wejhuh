@@ -239,10 +239,10 @@
 				4F8A5CEA276093EC008BE65A /* Signup.swift */,
 				4F8A5CE8276093AB008BE65A /* SignIn.swift */,
 				4F5BEDCA2768743B006E495A /* Profile.swift */,
-				4F15580E278C27C5009B6BCA /* UsefulContacts.swift */,
-				4F155810278C281D009B6BCA /* UsefulContactsCell.swift */,
 				4F93D4AD2770BBFE003A997C /* UserApi.swift */,
 				4F64CF522774A4E500D5B9A0 /* User.swift */,
+				4F15580E278C27C5009B6BCA /* UsefulContacts.swift */,
+				4F155810278C281D009B6BCA /* UsefulContactsCell.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
