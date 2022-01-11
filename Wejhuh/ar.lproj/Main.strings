@@ -1,0 +1,264 @@
+
+/* Class = "UILabel"; text = "Wellcome"; ObjectID = "06q-QM-inH"; */
+"06q-QM-inH.text" = "اهلا بكم";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1S1-Os-MEJ"; */
+"1S1-Os-MEJ.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "1YT-jL-kf5"; */
+"1YT-jL-kf5.placeholder" = "الأسم";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2xs-bD-1hM"; */
+"2xs-bD-1hM.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Call our 24/7 Tourism Hotline"; ObjectID = "3s5-cg-o7R"; */
+"3s5-cg-o7R.configuration.title" = "اتصل بنا";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3s5-cg-o7R"; */
+"3s5-cg-o7R.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6f1-M3-Tc2"; */
+"6f1-M3-Tc2.text" = "Label";
+
+/* Class = "UILabel"; text = "Currency exchange and transactions can be done easily in Saudi Arabia. The official currency of Saudi Arabia is the Saudi riyal (SAR), and the riyal consists of 100 halalas. Banknotes are available in denominations of 5 riyals, 10 riyals, 50 riyals, 100 riyals, and 500 riyals, and coins in denominations of one riyal, two riyals, 50 halalas, 25 halalas, 10 halalas, 5 halalas and one halala .."; ObjectID = "6rt-Ju-xKc"; */
+"6rt-Ju-xKc.text" = "يمكن إجراء عمليات صرف العملات والمعاملات بسهولة في المملكة العربية السعودية. العملة الرسمية للمملكة العربية السعودية هي الريال السعودي ، ويتكون الريال من 100 هللة .. الأوراق النقدية متوفرة بفئات 5 ريالات و 10 ريالات و 50 ريال و 100 ريال و 500 ريال والعملات المعدنية من فئة الريال الواحد ، ريالان ، 50 هللة ، 25 هللة ، 10 هللة ، 5 هللة ، هللة واحدة.";
+
+/* Class = "UILabel"; text = "Do have an account ?"; ObjectID = "78A-aj-xOd"; */
+"78A-aj-xOd.text" = "هل لديك حساب ؟";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "AYa-eU-bfU"; */
+"AYa-eU-bfU.placeholder" = "الايميل";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "DQd-2r-yc2"; */
+"DQd-2r-yc2.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ekr-kq-aIL"; */
+"Ekr-kq-aIL.text" = "Label";
+
+/* Class = "UILabel"; text = "Eligible for a visa :"; ObjectID = "GSZ-86-4nh"; */
+"GSZ-86-4nh.text" = "حول التأشيرة :";
+
+/* Class = "UILabel"; text = "Saudi Arabia imposes an indirect tax of 15% (Value Added Tax) on all goods and services that are bought and sold by businesses. Some exceptions apply."; ObjectID = "GuM-vd-ddN"; */
+"GuM-vd-ddN.text" = "تفرض المملكة العربية السعودية ضريبة غير مباشرة بنسبة 15٪ (ضريبة القيمة المضافة) على جميع السلع والخدمات التي يتم شراؤها وبيعها من قبل الشركات. تنطبق بعض الاستثناءات.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "H1x-v4-3pi"; */
+"H1x-v4-3pi.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Log Out"; ObjectID = "IK1-2m-uJd"; */
+"IK1-2m-uJd.configuration.title" = "تسجيل خروج";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "IK1-2m-uJd"; */
+"IK1-2m-uJd.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JcE-du-hZy"; */
+"JcE-du-hZy.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JnD-ci-a9U"; */
+"JnD-ci-a9U.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LyY-zE-iM2"; */
+"LyY-zE-iM2.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "M8V-Lp-EiW"; */
+"M8V-Lp-EiW.text" = "Label";
+
+/* Class = "UILabel"; text = "About  eVisa"; ObjectID = "MKz-pO-Amx"; */
+"MKz-pO-Amx.text" = "التأشيرة";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Mia-f1-Z0G"; */
+"Mia-f1-Z0G.text" = "Label";
+
+/* Class = "UILabel"; text = "starting"; ObjectID = "NLa-k6-9nE"; */
+"NLa-k6-9nE.text" = "البدايه";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NQF-l8-7z1"; */
+"NQF-l8-7z1.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Sign In"; ObjectID = "NWB-g7-Yu1"; */
+"NWB-g7-Yu1.configuration.title" = "تسجيل دخول";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "NWB-g7-Yu1"; */
+"NWB-g7-Yu1.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Useful Contacts"; ObjectID = "Oc4-CQ-pVK"; */
+"Oc4-CQ-pVK.configuration.title" = "اتصالات مفيدة";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Oc4-CQ-pVK"; */
+"Oc4-CQ-pVK.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "PSm-o2-Q8b"; */
+"PSm-o2-Q8b.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "PmC-i0-7mm"; */
+"PmC-i0-7mm.text" = "Label";
+
+/* Class = "UILabel"; text = "ending"; ObjectID = "QE1-i3-lAJ"; */
+"QE1-i3-lAJ.text" = "النهاية";
+
+/* Class = "UILabel"; text = "Don't have an account ?"; ObjectID = "Rgr-Le-uis"; */
+"Rgr-Le-uis.text" = "لا يوجد لديك حساب ؟";
+
+/* Class = "UILabel"; text = "Season :"; ObjectID = "Tn0-1i-sfy"; */
+"Tn0-1i-sfy.text" = "الموسم :";
+
+/* Class = "UILabel"; text = "Sign up"; ObjectID = "Tzf-Vy-kiT"; */
+"Tzf-Vy-kiT.text" = "تسجيل جديد";
+
+/* Class = "UITabBarItem"; title = "My Trip"; ObjectID = "UEZ-31-twP"; */
+"UEZ-31-twP.title" = "رحلتي";
+
+/* Class = "UILabel"; text = "Learn more"; ObjectID = "VFd-Yl-PIv"; */
+"VFd-Yl-PIv.text" = "تعلم أكثر";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Vc0-1O-Zrh"; */
+"Vc0-1O-Zrh.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "W8u-cf-8Rz"; */
+"W8u-cf-8Rz.text" = "Label";
+
+/* Class = "UILabel"; text = "abc ..."; ObjectID = "XRo-JO-gQJ"; */
+"XRo-JO-gQJ.text" = "abc ...";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XZ4-dq-Qxi"; */
+"XZ4-dq-Qxi.text" = "Label";
+
+/* Class = "UILabel"; text = "Taxes"; ObjectID = "Y4d-Ou-56n"; */
+"Y4d-Ou-56n.text" = "الضريبة :";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Ye7-3f-F4M"; */
+"Ye7-3f-F4M.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Sign up"; ObjectID = "YgW-kP-dcy"; */
+"YgW-kP-dcy.configuration.title" = "تسجيل جديد";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "YgW-kP-dcy"; */
+"YgW-kP-dcy.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "YoC-Co-9wV"; */
+"YoC-Co-9wV.text" = "Label";
+
+/* Class = "UISearchBar"; Yqf-yp-6H9.scopeButtonTitles[0] = "Title"; ObjectID = "Yqf-yp-6H9"; */
+"Yqf-yp-6H9.scopeButtonTitles[0]" = "العنوان";
+
+/* Class = "UISearchBar"; Yqf-yp-6H9.scopeButtonTitles[1] = "Title"; ObjectID = "Yqf-yp-6H9"; */
+"Yqf-yp-6H9.scopeButtonTitles[1]" = "العنوان";
+
+/* Class = "UILabel"; text = "The Kingdom of Saudi Arabia has opened its doors to visitors from all over the world with the electronic visa system as of September 2019. Visitors can obtain a one-year entry visa that entitles them to enter the country multiple times and allows them to stay for a maximum of 90 days during its validity period. This visa can be used for tourism and Umrah activities (except for the Hajj season), and it does not include other activities such as studying .."; ObjectID = "ZS6-1e-h8U"; */
+"ZS6-1e-h8U.text" = "فتحت المملكة العربية السعودية أبوابها للزوار من جميع أنحاء العالم بنظام التأشيرات الإلكترونية اعتبارًا من سبتمبر 2019. يمكن للزوار الحصول على تأشيرة دخول لمدة عام واحد تسمح لهم بدخول البلاد عدة مرات وتسمح لهم بالإقامة لمدة بحد أقصى 90 يومًا خلال فترة صلاحيتها. يمكن استخدام هذه التأشيرة لأنشطة السياحة والعمرة (باستثناء موسم الحج) ، ولا تشمل الأنشطة الأخرى مثل الدراسة .. ";
+
+/* Class = "UITabBarItem"; title = "Essentals"; ObjectID = "ZfV-4r-KGu"; */
+"ZfV-4r-KGu.title" = "الأساسيات";
+
+/* Class = "UILabel"; text = "To :"; ObjectID = "agp-T3-RJr"; */
+"agp-T3-RJr.text" = "إلى :";
+
+/* Class = "UILabel"; text = "Ancient Cities :"; ObjectID = "ait-Rg-Apb"; */
+"ait-Rg-Apb.text" = "المدن التاريخيه";
+
+/* Class = "UILabel"; text = "The Saudi Ministry of Health offers a special electronic application under the name (Mawd) for smart phones, which displays the latest health recommendations, and a hotline is available on the number 937. In addition, you can visit the Ministry's website to find out the latest updates and news of travel laws .."; ObjectID = "am8-qM-4nm"; */
+"am8-qM-4nm.text" = "تقدم وزارة الصحة السعودية تطبيقًا إلكترونيًا خاصًا باسم (مود) للهواتف الذكية ، يعرض أحدث التوصيات الصحية ، ويتوفر خط ساخن على الرقم 937. بالإضافة إلى ذلك ، يمكنك زيارة موقع الوزارة لمعرفة المزيد آخر مستجدات وأخبار قوانين السفر ..";
+
+/* Class = "UILabel"; text = "From :"; ObjectID = "b4U-8Z-XMm"; */
+"b4U-8Z-XMm.text" = "من :";
+
+/* Class = "UILabel"; text = "Time :"; ObjectID = "bKF-mW-X6Y"; */
+"bKF-mW-X6Y.text" = "الوقت :";
+
+/* Class = "UILabel"; text = "Your health is your responsibility\n\nBe responsible for your health. Make sure you feel well before you start your trip, and if you're not, stay home. If you feel that you have any of the symptoms of COVID-19 such as mild cough, high temperature or shortness of breath, isolate yourself at home and seek medical help. Make sure you have your medical insurance in place before you travel. Keep essential phone numbers to be prepared in case of emergencies with your health insurance details .."; ObjectID = "bNZ-px-J1P"; */
+"bNZ-px-J1P.text" = "صحتك مسؤوليتك  كن مسؤولاً عن صحتك. تأكد من أنك تشعر بالراحة قبل أن تبدأ رحلتك ، وإذا لم تكن كذلك ، فابق في المنزل. إذا شعرت أن لديك أيًا من أعراض COVID-19 مثل السعال الخفيف أو ارتفاع درجة الحرارة أو ضيق التنفس ، فاعزل نفسك في المنزل واطلب المساعدة الطبية. تأكد من حصولك على تأمينك الطبي قبل السفر. احتفظ بأرقام الهواتف الأساسية المراد تجهيزها في حالات الطوارئ مع تفاصيل التأمين الصحي الخاص بك.";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "c5d-tP-iX1"; */
+"c5d-tP-iX1.placeholder" = "الايميل";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "cK0-lJ-FDS"; */
+"cK0-lJ-FDS.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Apply for eVisa"; ObjectID = "dxj-gZ-1Og"; */
+"dxj-gZ-1Og.configuration.title" = "للحصول على التأشيرة";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dxj-gZ-1Og"; */
+"dxj-gZ-1Og.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Natural Cities :"; ObjectID = "eYa-eA-51U"; */
+"eYa-eA-51U.text" = "المدن الطبيعية :";
+
+/* Class = "UITabBarItem"; title = "Discover"; ObjectID = "edZ-am-A3J"; */
+"edZ-am-A3J.title" = "اكتشف";
+
+/* Class = "UIButton"; configuration.title = "SignIn"; ObjectID = "fqn-rg-WKG"; */
+"fqn-rg-WKG.configuration.title" = "تسجيل دخول";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "fqn-rg-WKG"; */
+"fqn-rg-WKG.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "See"; ObjectID = "g3y-A1-vvh"; */
+"g3y-A1-vvh.title" = "معالم وأنشطه";
+
+/* Class = "UIButton"; configuration.title = "langauge"; ObjectID = "gAj-na-MBA"; */
+"gAj-na-MBA.configuration.title" = "اللغة";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gAj-na-MBA"; */
+"gAj-na-MBA.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gZK-Ih-vhz"; */
+"gZK-Ih-vhz.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "SAR conversion calculater"; ObjectID = "iVm-rV-FM5"; */
+"iVm-rV-FM5.configuration.title" = "لـ تحويل العملات";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "iVm-rV-FM5"; */
+"iVm-rV-FM5.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "iYw-Y3-QEa"; */
+"iYw-Y3-QEa.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Sign up"; ObjectID = "juf-bt-eW6"; */
+"juf-bt-eW6.configuration.title" = "تسجيل جديد ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "juf-bt-eW6"; */
+"juf-bt-eW6.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Event Detalis :"; ObjectID = "jwz-7T-tXm"; */
+"jwz-7T-tXm.text" = "تفاصيل النشاط :";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ksu-JQ-NzH"; */
+"ksu-JQ-NzH.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mDA-4K-Evl"; */
+"mDA-4K-Evl.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Safety travel tips .."; ObjectID = "mvY-UU-y3C"; */
+"mvY-UU-y3C.text" = "نصائح السفر الامن ..";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "nT8-JI-JFu"; */
+"nT8-JI-JFu.placeholder" = "كلمة المرور";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "oWW-et-uGh"; */
+"oWW-et-uGh.text" = "التفاصيل";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oi5-0c-ENs"; */
+"oi5-0c-ENs.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Audience :"; ObjectID = "ozD-MA-mdR"; */
+"ozD-MA-mdR.text" = "الجمهور :";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "sFW-jS-NyF"; */
+"sFW-jS-NyF.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "sov-KH-gUG"; */
+"sov-KH-gUG.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "w9K-h3-zRf"; */
+"w9K-h3-zRf.text" = "العنوان";
+
+/* Class = "UILabel"; text = "Our employees from 49 eligible countries can apply for a tourist visa online through our quick and easy-to-use e-Visa platform before traveling, or upon arrival in Saudi Arabia through the visa offices of the Immigration Department\nTo obtain the visa through the official website:"; ObjectID = "x9J-tC-adB"; */
+"x9J-tC-adB.text" = "يمكن للسياح من 49 دولة مؤهلة التقدم للحصول على تأشيرة سياحة عبر الإنترنت من خلال منصة التأشيرة الإلكترونية السريعة وسهلة الاستخدام الخاصة بنا قبل السفر ، أو عند الوصول إلى المملكة العربية السعودية من خلال مكاتب التأشيرات التابعة لإدارة الهجرة للحصول على التأشيرة من خلال الموقع الرسمي:";
+
+/* Class = "UILabel"; text = "About :"; ObjectID = "yIk-Y5-1uc"; */
+"yIk-Y5-1uc.text" = "حول :";
+
+/* Class = "UILabel"; text = "Currency and payments in KSA"; ObjectID = "yRq-x0-u1X"; */
+"yRq-x0-u1X.text" = "العملة والمدفوعات في المملكة العربية السعودية";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "zaE-uG-5yL"; */
+"zaE-uG-5yL.placeholder" = "كلمة المرور";

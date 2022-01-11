@@ -26,6 +26,7 @@ class Signup: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         password.rightViewMode = .unlessEditing
+        
         button.setImage(UIImage(named: "closeEye"), for: .normal)
         button.imageEdgeInsets = UIEdgeInsets(top: 5, left: -5 , bottom: 5, right: 15)
         button.alpha = 5

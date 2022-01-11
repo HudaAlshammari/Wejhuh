@@ -60,12 +60,12 @@ class SeeCell: UICollectionViewCell {
     // button for add to list of trips
     @IBAction func addFavoritePlaces(_ sender: UIButton) {
 
-        let x = fetchAllLists()
-        for y in x {
-            if y.name == selectedSee?.name {
-                print("okay")
-            }
-        }
+//        let x = fetchAllLists()
+//        for y in x {
+//            if y.name == selectedSee?.name {
+//                print("done")
+//            }
+//        }
         
 //        createNewList(eventName:selectedSee.name , eventPhoto: selectedSee.photo)
 //        let alart = UIAlertController(title: "", message: "asma", preferredStyle: .alert)
@@ -107,15 +107,21 @@ class SeeCell: UICollectionViewCell {
     
     // MARK: -CORE DATA
     
-    // function to fetch the saved data
+    // function to
     func fetchAllLists() -> [TripsList] {
         let context = persistentContainer.viewContext
-        var mmm : [TripsList] = []
+        var trip : [TripsList] = []
         do {
-            mmm = try context.fetch(TripsList.fetchRequest())
+            trip = try context.fetch(TripsList.fetchRequest())
         } catch {
             print(error)
         }
-        return mmm
+        return trip
     }
 }
+
+
+
+
+
+//fetch the saved data

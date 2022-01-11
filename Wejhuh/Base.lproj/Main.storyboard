@@ -453,7 +453,7 @@ Be responsible for your health. Make sure you feel well before you start your tr
                                         <color key="textColor" name="ColorWriting"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVm-rV-FM5">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVm-rV-FM5">
                                         <rect key="frame" x="20" y="446" width="374" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="66" id="Hc0-2o-cfL"/>
@@ -584,7 +584,7 @@ To obtain the visa through the official website:</string>
                                         <color key="textColor" name="ColorWriting"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxj-gZ-1Og">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxj-gZ-1Og">
                                         <rect key="frame" x="20" y="598" width="374" height="66"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Apply for eVisa">
@@ -1183,13 +1183,13 @@ To obtain the visa through the official website:</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Yqf-yp-6H9">
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yqf-yp-6H9">
                                 <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="AzD-gR-8up"/>
                                 </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -1590,7 +1590,7 @@ To obtain the visa through the official website:</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEz-ff-Eyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="P0S-2D-ZU0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1054" y="-1167"/>
+            <point key="canvasLocation" x="-1078" y="-1167"/>
         </scene>
         <!--Discover-->
         <scene sceneID="eu0-bT-Ehc">
@@ -1700,13 +1700,6 @@ To obtain the visa through the official website:</string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KY3-db-rhf">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1117"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motifs" translatesAutoresizingMaskIntoConstraints="NO" id="AWA-BS-62r">
-                                        <rect key="frame" x="198" y="808" width="216" height="217"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="216" id="ZKU-Wv-UTs"/>
-                                            <constraint firstAttribute="height" constant="217" id="fBj-We-WrO"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQd-2r-yc2">
                                         <rect key="frame" x="45" y="391" width="349" height="34.5"/>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="36"/>
@@ -1747,13 +1740,11 @@ To obtain the visa through the official website:</string>
                                     <constraint firstItem="yIk-Y5-1uc" firstAttribute="top" secondItem="qI2-TU-OSU" secondAttribute="bottom" constant="43" id="AVE-x2-eoT"/>
                                     <constraint firstItem="XZ4-dq-Qxi" firstAttribute="top" secondItem="DQd-2r-yc2" secondAttribute="bottom" constant="69.5" id="E5b-dP-wGl"/>
                                     <constraint firstItem="yIk-Y5-1uc" firstAttribute="top" secondItem="XZ4-dq-Qxi" secondAttribute="bottom" constant="-555" id="IO6-Xy-UPQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="AWA-BS-62r" secondAttribute="bottom" id="Jkk-SL-u4I"/>
                                     <constraint firstAttribute="trailing" secondItem="YUo-Av-O0I" secondAttribute="trailing" id="MC2-ZZ-TPQ"/>
                                     <constraint firstItem="XZ4-dq-Qxi" firstAttribute="trailing" secondItem="DQd-2r-yc2" secondAttribute="trailing" id="N69-k9-LQw"/>
                                     <constraint firstItem="DQd-2r-yc2" firstAttribute="leading" secondItem="qI2-TU-OSU" secondAttribute="trailing" constant="8" symbolic="YES" id="W0D-Zq-fSC"/>
                                     <constraint firstItem="XZ4-dq-Qxi" firstAttribute="centerX" secondItem="YUo-Av-O0I" secondAttribute="centerX" id="Zkn-Or-Ca6"/>
                                     <constraint firstItem="DQd-2r-yc2" firstAttribute="leading" secondItem="qI2-TU-OSU" secondAttribute="trailing" constant="8" symbolic="YES" id="aoT-Bm-Qgp"/>
-                                    <constraint firstAttribute="trailing" secondItem="AWA-BS-62r" secondAttribute="trailing" id="d3V-3O-Wzp"/>
                                     <constraint firstAttribute="bottom" secondItem="XZ4-dq-Qxi" secondAttribute="bottom" constant="6" id="fhR-z3-BCz"/>
                                     <constraint firstItem="YUo-Av-O0I" firstAttribute="leading" secondItem="KY3-db-rhf" secondAttribute="leading" id="hYf-cD-8Gl"/>
                                     <constraint firstItem="XZ4-dq-Qxi" firstAttribute="leading" secondItem="KY3-db-rhf" secondAttribute="leading" constant="20" id="jdt-cv-vWL"/>
@@ -1963,7 +1954,7 @@ To obtain the visa through the official website:</string>
                                     <action selector="logOut:" destination="zng-HD-5vC" eventType="touchUpInside" id="Dkm-Ph-8Ts"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oc4-CQ-pVK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oc4-CQ-pVK">
                                 <rect key="frame" x="20" y="524" width="374" height="66"/>
                                 <color key="backgroundColor" name="ColorCell"/>
                                 <constraints>
@@ -1987,7 +1978,7 @@ To obtain the visa through the official website:</string>
                                     <constraint firstAttribute="width" constant="10" id="b0S-ca-1oY"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAj-na-MBA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAj-na-MBA">
                                 <rect key="frame" x="20" y="292" width="374" height="66"/>
                                 <color key="backgroundColor" name="ColorCell"/>
                                 <constraints>
@@ -2010,7 +2001,7 @@ To obtain the visa through the official website:</string>
                                     <constraint firstAttribute="width" constant="10" id="xi5-AR-CwG"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3s5-cg-o7R">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3s5-cg-o7R">
                                 <rect key="frame" x="20" y="408" width="374" height="66"/>
                                 <color key="backgroundColor" name="ColorCell"/>
                                 <constraints>
@@ -2161,7 +2152,7 @@ To obtain the visa through the official website:</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Oke-1L-ecN"/>
+        <segue reference="qHw-Lg-AOj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="0B0D7B19-923F-469A-B230-B1B5EEA9677D_1_105_c" width="1078" height="729"/>
@@ -2185,7 +2176,6 @@ To obtain the visa through the official website:</string>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="mawid" width="439" height="439"/>
         <image name="ministryOfHealth" width="439" height="439"/>
-        <image name="motifs" width="886" height="886"/>
         <image name="motifs2" width="1124" height="196"/>
         <image name="motifs3" width="749" height="937"/>
         <image name="person.3" catalog="system" width="128" height="62"/>

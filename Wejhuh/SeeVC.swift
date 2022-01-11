@@ -54,7 +54,7 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
         filterdata = favorite
         search.delegate = self
         setSee()
-
+        filterdata = favorite
         
         
         
@@ -198,7 +198,8 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     }
     
     // MARK: - =========
-    var filterdata:[Event]!
+    var filterdata = [Event]()
+    var searching = false
     
     
     
@@ -209,27 +210,34 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     
     //function to determine the number of rows of an array
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return favorite.count
+        
+            return filterdata.count
+
     }
     
     //function to select the elements of an array
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SeeCell
-        let data = favorite[indexPath.row]
+        
+        let data = filterdata[indexPath.row]
         cell.setupCell(photo: data.photo, city : data.city , name: data.name)
         cell.curentImageName = data.photo
-        cell.btnAddToMyTrip.tag = indexPath.row
         
+        cell.btnAddToMyTrip.tag = indexPath.row
         cell.btnAddToMyTrip.addTarget(self, action: #selector(addToTrip(sender:)), for: .touchUpInside )
-        cell.myFavorite = myFavorite
+        
+        cell.seeCity?.text = filterdata[indexPath.row].city
+ 
+        
+        
         return cell
     }
     
     //function that is didSelect on the cells
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         
-        let events = favorite[indexPath.row]
+        let events = filterdata[indexPath.row]
         selectedDetails = EventDetails(photo: events.photo2, name: events.name, from: events.from, to: events.to, starting: events.starting, ending: events.ending, season: events.season , audince: events.audince, overview: events.eventDetalis , latitude: events.latitude , longitude: events.longitude)
         
         performSegue(withIdentifier: Segues.toSeeMore.rawValue , sender: nil)
@@ -282,11 +290,15 @@ extension SeeVC : UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
         filterdata = searchText.isEmpty ? favorite : favorite.filter {(item : Event) -> Bool in
-
             return item.city.contains(searchText)
         }
-
-        favorite = filterdata
+        searching = true
+        seeCollectionView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        filterdata = favorite
         seeCollectionView.reloadData()
     }
 }
