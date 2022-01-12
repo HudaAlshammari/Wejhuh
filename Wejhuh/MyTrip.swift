@@ -51,9 +51,12 @@ class MyTrip: UIViewController , UICollectionViewDelegate , UICollectionViewData
     
     //function to select the elements of an array
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tripsCell", for: indexPath) as! FavoriteListCell
+        
         cell.photo?.image = UIImage(named: myFavorite[indexPath.row])
         cell.name?.text = myFavorite[indexPath.row]
+        
         return cell
         
     }
@@ -69,6 +72,18 @@ class MyTrip: UIViewController , UICollectionViewDelegate , UICollectionViewData
             }
         }
     }
+    
+    override func setEditing(_ editing: Bool, animated: Bool){
+        super.setEditing(editing, animated: animated)
+
+        favotiteList.allowsMultipleSelection = editing
+            let indexPaths = favotiteList.indexPathsForVisibleItems
+            for indexPath in indexPaths {
+                let cell = favotiteList.cellForItem(at: indexPath) as! FavoriteListCell
+//                cell.isInEditingMode = editing
+            }
+    }
+
     
     
     // MARK: -CORE DATA

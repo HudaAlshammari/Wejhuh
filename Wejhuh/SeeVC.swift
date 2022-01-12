@@ -81,7 +81,7 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     
     // Fill in the array with data
     func setSee(){
-        favorite.append(Event(name: "Sea Experiences".localaized,
+        favorite.append(Event(name: "WJ".localaized,
                               city: "Jeddah".localaized,
                               photo : "WJ",
                               photo2: "WJ2" ,
@@ -173,10 +173,10 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
                               city: "Riyadh".localaized,
                               photo : "Combat Filed",
                               photo2: "Combat Filed2",
-                              from: "2 Dec 2021",
-                              to: "1 Mar 2021",
-                              starting: "4:00 PM",
-                              ending: "2:00 AM",
+                              from: "4:00 PM",
+                              to: "2:00 AM",
+                              starting: "2 Dec 2021",
+                              ending: "1 Mar 2021",
                               season: "Riyadh season".localaized,
                               audince: "12 +",
                               eventDetalis: "An amusement park that simulates war and combat games, here in Riyadh! Combat field is a world where you live the meaning of action and excitement, prove to us your shooting skills and your heart strength as you descend from the top of the zipline. Unmissable adventures between the details of different historical areas, watch live shows and live the life of a cowboy and fight your opponents in virtual reality ..".localaized ,
@@ -282,6 +282,11 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
         }
     }
 }
+
+
+
+
+
 
 
 

@@ -34,7 +34,11 @@ class Signup: UIViewController {
         button.addTarget(self, action: #selector(self.btnPasswordVisiblityClicked), for: .touchUpInside)
         password.rightView = button
         password.rightViewMode = .always
-    }
+        
+        let TapGesture = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+            view.addGestureRecognizer(TapGesture)
+        }
+   
     
     //Function of the button to hide and display the password
     @IBAction func btnPasswordVisiblityClicked(_ sender: Any) {
@@ -51,13 +55,10 @@ class Signup: UIViewController {
     
     //button signup
     @IBAction func signup(_ sender: Any) {
-        if email.text?.isEmpty == true {
-            print("pleas full Email")
-            return
-        }
-        if password.text?.isEmpty == true {
-            print("pleas full password")
-            return
+        if email.text?.isEmpty == true || password.text?.isEmpty == true || name.text?.isEmpty == true {
+            let alert = UIAlertController(title: "please full in Email and Password", message: "your name or email or passowrd is missing" , preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK" , style: .default , handler: nil))
+            self.present(alert, animated : true)
         }else{
             signup()
         }
@@ -75,6 +76,10 @@ class Signup: UIViewController {
     func signup(){
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (authResult, error) in
             if let error = error {
+                let alert = UIAlertController(title: "Error", message: "The email address is incorrect or is already in use by another account." , preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK" , style: .default , handler: nil))
+                self.present(alert, animated : true)
+                
                 print(error.localizedDescription)
             }else{
                 UserApi.addUser(name: self.name.text ?? "" , uid: authResult?.user.uid ?? "" , email: self.email.text ?? "" , completion: { check in
@@ -91,3 +96,9 @@ class Signup: UIViewController {
         }
     }
 }
+
+
+//if password.text?.isEmpty == true {
+//    print("pleas full password")
+//    return
+//}

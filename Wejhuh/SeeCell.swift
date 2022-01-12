@@ -60,29 +60,49 @@ class SeeCell: UICollectionViewCell {
     // button for add to list of trips
     @IBAction func addFavoritePlaces(_ sender: UIButton) {
 
-//        let x = fetchAllLists()
-//        for y in x {
-//            if y.name == selectedSee?.name {
-//                print("done")
+//        UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { user in
+//            DispatchQueue.main.async {
+//
+//                self.myFavorite =  user.trips ?? [""]
+//                let fav = self.seeName.text ?? ""
+//                if let foundIndex = self.myFavorite.firstIndex(of: fav) {
+//                    
+//                    let alart = UIAlertController(title: "", message: "Already added", preferredStyle: UIAlertController.Style.alert)
+//                    alart.addAction(UIAlertAction(title: "", style: .default , handler: nil))
+//                    alart.present(alart, animated: true)
+//                    
+//                    print("Already added \(foundIndex)")
+//                    print("added")
+//                    
+//                    
+//                } else {
+//                    self.myFavorite.append(fav)
+//                    UserApi.addLikes(uid: Auth.auth().currentUser?.uid ?? "", likes: self.myFavorite)
+////                    print("favs")
+////                    print(self.myFavorite)
+//                    
+//                    
+//                    let alarts = UIAlertController(title: "", message: "ok", preferredStyle: .actionSheet)
+//                    alarts.addAction(UIAlertAction(title: "ok", style: .default , handler: nil))
+//                    alarts.present(alarts, animated: true)
+//                    
+//                }
+//                
+//                
 //            }
+//            
 //        }
         
-//        createNewList(eventName:selectedSee.name , eventPhoto: selectedSee.photo)
-//        let alart = UIAlertController(title: "", message: "asma", preferredStyle: .alert)
-//        alart.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
-//
         
-        
-        
-        UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { user in
-            DispatchQueue.main.async {
-                self.myFavorite =  user.trips ?? [""]
-                self.myFavorite.append(self.seeName.text ?? "")
-                UserApi.addLikes(uid: Auth.auth().currentUser?.uid ?? "", likes: self.myFavorite)
-                print("favs")
-                print(self.myFavorite)
-            }
-        }
+//        UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { user in
+//            DispatchQueue.main.async {
+//                self.myFavorite =  user.trips ?? [""]
+//                self.myFavorite.append(self.seeName.text ?? "")
+//                UserApi.addLikes(uid: Auth.auth().currentUser?.uid ?? "", likes: self.myFavorite)
+//                print("favs")
+//                print(self.myFavorite)
+//            }
+//        }
     }
     
     
@@ -108,16 +128,16 @@ class SeeCell: UICollectionViewCell {
     // MARK: -CORE DATA
     
     // function to
-//    func fetchAllLists() -> [TripsList] {
-//        let context = persistentContainer.viewContext
-//        var trip : [TripsList] = []
-//        do {
-//            trip = try context.fetch(TripsList.fetchRequest())
-//        } catch {
-//            print(error)
-//        }
-//        return trip
-//    }
+    func fetchAllLists() -> [TripsList] {
+        let context = persistentContainer.viewContext
+        var trip : [TripsList] = []
+        do {
+            trip = try context.fetch(TripsList.fetchRequest())
+        } catch {
+            print(error)
+        }
+        return trip
+    }
 }
 
 

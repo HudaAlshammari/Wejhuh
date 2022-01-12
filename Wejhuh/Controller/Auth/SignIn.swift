@@ -20,6 +20,7 @@ class SignIn: UIViewController {
     
     let button = UIButton(type: .custom)
     var btnColor = UIButton(type: .custom)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         password.rightViewMode = .unlessEditing
@@ -30,6 +31,8 @@ class SignIn: UIViewController {
         button.addTarget(self, action: #selector(self.btnPasswordVisiblityClicked), for: .touchUpInside)
         password.rightView = button
         password.rightViewMode = .always
+        let TapGesture = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+            view.addGestureRecognizer(TapGesture)
     }
     
     //Function of the button to hide and show the password
