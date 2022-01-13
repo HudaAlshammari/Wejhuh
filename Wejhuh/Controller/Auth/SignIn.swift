@@ -16,8 +16,8 @@ class SignIn: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    //eye icon password
     
+    //eye icon password
     let button = UIButton(type: .custom)
     var btnColor = UIButton(type: .custom)
     

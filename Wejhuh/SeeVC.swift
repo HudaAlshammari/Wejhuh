@@ -16,10 +16,18 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     // MARK: -CORE DATA
     
     var myFavoriteModel: [TripsList] = []
-    
-    
+    //Variable to fill in details
+    var selectedSee : Event?
     var selectedDetails : EventDetails?
+    var curentImageName: String?
     
+    //  =========
+    var filterdata = [Event]()
+    var searching = false
+    
+    //Variable to
+    var myFavorite = [String]()
+
     //SAVE CORE DATA
     let persistentContainer : NSPersistentContainer = {
         let container = NSPersistentContainer(name: "FavoriteModel")
@@ -36,15 +44,8 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
     
     //Outlet of CollectionView
     @IBOutlet weak var seeCollectionView: UICollectionView!
-    
-    
     @IBOutlet weak var search: UISearchBar!
     
-    //Variable to fill in details
-    var selectedSee : Event?
-    
-    //Variable to
-    var myFavorite = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,9 +57,6 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
         setSee()
         filterdata = favorite
         
-        
-        
-        
         // To access with information about the user
         UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { user in
             DispatchQueue.main.async {
@@ -68,16 +66,44 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
             }
         }
     }
-    override func viewWillAppear(_ animated: Bool) {
-        
+    
+    // MARK: - collectionView methods
+    
+    //function to determine the number of rows of an array
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return filterdata.count
     }
+    
+    //function to select the elements of an array
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SeeCell
+        let data = filterdata[indexPath.row]
+        cell.setupCell(photo: data.photo, city : data.city , name: data.name)
+        cell.curentImageName = data.photo
+        cell.seeCity?.text = filterdata[indexPath.row].city
+        return cell
+    }
+    
+    //function that is didSelect on the cells
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        let events = filterdata[indexPath.row]
+        selectedDetails = EventDetails(photo: events.photo2, name: events.name, from: events.from, to: events.to, starting: events.starting, ending: events.ending, season: events.season , audince: events.audince, overview: events.eventDetalis , latitude: events.latitude , longitude: events.longitude)
+        performSegue(withIdentifier: Segues.toSeeMore.rawValue , sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segues.toSeeMore.rawValue {
+            let dest = segue.destination as! SeeMore
+            dest.selectedData = selectedDetails
+        }
+    }
+    
     
     
     // MARK: - Array
     
     //Array of pictures, names and details
     var favorite = [Event]()
-    
     
     // Fill in the array with data
     func setSee(){
@@ -94,8 +120,6 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
                               eventDetalis: "This development phase is the largest development phase of the Jeddah waterfront, and there are services and elements that have been added for the first time at the level of Jeddah waterfronts, equipped with services suitable for all groups and ages .. ".localaized ,
                              latitude: "21.603217937030088" ,
                              longitude: "39.10753647827252"))
-        
-        
         
         favorite.append(Event(name: "Formula".localaized,
                               city: "Jeddah".localaized,
@@ -196,74 +220,7 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
                               latitude: "21.603217937030088" ,
                               longitude: "39.10753647827252"))
     }
-    
-    // MARK: - =========
-    var filterdata = [Event]()
-    var searching = false
-    
-    
-    
-    
-    
-    
-    // MARK: - functions
-    
-    //function to determine the number of rows of an array
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-            return filterdata.count
 
-    }
-    
-    //function to select the elements of an array
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SeeCell
-        
-        let data = filterdata[indexPath.row]
-        cell.setupCell(photo: data.photo, city : data.city , name: data.name)
-        cell.curentImageName = data.photo
-        
-        cell.btnAddToMyTrip.tag = indexPath.row
-        cell.btnAddToMyTrip.addTarget(self, action: #selector(addToTrip(sender:)), for: .touchUpInside )
-        
-        cell.seeCity?.text = filterdata[indexPath.row].city
- 
-        
-        
-        return cell
-    }
-    
-    //function that is didSelect on the cells
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        
-        let events = filterdata[indexPath.row]
-        selectedDetails = EventDetails(photo: events.photo2, name: events.name, from: events.from, to: events.to, starting: events.starting, ending: events.ending, season: events.season , audince: events.audince, overview: events.eventDetalis , latitude: events.latitude , longitude: events.longitude)
-        
-        performSegue(withIdentifier: Segues.toSeeMore.rawValue , sender: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Segues.toSeeMore.rawValue {
-            let dest = segue.destination as! SeeMore
-            dest.selectedData = selectedDetails
-        }
-    }
-    
-    
-    //function to change the style of the button
-    @objc
-    func addToTrip(sender : UIButton){
-        let currentImage = sender.imageView?.image
-        if currentImage == UIImage(systemName: "heart.circle.fill"){
-            sender.setImage(UIImage(systemName: "heart.circle"), for: .normal)
-        }else{
-            sender.setImage(UIImage(systemName: "heart.circle.fill"), for: .normal)
-        }
-    }
-    
-    
-    
     
     // MARK: -CORE DATA
     
@@ -284,15 +241,8 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
 }
 
 
-
-
-
-
-
-
-
+// MARK: - extension for Search
 extension SeeVC : UISearchBarDelegate {
-
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
         filterdata = searchText.isEmpty ? favorite : favorite.filter {(item : Event) -> Bool in
             return item.city.contains(searchText)
@@ -300,7 +250,6 @@ extension SeeVC : UISearchBarDelegate {
         searching = true
         seeCollectionView.reloadData()
     }
-    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = ""
         filterdata = favorite

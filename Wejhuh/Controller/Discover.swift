@@ -17,12 +17,10 @@ class Discover: UIViewController {
     @IBOutlet weak var detailsTitle: UILabel!
     @IBOutlet weak var details: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Formats for CollectionView
         detailsImage.layer.cornerRadius = 40
-        
         // for Set details
         detailsImage.image = selectedSetData.photo
         detailsTitle.text = selectedSetData.title

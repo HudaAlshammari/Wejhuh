@@ -35,10 +35,12 @@ class MyTrip: UIViewController , UICollectionViewDelegate , UICollectionViewData
     //Array
     var myFavorite = [String]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Formats for CollectionView
         favotiteList.backgroundColor = UIColor.clear
+        
     }
 
     
@@ -49,17 +51,43 @@ class MyTrip: UIViewController , UICollectionViewDelegate , UICollectionViewData
        return myFavorite.count
     }
     
+    
     //function to select the elements of an array
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tripsCell", for: indexPath) as! FavoriteListCell
-        
         cell.photo?.image = UIImage(named: myFavorite[indexPath.row])
         cell.name?.text = myFavorite[indexPath.row]
-        
+       
         return cell
         
+//        cell.deleteThisCell = { [weak self] in
+//
+//                /// your deletion code here
+//                /// for example:
+//
+//                self?.myFavorite.remove(at: indexPath.item)
+//
+//                do {
+//                    try self?.realm.write {
+//                        self?.realm.delete(myFavorite[indexPath.item]) /// or whatever realm array you have
+//                    }
+//                    self?.favotiteList.performBatchUpdates({
+//                        self?.favotiteList.deleteItems(at: [indexPath])
+//                    }, completion: nil)
+//                } catch {
+//                    print("Error deleting project from realm: \(error)")
+//                }
+//            }
+        
     }
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+        }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         self.fetchAllLists()
@@ -69,26 +97,33 @@ class MyTrip: UIViewController , UICollectionViewDelegate , UICollectionViewData
             DispatchQueue.main.async {
                 self.myFavorite = user.trips ?? [""]
                 self.favotiteList.reloadData()
+            
             }
         }
     }
     
-    override func setEditing(_ editing: Bool, animated: Bool){
-        super.setEditing(editing, animated: animated)
-
-        favotiteList.allowsMultipleSelection = editing
-            let indexPaths = favotiteList.indexPathsForVisibleItems
-            for indexPath in indexPaths {
-                let cell = favotiteList.cellForItem(at: indexPath) as! FavoriteListCell
-//                cell.isInEditingMode = editing
-            }
+    
+    func deleteFavFromFireStore(favIndex: Int){
+        myFavorite.remove(at: favIndex)
+        UserApi.addLikes(uid: Auth.auth().currentUser?.uid ?? "", likes: myFavorite)
     }
+    
+//    override func setEditing(_ editing: Bool, animated: Bool){
+//        super.setEditing(editing, animated: animated)
+//
+//        favotiteList.allowsMultipleSelection = editing
+//            let indexPaths = favotiteList.indexPathsForVisibleItems
+//            for indexPath in indexPaths {
+//                let cell = favotiteList.cellForItem(at: indexPath) as! FavoriteListCell
+//                cell.isInEditingMode = editing
+//            }
+//    }
 
     
     
     // MARK: -CORE DATA
     
-    // function to fetch the saved data
+     //function to fetch the saved data
     func fetchAllLists() {
         let context = persistentContainer.viewContext
         do {
@@ -97,5 +132,34 @@ class MyTrip: UIViewController , UICollectionViewDelegate , UICollectionViewData
             print(error)
         }
     }
+    
+//    func deleteFav(fav: TripsList) {
+//        let context = persistentContainer.viewContext
+//
+//        do {
+//        context.delete(fav)
+//        try context.save()
+//        } catch{
+//            print(error)
+//        }
+//    }
 
 }
+
+//
+//if let selectedCells = favotiteList.indexPathsForSelectedItems {
+//
+//
+//     let items = selectedCells.map { $0.item }.sorted().reversed()
+//
+//     for item in items {
+//         myFavorite.remove(at: item)
+//
+//     }
+//
+//    favotiteList.deleteItems(at: selectedCells)
+//   }
+
+
+
+

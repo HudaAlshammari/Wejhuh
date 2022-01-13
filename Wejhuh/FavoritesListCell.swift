@@ -1,0 +1,25 @@
+//
+//  FavoritesListCell.swift
+//  Wejhuh
+//
+//  Created by Huda N S on 10/06/1443 AH.
+//
+
+import UIKit
+
+class FavoritesListCell: UITableViewCell {
+
+    // Outlet of items in cells
+    @IBOutlet weak var photo: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var view: UIView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        photo.layer.cornerRadius = 12
+    }
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+
+}

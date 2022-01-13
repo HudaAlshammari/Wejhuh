@@ -10,21 +10,20 @@ import SwiftUI
 
 class EssentalsVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
     
+    //Variable to fill in details
+    var selectedDetails : SetDetails?
+    //Arrays of pictures, names and details
+    var essentaltSet = [Essental]()
     
     // MARK: - CollectionView of Essentals
     
     // Outlet of CollectionView
     @IBOutlet weak var Essentals: UICollectionView!
     
-    //Variable to fill in details
-    var selectedDetails : SetDetails?
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         Essentals.delegate = self
         Essentals.dataSource = self
-        
         //Formats for CollectionView
         Essentals.backgroundColor = UIColor.clear
         Essentals.layer.shadowColor = UIColor.placeholderText.cgColor
@@ -34,37 +33,20 @@ class EssentalsVC: UIViewController , UICollectionViewDelegate , UICollectionVie
         setEssentals()
     }
     
-    //Arrays of pictures, names and details
-    var essentaltSet = [Essental]()
-
     
-    // MARK: - Fill in the array with data
-    func setEssentals(){
-        essentaltSet.append(Essental(Title: "Safety travel tips".localaized,
-                                     photo: UIImage(named: "culture")!,
-                                     dec: "stay informed ..".localaized))
-        
-        essentaltSet.append(Essental(Title: "About  eVisa".localaized,
-                                     photo: UIImage(named: "piano")!,
-//                                     photo2: UIImage(named: "111111111")!,
-                                     dec: "The Kingdom of Saudi Arabia has ..".localaized))
-        
-        essentaltSet.append(Essental(Title: "Saudi currency and payments".localaized,
-                                     photo: UIImage(named: "currency")!,
-//                                     photo2: UIImage(named: "essentals5")!,
-                                     dec: "Currency exchange and transactions ..".localaized))
-        
-       
-        
-        
-        essentaltSet.append(Essental(Title: "Saudi Heritage Journey to UNESCO".localaized,
-                                     photo: UIImage(named: "UNESCO")!,
-//                                     photo2: UIImage(named: "essentals2")!,
-                                     dec: "The trip of Saudi heritage to UNESCO was not a picnic ..".localaized))
+    // MARK: - buttons
+    
+    //button for URL
+    @IBAction func URLVisitSaudi(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.visitsaudi.com/en")! as URL , options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func SaudiTourismAuthority(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.sta.gov.sa/ar/")! as URL , options: [:], completionHandler: nil)
     }
     
     
-    // MARK: - functions
+    // MARK: - collectionView methods
     
     //function to determine the number of rows of an array
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -81,30 +63,37 @@ class EssentalsVC: UIViewController , UICollectionViewDelegate , UICollectionVie
     
     //function that is didSelect on the cells
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-//        let essental = essentaltSet[indexPath.row]
         switch indexPath.row {
         case 0 :
-            performSegue(withIdentifier: "SafetyTravelTips", sender: nil)
+            performSegue(withIdentifier: Segues.SafetyTravelTips.rawValue, sender: nil)
         case 1 :
-            performSegue(withIdentifier: "AboutVisa", sender: nil)
-            
+            performSegue(withIdentifier:Segues.AboutVisa.rawValue , sender: nil)
         case 2 :
-            performSegue(withIdentifier: "SaudiCurrency", sender: nil)
+            performSegue(withIdentifier: Segues.SaudiCurrency.rawValue, sender: nil)
         case 3 :
-            performSegue(withIdentifier: "UNESCO", sender: nil)
+            performSegue(withIdentifier: Segues.UNESCO.rawValue, sender: nil)
         default :
-            performSegue(withIdentifier: "...", sender: nil)
+            performSegue(withIdentifier: "", sender: nil)
         }
     }
     
-    // MARK: - buttons
-    
-    //button for URL
-    @IBAction func URLVisitSaudi(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://www.visitsaudi.com/en")! as URL , options: [:], completionHandler: nil)
+    // MARK: - Fill in the array with data
+    func setEssentals(){
+        essentaltSet.append(Essental(Title: "Safety travel tips".localaized,
+                                     photo: UIImage(named: "culture")!,
+                                     dec: "stay informed ..".localaized))
+        
+        essentaltSet.append(Essental(Title: "About  eVisa".localaized,
+                                     photo: UIImage(named: "piano")!,
+                                     dec: "The Kingdom of Saudi Arabia has ..".localaized))
+        
+        essentaltSet.append(Essental(Title: "Saudi currency and payments".localaized,
+                                     photo: UIImage(named: "currency")!,
+                                     dec: "Currency exchange and transactions ..".localaized))
+        
+        essentaltSet.append(Essental(Title: "Saudi Heritage Journey to UNESCO".localaized,
+                                     photo: UIImage(named: "UNESCO")!,
+                                     dec: "The trip of Saudi heritage to UNESCO was not a picnic ..".localaized))
     }
     
-    @IBAction func SaudiTourismAuthority(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://www.sta.gov.sa/ar/")! as URL , options: [:], completionHandler: nil)
-    }
 }

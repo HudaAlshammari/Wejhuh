@@ -8,6 +8,8 @@
 import Foundation
 
 
+// MARK: - extension for localaized
+
 extension String {
     var localaized: String {
         return NSLocalizedString(self, comment: "")

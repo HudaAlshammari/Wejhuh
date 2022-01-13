@@ -19,6 +19,7 @@ struct City {
     let photo2 : UIImage
     let detail : String
 }
+
 //-2
 struct NaturalCities {
     let name : String
@@ -26,6 +27,7 @@ struct NaturalCities {
     let photo2 : UIImage
     let detail : String
 }
+
 //-3
 struct AncientCities{
     let name : String
@@ -33,6 +35,7 @@ struct AncientCities{
     let photo2 : UIImage
     let detail : String
 }
+
 //See
 struct Event {
     let name : String
@@ -48,9 +51,9 @@ struct Event {
     let eventDetalis : String
     let latitude : String
     let longitude : String
-    
 }
 
+//struct to put details for events
 struct EventDetails {
     let photo : String
     let name : String
@@ -61,19 +64,15 @@ struct EventDetails {
     let season : String
     let audince : String
     let overview : String
-    
     let latitude : String
     let longitude : String
 }
-
 
 //Essental
 struct Essental {
     var Title : String
     var photo : UIImage
-//    var photo2 : UIImage
     var dec : String
-//    var details : String
 }
 
 //struct to put details
@@ -83,6 +82,11 @@ struct SetDetails {
     let details : String
 }
 
+//struct for (UsefulContact)
+struct UsefulContact {
+    let title : String
+    let number : String
+}
 
 // MARK: - class for user data
 class User {
@@ -92,13 +96,16 @@ class User {
 }
 
 
-
 // MARK: - enum for Segues
 enum Segues: String {
     case toProfile = "toProfile"
     case toOverviewOfTheSities = "toOverviewOfTheSities"
     case toEssentals = "toEssentals"
     case toSeeMore = "toSeeMore"
+    case SafetyTravelTips = "SafetyTravelTips"
+    case AboutVisa = "AboutVisa"
+    case SaudiCurrency = "SaudiCurrency"
+    case UNESCO = "UNESCO"
 }
 
 

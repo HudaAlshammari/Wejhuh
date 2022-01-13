@@ -15,14 +15,10 @@ class Profile: UIViewController {
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
-    
-    
     @IBOutlet weak var langaugeButton: UIButton!
-    
     @IBOutlet weak var callButton: UIButton!
-    
-    
     @IBOutlet weak var usefulContactsButton: UIButton!
+    
     
     var profile : User?
     
@@ -59,6 +55,7 @@ class Profile: UIViewController {
         }
     }
     
+    
     // MARK: - logOut Button
     @IBAction func logOut(_ sender: Any) {
         
@@ -71,10 +68,9 @@ class Profile: UIViewController {
        }
     }
     
-    // MARK: - language Button
     
+    // MARK: - language Button
     @IBAction func language(_ sender: Any) {
-        
         let chengelangu = UIAlertController(title: NSLocalizedString("The application will be restarted", comment: ""), message: NSLocalizedString( "Choose your preferred language",comment: ""), preferredStyle: .actionSheet)
            chengelangu.addAction(UIAlertAction(title: "Einglish", style: .default, handler: { action in
              let currentlang = Locale.current.languageCode
@@ -94,20 +90,14 @@ class Profile: UIViewController {
     
     
     // MARK: - call Button
-    
     @IBAction func call(_ sender: Any) {
-        
         let myUrl = "tel://930"
               // or outside scope use this
               guard let url = URL(string: "\(myUrl)"), !url.absoluteString.isEmpty else { return }
                UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
-    
-    
     @IBAction func usefulContacts(_ sender: Any) {
-        
     }
-    
 }
 
 

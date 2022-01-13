@@ -96,9 +96,3 @@ class Signup: UIViewController {
         }
     }
 }
-
-
-//if password.text?.isEmpty == true {
-//    print("pleas full password")
-//    return
-//}
