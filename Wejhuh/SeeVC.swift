@@ -6,38 +6,24 @@
 //
 
 import UIKit
-import CoreData
+//import CoreData
 import Firebase
 import FirebaseFirestore
 
 class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource  {
     
     
-    // MARK: -CORE DATA
-    
-    var myFavoriteModel: [TripsList] = []
     //Variable to fill in details
     var selectedSee : Event?
     var selectedDetails : EventDetails?
     var curentImageName: String?
     
-    //  =========
+    // searchBar
     var filterdata = [Event]()
     var searching = false
     
-    //Variable to
+    // Favorites
     var myFavorite = [String]()
-
-    //SAVE CORE DATA
-    let persistentContainer : NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "FavoriteModel")
-        container.loadPersistentStores(completionHandler: { desc, error in
-            if let readError = error {
-                print(readError)
-            }
-        })
-        return container
-    }()
     
     
     // MARK: - CollectionView of the See
@@ -219,24 +205,6 @@ class SeeVC: UIViewController , UICollectionViewDelegate , UICollectionViewDataS
                               eventDetalis: "The cruise ship, which is owned and operated by MSC Cruises, can accommodate 4,500 passengers and has a crew of about 1,500 ..".localaized ,
                               latitude: "21.603217937030088" ,
                               longitude: "39.10753647827252"))
-    }
-
-    
-    // MARK: -CORE DATA
-    
-    //to save data
-    func createNewList(eventName: String, eventPhoto: String){
-        let context = persistentContainer.viewContext
-        context.performAndWait {
-            let list = TripsList(context: context)
-            list.name = eventName
-            list.photo = eventPhoto
-            do {
-                try context.save()
-            } catch {
-                print(error)
-            }
-        }
     }
 }
 

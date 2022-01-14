@@ -6,37 +6,25 @@
 //
 
 import UIKit
-import CoreData
-import FirebaseFirestore
+//import CoreData
+import Firebase
 import FirebaseAuth
 
 class Trip: UIViewController , UITableViewDataSource , UITableViewDelegate {
     
-    var db : Firestore!
-    var myFavoriteModel: [TripsList] = []
+//    var myFavoriteModel: [TripsList] = []
     var myFavorite = [String]()
-    
-    // MARK: -CORE DATA
-    let persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "FavoriteModel")
-        container.loadPersistentStores (completionHandler: { desc, error in
-            if let readError = error {
-                print(readError)
-            }
-        })
-        return container
-    }()
-    
+
     
     @IBOutlet weak var favotiteList: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        db = Firestore.firestore()
-        favotiteList.backgroundColor = UIColor.clear
+//        favotiteList.backgroundColor = UIColor.clear
+        favotiteList.layer.cornerRadius = 12
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.fetchAllLists()
+
         self.favotiteList.reloadData()
         
         UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { user in
@@ -60,39 +48,22 @@ class Trip: UIViewController , UITableViewDataSource , UITableViewDelegate {
        
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            let trip = myFavorite[indexPath.row]
+            favotiteList.beginUpdates()
             myFavorite.remove(at: indexPath.row)
-            favotiteList.deleteRows(at: [indexPath], with: .automatic)
-
-            db.collection("Users").document("uid").updateData([
-                "likes": myFavorite.remove(at: indexPath.row),
-            ]) { err in
-                if let err = err {
-                    print("Error updating document: \(err)")
-                } else {
-                    print("Document successfully updated")
-                }
-            }
+            
+            favotiteList.deleteRows(at: [indexPath], with: .fade)
+            favotiteList.endUpdates()
         }
     }
     
-    // MARK: -CORE DATA
-    func fetchAllLists() {
-        let context = persistentContainer.viewContext
-        do {
-            myFavoriteModel = try context.fetch(TripsList.fetchRequest())
-        } catch {
-            print(error)
-        }
-    }
+    
+    
 }
-
-
-
-//    func deleteFavFromFireStore(favIndex: Int){
-//        myFavorite.remove(at: favIndex)
-//        UserApi.addLikes(uid: Auth.auth().currentUser?.uid ?? "", likes: myFavorite)
-//    }

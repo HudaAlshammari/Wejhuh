@@ -6,7 +6,7 @@
 //
 import Foundation
 import UIKit
-import CoreData
+//import CoreData
 import MapKit
 import FirebaseAuth
 import FirebaseFirestore
@@ -19,20 +19,8 @@ class SeeMore: UIViewController {
     var curentImageName: String?
     var lat = ""
     var lon = ""
+
     
-    // MARK: -CORE DATA
-    var selectedArrayTrips : Trips!
-    var selectedSee : Event!
-    var arrayTrip = [Trips]()
-    let persistentContainer : NSPersistentContainer = {
-       let container = NSPersistentContainer(name: "FavoriteModel")
-       container.loadPersistentStores(completionHandler: { desc, error in
-           if let readError = error {
-               print(readError)
-           }
-       })
-       return container
-   }()
    
     //Outlet of items of CollectionView
     @IBOutlet weak var seeImge: UIImageView!
