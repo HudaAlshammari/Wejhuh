@@ -122,7 +122,7 @@ class DiscoverVC: UIViewController , UICollectionViewDelegate , UICollectionView
     func setCity(){
         cityArray.append(City(name: "Al-Suwdah".localaized ,
                               photo: UIImage(named: "sudah")!,
-                              photo2: UIImage(named: "sudah2")!,
+                              photo2: UIImage(named: "sudah")!,
                               detail: "Jabal Al-Soudah Abha is the highest mountain peak in the Kingdom that combines the magic of place and time. God has blessed him with a beautiful nature, amazing views, and unparalleled beauty. Its height is 3015 meters above sea level, and it is covered with dense forests of juniper trees that add to its splendor. The magic makes it the most famous tourist attraction in Abha .. \nAl-Soudah Abha is also characterized by moderate weather throughout the year, where temperatures during the summer reach 15 degrees Celsius, accompanied by rain in August. Therefore, Jabal Al-Soudah is one of the most prominent tourist attractions in Saudi Arabia, and it attracts a huge number of visitors, both from inside and outside the Kingdom .. \n\nBEST ACTIVITIES : \n\n- Residential hotels \n- Chairlifts \n- Entertainment games \n- Glide \n- Residential Resorts.".localaized))
         
         cityArray.append(City(name: "Al-Ula".localaized,

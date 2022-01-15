@@ -254,11 +254,18 @@
 /* Class = "UILabel"; text = "Our employees from 49 eligible countries can apply for a tourist visa online through our quick and easy-to-use e-Visa platform before traveling, or upon arrival in Saudi Arabia through the visa offices of the Immigration Department\nTo obtain the visa through the official website:"; ObjectID = "x9J-tC-adB"; */
 "x9J-tC-adB.text" = "يمكن للسياح من 49 دولة مؤهلة التقدم للحصول على تأشيرة سياحة عبر الإنترنت من خلال منصة التأشيرة الإلكترونية السريعة وسهلة الاستخدام الخاصة بنا قبل السفر ، أو عند الوصول إلى المملكة العربية السعودية من خلال مكاتب التأشيرات التابعة لإدارة الهجرة للحصول على التأشيرة من خلال الموقع الرسمي:";
 
+
 /* Class = "UILabel"; text = "About :"; ObjectID = "yIk-Y5-1uc"; */
 "yIk-Y5-1uc.text" = "حول :";
+
 
 /* Class = "UILabel"; text = "Currency and payments in KSA"; ObjectID = "yRq-x0-u1X"; */
 "yRq-x0-u1X.text" = "العملة والمدفوعات في المملكة العربية السعودية";
 
+
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "zaE-uG-5yL"; */
 "zaE-uG-5yL.placeholder" = "كلمة المرور";
+
+
+"TdF-g4-alG" = "رحلتك الى المملكه تبدا من هنا";
+

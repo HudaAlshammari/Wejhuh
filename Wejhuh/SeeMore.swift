@@ -6,7 +6,6 @@
 //
 import Foundation
 import UIKit
-//import CoreData
 import MapKit
 import FirebaseAuth
 import FirebaseFirestore
@@ -17,9 +16,8 @@ class SeeMore: UIViewController {
     var selectedData : EventDetails!
     var myFavorite = [String]()
     var curentImageName: String?
-    var lat = ""
-    var lon = ""
-
+    var lat : Double = 0.0
+    var lon : Double = 0.0
     
    
     //Outlet of items of CollectionView
@@ -48,8 +46,10 @@ class SeeMore: UIViewController {
         season.text = selectedData.season
         audience.text = selectedData.audince
         overview.text = selectedData.overview
+        
         lat = selectedData.latitude
         lon = selectedData.longitude
+        addPin(latitude: lat, longitude: lon)
     }
     
     // MARK: - button for add To Favorite
@@ -75,5 +75,18 @@ class SeeMore: UIViewController {
                 }
             }
         }
+    }
+    
+    func addPin(latitude : Double ,longitude : Double ) {
+        let annotationn = MKPointAnnotation()
+        let centerCoordinate = CLLocationCoordinate2D(latitude: latitude , longitude:longitude )
+        annotationn.coordinate = centerCoordinate
+        location.addAnnotation(annotationn)
+        setStartingLocation(locations: centerCoordinate, destance: 1000)
+    }
+    
+    func setStartingLocation(locations : CLLocationCoordinate2D , destance : CLLocationDistance){
+        let region = MKCoordinateRegion(center: locations, latitudinalMeters: destance, longitudinalMeters: destance)
+        location.setRegion(region, animated: true)
     }
 }

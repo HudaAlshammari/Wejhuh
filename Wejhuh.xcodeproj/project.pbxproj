@@ -130,6 +130,8 @@
 		4F4D6931276F04DC00C95EFA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4F5BEDCA2768743B006E495A /* Profile.swift */,
+				4F15580E278C27C5009B6BCA /* UsefulContacts.swift */,
 				4F8C5AFC27620A8800D24189 /* Auth */,
 				4F5B8B45275E7AD300AEAC0A /* DiscoverVC.swift */,
 				4F60332827672CAE008EE389 /* Discover.swift */,
@@ -143,6 +145,8 @@
 		4F4D6932276F22E900C95EFA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4F7483972790413600579AA7 /* FavoritesListCell.swift */,
+				4F155810278C281D009B6BCA /* UsefulContactsCell.swift */,
 				4F653CF2275F78CC0002AB9B /* DiscoverCell.swift */,
 				4F8C5AFA2761F97800D24189 /* NaturalCitiesCell.swift */,
 				4FFC73082765CCAA00258F98 /* AncientCitiesCell.swift */,
@@ -196,11 +200,9 @@
 				4F653CF0275F61D70002AB9B /* GoogleService-Info.plist */,
 				4FFC730A2765E46400258F98 /* SeeVC.swift */,
 				4F4D6936276F5BAD00C95EFA /* SeeMore.swift */,
-				4F7132D92780DE7A00B98A4D /* API */,
-				4F3E9192278D65FC00E20AF4 /* localaized.swift */,
-				4F395B66278D736F000169F9 /* Localizable.strings */,
 				4F74839527903F7600579AA7 /* Trip.swift */,
-				4F7483972790413600579AA7 /* FavoritesListCell.swift */,
+				4F7132D92780DE7A00B98A4D /* API */,
+				4F395B66278D736F000169F9 /* Localizable.strings */,
 			);
 			path = Wejhuh;
 			sourceTree = "<group>";
@@ -229,10 +231,8 @@
 			children = (
 				4F7132D327809D9500B98A4D /* VideoVC.swift */,
 				4F6F5103278187F0001AD58A /* VideoTableViewCell.swift */,
-				4F6F51012781840B001AD58A /* VideoResponse.swift */,
 				4F7132D52780B03100B98A4D /* Response.swift */,
 				4F7132D127809B8D00B98A4D /* Model.swift */,
-				4F7132CD27807D7C00B98A4D /* Constents.swift */,
 				4F6F51052781BACE001AD58A /* DetailVC.swift */,
 			);
 			path = API;
@@ -250,7 +250,12 @@
 		4F74839A2790642500579AA7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4F6F51012781840B001AD58A /* VideoResponse.swift */,
+				4F64CF522774A4E500D5B9A0 /* User.swift */,
+				4F93D4AD2770BBFE003A997C /* UserApi.swift */,
+				4F7132CD27807D7C00B98A4D /* Constents.swift */,
 				4F4D6934276F25AD00C95EFA /* Structs.swift */,
+				4F3E9192278D65FC00E20AF4 /* localaized.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,11 +265,6 @@
 			children = (
 				4F8A5CEA276093EC008BE65A /* Signup.swift */,
 				4F8A5CE8276093AB008BE65A /* SignIn.swift */,
-				4F5BEDCA2768743B006E495A /* Profile.swift */,
-				4F93D4AD2770BBFE003A997C /* UserApi.swift */,
-				4F64CF522774A4E500D5B9A0 /* User.swift */,
-				4F15580E278C27C5009B6BCA /* UsefulContacts.swift */,
-				4F155810278C281D009B6BCA /* UsefulContactsCell.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";

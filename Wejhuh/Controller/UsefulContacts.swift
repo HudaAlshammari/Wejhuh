@@ -26,8 +26,13 @@ class UsefulContacts: UITableViewController {
         usefulContact.append(UsefulContact(title: "For Traffic accidents".localaized, number: "993"))
         usefulContact.append(UsefulContact(title: "passports".localaized, number: "992"))
         usefulContact.append(UsefulContact(title: "Saudi publice Securty".localaized, number: "989"))
-        usefulContact.append(UsefulContact(title: "General enquires".localaized, number: "905"))
+        usefulContact.append(UsefulContact(title: "Queries".localaized, number: "905"))
         usefulContact.append(UsefulContact(title: "Municipalities".localaized, number: "940"))
+        usefulContact.append(UsefulContact(title: "Roads Security".localaized, number: "996"))
+        usefulContact.append(UsefulContact(title: "border guards".localaized, number: "994"))
+        usefulContact.append(UsefulContact(title: "Electricity emergency".localaized, number: "933"))
+        usefulContact.append(UsefulContact(title: "Tourist call center".localaized, number: "930"))
+        usefulContact.append(UsefulContact(title: "Najm Company".localaized, number: "920000560"))
         usefulContact.append(UsefulContact(title: "Consumer protection".localaized, number: "935"))
     }
 

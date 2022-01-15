@@ -73,5 +73,3 @@ struct Default: Codable {
 struct PageInfo: Codable {
     let totalResults, resultsPerPage: Int
 }
-
-//Thumbnails
