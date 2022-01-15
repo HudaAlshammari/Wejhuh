@@ -13,7 +13,7 @@ The application contains:
 - dark mode
 - Allows the user to discover the most important historical monuments in Saudi Arabia
 - Allows the user to select his trip and save his favorite places
-- The user is allowed to view the terms and conditions and public morals in Saudi Arabia
+- The user is allowed to view the terms in Saudi Arabia
 
 
 ### Define the scenes :
@@ -25,9 +25,9 @@ The application contains:
 
 
 ### User Stories :
-- Select Language
-- Sign up with Email and Passowrd
-- See the front of the house and discover the most important tourist cities in Saudi Arabia.
-- From the list of "Historic Landmarks" discover the most important landmarks in the Kingdom of Saudi Arabia
-- In "My Trip" the user's favorite places and save them for visiting
-- In "Basics" see Terms and Conditions, Public Etiquette and Culture in Saudi Arabia
+- Signup with email and Passowrd
+- See the front of the house and discover the most important tourist cities in the Kingdom of Saudi Arabia.
+- From the "Watch" list, discover the most important events in the Kingdom of Saudi Arabia
+- In "My Trip" the user's favorite places and saved to visit
+- In "Essental", see the terms and conditions..
+- In the "Profile" there are settings - change the language, a number for quick contact in the center of the Ministry of Tourism, and a list of important numbers
