@@ -9,12 +9,12 @@ import UIKit
 import WebKit
 
 class DetailVC: UIViewController {
-
+    var item : Item?
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var webView: WKWebView!
     
-    var item : Item?
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -9,11 +9,11 @@ import UIKit
 
 class VideoVC : UIViewController , UITableViewDataSource , UITableViewDelegate , ModelDelegate{
     
-    
-    @IBOutlet weak var tableViewVideos: UITableView!
-    
     var model = Model()
     var videos = [Item]()
+    
+    @IBOutlet weak var tableViewVideos: UITableView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

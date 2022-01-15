@@ -2075,7 +2075,6 @@ To obtain the visa through the official website:</string>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="usefulContacts:" destination="zng-HD-5vC" eventType="touchUpInside" id="NUU-SR-eqv"/>
-                                    <segue destination="56Q-d6-MG3" kind="show" id="Trk-qT-qBJ"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vlm-xQ-uP9">
@@ -2182,6 +2181,7 @@ To obtain the visa through the official website:</string>
                         <outlet property="langaugeButton" destination="gAj-na-MBA" id="0zQ-DO-sj1"/>
                         <outlet property="name" destination="LyY-zE-iM2" id="1c2-rC-JKQ"/>
                         <outlet property="usefulContactsButton" destination="Oc4-CQ-pVK" id="xpj-Vd-ays"/>
+                        <segue destination="bbX-O4-CIn" kind="show" identifier="usefulContacts" id="94m-zN-eKK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDn-fA-qKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2191,7 +2191,7 @@ To obtain the visa through the official website:</string>
         <!--Useful Contacts-->
         <scene sceneID="KRe-8b-Nbu">
             <objects>
-                <tableViewController id="bbX-O4-CIn" customClass="UsefulContacts" customModule="Wejhuh" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="bbX-O4-CIn" customClass="UsefulContacts" customModule="Wejhuh" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="mTE-tn-bFv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2238,7 +2238,7 @@ To obtain the visa through the official website:</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yuo-4A-ZSb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3073.913043478261" y="646.875"/>
+            <point key="canvasLocation" x="2104" y="647"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Drf-sr-G3m">
@@ -2277,25 +2277,6 @@ To obtain the visa through the official website:</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TME-Zi-zF5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-410" y="329"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="xae-ia-SjW">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="56Q-d6-MG3" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="0Fg-cD-MLr"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BvD-2A-Sz6">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="bbX-O4-CIn" kind="relationship" relationship="rootViewController" id="a3h-JE-iWg"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8A4-eQ-PAp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2163.768115942029" y="646.875"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

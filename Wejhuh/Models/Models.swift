@@ -106,6 +106,8 @@ enum Segues: String {
     case AboutVisa = "AboutVisa"
     case SaudiCurrency = "SaudiCurrency"
     case UNESCO = "UNESCO"
+    case toApp = "toApp"
+    case usefulContacts = "usefulContacts"
 }
 
 

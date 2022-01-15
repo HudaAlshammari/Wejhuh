@@ -14,14 +14,14 @@ import FirebaseAuth
 // MARK: - Signup
 class Signup: UIViewController {
     
+    //eye icon password
+    let button = UIButton(type: .custom)
+    var btnColor = UIButton(type: .custom)
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    //eye icon password
-    let button = UIButton(type: .custom)
-    var btnColor = UIButton(type: .custom)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,7 +85,7 @@ class Signup: UIViewController {
                 UserApi.addUser(name: self.name.text ?? "" , uid: authResult?.user.uid ?? "" , email: self.email.text ?? "" , completion: { check in
                     if check {
                         print(".....")
-                        self.performSegue(withIdentifier: "toApp", sender: nil)
+                        self.performSegue(withIdentifier: Segues.toApp.rawValue, sender: nil)
                     }
                 })
             }

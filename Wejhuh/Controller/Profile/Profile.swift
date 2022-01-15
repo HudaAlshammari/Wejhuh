@@ -13,14 +13,13 @@ import FirebaseAuth
 // MARK: - Profile
 class Profile: UIViewController {
     
+    var profile : User?
+    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var langaugeButton: UIButton!
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var usefulContactsButton: UIButton!
-    
-    
-    var profile : User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,8 +96,6 @@ class Profile: UIViewController {
                UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     @IBAction func usefulContacts(_ sender: Any) {
+        performSegue(withIdentifier: Segues.usefulContacts.rawValue, sender: nil)
     }
 }
-
-
-

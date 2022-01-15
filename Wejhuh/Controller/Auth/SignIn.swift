@@ -13,14 +13,15 @@ import FirebaseAuth
 // MARK: - Signin
 class SignIn: UIViewController {
     
-    @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var password: UITextField!
-    
-    
     //eye icon password
     let button = UIButton(type: .custom)
     var btnColor = UIButton(type: .custom)
     
+    
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         password.rightViewMode = .unlessEditing
@@ -35,6 +36,15 @@ class SignIn: UIViewController {
             view.addGestureRecognizer(TapGesture)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //Confirm the existence of the account
+        if Auth.auth().currentUser != nil {
+           performSegue(withIdentifier: "toApp", sender: nil)
+        }
+    }
+    
     //Function of the button to hide and show the password
     @IBAction func btnPasswordVisiblityClicked(_ sender: Any) {
         (sender as! UIButton).isSelected = !(sender as! UIButton).isSelected
@@ -47,14 +57,6 @@ class SignIn: UIViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        //Confirm the existence of the account
-        if Auth.auth().currentUser != nil {
-           performSegue(withIdentifier: "toApp", sender: nil)
-        }
-    }
     
     //creat New Account Button
     @IBAction func creatAccount(_ sender: UIButton) {
@@ -83,7 +85,7 @@ class SignIn: UIViewController {
                 alert.addAction(UIAlertAction(title: "OK" , style: .default , handler: nil))
                 self?.present(alert, animated : true)
             } else {
-                self?.performSegue(withIdentifier: "toApp", sender: nil)
+                self?.performSegue(withIdentifier: Segues.toApp.rawValue, sender: nil)
             }
         }
     }
