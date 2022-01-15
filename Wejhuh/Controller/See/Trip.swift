@@ -47,14 +47,29 @@ class Trip: UIViewController , UITableViewDataSource , UITableViewDelegate {
         return .delete
     }
     
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//
+//        if editingStyle == .delete {
+//            favotiteList.beginUpdates()
+//            myFavorite.remove(at: indexPath.row)
+//
+//            favotiteList.deleteRows(at: [indexPath], with: .fade)
+//            favotiteList.endUpdates()
+//        }
+//
+//    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+            return true
+        }
+
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-        if editingStyle == .delete {
-            favotiteList.beginUpdates()
+        if (editingStyle == UITableViewCell.EditingStyle.delete) {
+
             myFavorite.remove(at: indexPath.row)
-            
             favotiteList.deleteRows(at: [indexPath], with: .fade)
-            favotiteList.endUpdates()
+
+            }
         }
-    }
 }

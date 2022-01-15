@@ -990,131 +990,6 @@ To obtain the visa through the official website:</string>
             </objects>
             <point key="canvasLocation" x="-772" y="-433"/>
         </scene>
-        <!--My Trip-->
-        <scene sceneID="iSF-CT-Kkk">
-            <objects>
-                <viewController id="OuU-Tp-ALa" customClass="MyTrip" customModule="Wejhuh" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="D58-pg-zUH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="122" translatesAutoresizingMaskIntoConstraints="NO" id="Bh2-aP-oPd">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
-                            </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mOK-8e-MDr">
-                                <rect key="frame" x="0.0" y="275" width="414" height="587"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="587" id="7Xi-gw-cuA"/>
-                                    <constraint firstAttribute="width" constant="414" id="vFZ-XB-R2A"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IRv-H6-AdW">
-                                    <size key="itemSize" width="373" height="120"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tripsCell" id="Kvz-61-HaO" customClass="FavoriteListCell" customModule="Wejhuh" customModuleProvider="target">
-                                        <rect key="frame" x="20.5" y="0.0" width="373" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nCy-0G-K9C">
-                                            <rect key="frame" x="0.0" y="0.0" width="373" height="120"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AyN-oC-Hrd">
-                                                    <rect key="frame" x="-3" y="1" width="147" height="123.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="126" id="CaJ-ir-4eq"/>
-                                                        <constraint firstAttribute="width" constant="147" id="TgI-vx-mB8"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mia-f1-Z0G">
-                                                    <rect key="frame" x="153" y="49" width="212" height="22"/>
-                                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
-                                                    <color key="textColor" name="ColorWriting"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HZk-60-ygn">
-                                                    <rect key="frame" x="352" y="56" width="12" height="12"/>
-                                                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxA-Uq-tCd">
-                                                    <rect key="frame" x="279" y="10" width="67" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                                    <connections>
-                                                        <action selector="deletePressed:" destination="Kvz-61-HaO" eventType="touchUpInside" id="Usz-EL-2Zv"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" name="ColorCell"/>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="AyN-oC-Hrd" secondAttribute="trailing" constant="229" id="0Bb-HN-IrQ"/>
-                                                <constraint firstAttribute="trailing" secondItem="Mia-f1-Z0G" secondAttribute="trailing" constant="8" id="66a-PS-iIf"/>
-                                                <constraint firstItem="AyN-oC-Hrd" firstAttribute="top" secondItem="nCy-0G-K9C" secondAttribute="top" id="7ja-Qw-lx0"/>
-                                                <constraint firstAttribute="trailing" secondItem="HZk-60-ygn" secondAttribute="trailing" constant="9" id="Ezd-tI-GGd"/>
-                                                <constraint firstItem="Mia-f1-Z0G" firstAttribute="leading" secondItem="nCy-0G-K9C" secondAttribute="leading" constant="153" id="HEP-9N-ydE"/>
-                                                <constraint firstItem="Mia-f1-Z0G" firstAttribute="leading" secondItem="nCy-0G-K9C" secondAttribute="leading" constant="153" id="JhU-RK-EfS"/>
-                                                <constraint firstAttribute="trailing" secondItem="Mia-f1-Z0G" secondAttribute="trailing" constant="8" id="QeQ-3K-CsG"/>
-                                                <constraint firstAttribute="bottom" secondItem="HZk-60-ygn" secondAttribute="bottom" constant="50.5" id="UsM-kP-pai"/>
-                                                <constraint firstItem="HZk-60-ygn" firstAttribute="top" secondItem="nCy-0G-K9C" secondAttribute="top" constant="54" id="YJh-Y2-nIV"/>
-                                                <constraint firstItem="Mia-f1-Z0G" firstAttribute="top" secondItem="AyN-oC-Hrd" secondAttribute="bottom" constant="-77" id="gnM-Ci-2OY"/>
-                                                <constraint firstItem="Mia-f1-Z0G" firstAttribute="top" secondItem="AyN-oC-Hrd" secondAttribute="bottom" constant="-77" id="i0M-Yx-ouz"/>
-                                                <constraint firstItem="AyN-oC-Hrd" firstAttribute="leading" secondItem="nCy-0G-K9C" secondAttribute="leading" constant="-3" id="lMo-As-7yz"/>
-                                                <constraint firstAttribute="bottom" secondItem="Mia-f1-Z0G" secondAttribute="bottom" constant="49" id="mlR-ST-itd"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="373" height="120"/>
-                                        <connections>
-                                            <outlet property="name" destination="Mia-f1-Z0G" id="xkj-Z1-B0p"/>
-                                            <outlet property="photo" destination="AyN-oC-Hrd" id="HQg-gT-pdk"/>
-                                            <outlet property="view" destination="nCy-0G-K9C" id="DXe-Oi-zuR"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="OuU-Tp-ALa" id="jbE-mi-8QW"/>
-                                    <outlet property="delegate" destination="OuU-Tp-ALa" id="Whn-4l-Wfm"/>
-                                </connections>
-                            </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your trip to Saudi start here .." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijf-uK-mdn">
-                                <rect key="frame" x="20" y="88" width="323" height="108"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="37"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="cqe-Z6-nSJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="cqe-Z6-nSJ" firstAttribute="trailing" secondItem="Ijf-uK-mdn" secondAttribute="trailing" constant="71" id="1g4-8l-lYW"/>
-                            <constraint firstItem="mOK-8e-MDr" firstAttribute="bottom" secondItem="Bh2-aP-oPd" secondAttribute="bottom" id="2o0-U8-Ofm"/>
-                            <constraint firstItem="Bh2-aP-oPd" firstAttribute="trailing" secondItem="cqe-Z6-nSJ" secondAttribute="trailing" id="IEG-0e-2tR"/>
-                            <constraint firstItem="Bh2-aP-oPd" firstAttribute="bottom" secondItem="cqe-Z6-nSJ" secondAttribute="bottom" id="Rna-J4-ZFQ"/>
-                            <constraint firstItem="mOK-8e-MDr" firstAttribute="leading" secondItem="cqe-Z6-nSJ" secondAttribute="leading" id="S2y-RY-ZI1"/>
-                            <constraint firstItem="Ijf-uK-mdn" firstAttribute="top" secondItem="cqe-Z6-nSJ" secondAttribute="top" id="aJd-mj-n1o"/>
-                            <constraint firstItem="mOK-8e-MDr" firstAttribute="top" secondItem="Ijf-uK-mdn" secondAttribute="bottom" constant="79" id="cjk-6r-eAu"/>
-                            <constraint firstItem="Bh2-aP-oPd" firstAttribute="leading" secondItem="cqe-Z6-nSJ" secondAttribute="leading" id="f3N-km-TSw"/>
-                            <constraint firstItem="mOK-8e-MDr" firstAttribute="trailing" secondItem="cqe-Z6-nSJ" secondAttribute="trailing" id="gXB-g0-L3t"/>
-                            <constraint firstItem="mOK-8e-MDr" firstAttribute="leading" secondItem="cqe-Z6-nSJ" secondAttribute="leading" id="j4U-9w-iQ4"/>
-                            <constraint firstItem="cqe-Z6-nSJ" firstAttribute="trailing" secondItem="mOK-8e-MDr" secondAttribute="trailing" id="kCo-8D-vVd"/>
-                            <constraint firstItem="Ijf-uK-mdn" firstAttribute="leading" secondItem="cqe-Z6-nSJ" secondAttribute="leading" constant="20" id="pLj-O3-ya0"/>
-                            <constraint firstItem="Bh2-aP-oPd" firstAttribute="top" secondItem="D58-pg-zUH" secondAttribute="top" id="ztD-Xg-PWk"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="nhI-RF-gUC">
-                        <barButtonItem key="backBarButtonItem" title="kmk" id="RjV-sv-l2h"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="favotiteList" destination="mOK-8e-MDr" id="TSZ-Np-xMp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gur-cF-HmC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2059" y="-433"/>
-        </scene>
         <!--SeeVC-->
         <scene sceneID="SLr-9y-mIX">
             <objects>
@@ -1758,25 +1633,6 @@ To obtain the visa through the official website:</string>
             </objects>
             <point key="canvasLocation" x="-1849" y="329"/>
         </scene>
-        <!--My Trip-->
-        <scene sceneID="hVe-e8-BFC">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DHx-Tg-k2c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Trip" image="suit.heart" catalog="system" selectedImage="suit.heart.fill" id="UEZ-31-twP"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GAt-hb-AKZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="OuU-Tp-ALa" kind="relationship" relationship="rootViewController" id="kJE-Ef-Wnp"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8mQ-Bm-DQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2059" y="-1167"/>
-        </scene>
         <!--See-->
         <scene sceneID="fl8-3Y-BNa">
             <objects>
@@ -2292,7 +2148,6 @@ To obtain the visa through the official website:</string>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="cloud.sun.rain" catalog="system" width="128" height="128"/>
-        <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="globe.americas" catalog="system" width="128" height="121"/>
         <image name="globe.americas.fill" catalog="system" width="128" height="121"/>
         <image name="heart" catalog="system" width="128" height="109"/>
@@ -2312,8 +2167,6 @@ To obtain the visa through the official website:</string>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="signup" width="629" height="1248"/>
-        <image name="suit.heart" catalog="system" width="128" height="109"/>
-        <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
         <image name="suitcase" catalog="system" width="128" height="100"/>
         <image name="suitcase.fill" catalog="system" width="128" height="100"/>
         <image name="visitSaudi" width="1035" height="393"/>
