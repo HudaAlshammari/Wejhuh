@@ -70,7 +70,7 @@ class Profile: UIViewController {
     
     // MARK: - language Button
     @IBAction func language(_ sender: Any) {
-        let chengelangu = UIAlertController(title: NSLocalizedString("The application will be restarted", comment: ""), message: NSLocalizedString( "Choose your preferred language",comment: ""), preferredStyle: .actionSheet)
+        let chengelangu = UIAlertController(title: NSLocalizedString("The application will be restarted".localaized, comment: ""), message: NSLocalizedString( "Choose your preferred language".localaized,comment: ""), preferredStyle: .actionSheet)
            chengelangu.addAction(UIAlertAction(title: "Einglish", style: .default, handler: { action in
              let currentlang = Locale.current.languageCode
              let newLanguage = currentlang == "en" ? "ar" : "en"
