@@ -1115,11 +1115,11 @@ To obtain the visa through the official website:</string>
             <objects>
                 <viewController id="Tia-1l-LFe" customClass="SeeMore" customModule="Wejhuh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JwJ-Lc-g9m">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1272"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1218"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUJ-d9-XwW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1185"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1180"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N1w-X1-B6F">
                                         <rect key="frame" x="0.0" y="-120" width="414" height="442"/>
@@ -1352,7 +1352,7 @@ To obtain the visa through the official website:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byf-Hp-xBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1151" y="1920"/>
+            <point key="canvasLocation" x="-813" y="1937"/>
         </scene>
         <!--Trip-->
         <scene sceneID="o5Y-fM-r7u">
@@ -1383,7 +1383,7 @@ To obtain the visa through the official website:</string>
                                                         <constraint firstAttribute="height" constant="112" id="acC-2i-ryX"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18U-AS-Dte">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18U-AS-Dte">
                                                     <rect key="frame" x="182" y="11" width="184" height="112"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1438,6 +1438,7 @@ To obtain the visa through the official website:</string>
                     <navigationItem key="navigationItem" id="mRE-43-q3D"/>
                     <connections>
                         <outlet property="favotiteList" destination="hWX-nc-6If" id="KPo-zx-YGG"/>
+                        <segue destination="Tia-1l-LFe" kind="showDetail" identifier="toSeeMore" id="IPG-Rk-ROM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSk-RY-1JJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2136,6 +2137,7 @@ To obtain the visa through the official website:</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="IPG-Rk-ROM"/>
         <segue reference="qHw-Lg-AOj"/>
     </inferredMetricsTieBreakers>
     <resources>

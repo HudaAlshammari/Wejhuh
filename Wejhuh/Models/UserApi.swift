@@ -32,4 +32,10 @@ class UserApi {
         let refUsers = Firestore.firestore().collection("Users")
         refUsers.document(uid).setData(["likes":likes],merge: true)
     }
+    
+//    static func removeLike(uid:String,likes:[String]) {
+//        let refUsers = Firestore.firestore().collection("Users")
+//        refUsers.document(uid).setData(["likes":likes],merge: true)
+//    }
+    
 }
