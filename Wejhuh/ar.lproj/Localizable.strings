@@ -147,3 +147,18 @@
 "Najm Company" = "شركة نجم";
 "Consumer protection" = "حماية المستهلك";
 "Queries" = "استعلامات";
+
+
+"please full in Email and Password" = "املئ الايميل وكلمة المرور";
+"your name or email or passowrd is missing" = "الايميل او كلمة المرور غير صحيحه";
+"Error" = "خطاء";
+
+"The email address is incorrect or is already in use by another account." = "الايميل غير صحيح او لديه حساب سابق";
+
+"please full in Email and Password" = "املئ الايميل وكلمة المرور";
+"your email or passowrd is missing" = "الايميل او كلمة المرور غير صحيحه";
+"Error" = "خطاء";
+"Sorry , we could not find your account." = "اسف . الحساب غير موجود";
+
+"It was successfully added to My Trip" = "تمت اضافتها الى قائمة رحلتي بنجاح";
+"Already added" = "تم الاضافة مسبقا";

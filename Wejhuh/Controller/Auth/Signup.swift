@@ -56,7 +56,7 @@ class Signup: UIViewController {
     //button signup
     @IBAction func signup(_ sender: Any) {
         if email.text?.isEmpty == true || password.text?.isEmpty == true || name.text?.isEmpty == true {
-            let alert = UIAlertController(title: "please full in Email and Password", message: "your name or email or passowrd is missing" , preferredStyle: .alert)
+            let alert = UIAlertController(title: "please full in Email and Password".localaized, message: "your name or email or passowrd is missing".localaized , preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK" , style: .default , handler: nil))
             self.present(alert, animated : true)
         }else{
@@ -76,7 +76,7 @@ class Signup: UIViewController {
     func signup(){
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (authResult, error) in
             if let error = error {
-                let alert = UIAlertController(title: "Error", message: "The email address is incorrect or is already in use by another account." , preferredStyle: .alert)
+                let alert = UIAlertController(title: "Error".localaized, message: "The email address is incorrect or is already in use by another account.".localaized , preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK" , style: .default , handler: nil))
                 self.present(alert, animated : true)
                 

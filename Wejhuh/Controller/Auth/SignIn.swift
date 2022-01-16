@@ -69,7 +69,7 @@ class SignIn: UIViewController {
     //Alert if the account has been created or not and if the data is filled out or not
     @IBAction func signIn(_ sender: UIButton) {
         if email.text?.isEmpty ?? true || password.text?.isEmpty ?? true {
-            let alert = UIAlertController(title: "please full in Email and Password", message: "your email or passowrd is missing" , preferredStyle: .alert)
+            let alert = UIAlertController(title: "please full in Email and Password".localaized, message: "your email or passowrd is missing".localaized , preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK" , style: .default , handler: nil))
             self.present(alert, animated : true)
         } else {
@@ -81,7 +81,7 @@ class SignIn: UIViewController {
     func signIn(){
         Auth.auth().signIn(withEmail: email.text!, password: password.text!) { [weak self] authResult, error in
             if error != nil {
-                let alert = UIAlertController(title: "Error", message: "Sorry , we could not find your account." , preferredStyle: .alert)
+                let alert = UIAlertController(title: "Error".localaized, message: "Sorry , we could not find your account.".localaized , preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK" , style: .default , handler: nil))
                 self?.present(alert, animated : true)
             } else {

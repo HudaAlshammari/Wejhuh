@@ -29,5 +29,5 @@ The application contains:
 - See the front of the house and discover the most important tourist cities in the Kingdom of Saudi Arabia.
 - From the "Watch" list, discover the most important events in the Kingdom of Saudi Arabia
 - In "My Trip" the user's favorite places and saved to visit
-- In "Essental", see the terms and conditions..
+- In "More", see the terms and conditions..
 - In the "Profile" there are settings - change the language, a number for quick contact in the center of the Ministry of Tourism, and a list of important numbers

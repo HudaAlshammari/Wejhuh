@@ -61,7 +61,7 @@ class SeeMore: UIViewController {
                 self.myFavorite =  user.trips ?? [""]
                 let fav = self.seeName.text ?? ""
                 if let foundIndex = self.myFavorite.firstIndex(of: fav) {
-                    let alart = UIAlertController(title: "", message: "Already added", preferredStyle: UIAlertController.Style.alert)
+                    let alart = UIAlertController(title: "", message: "Already added".localaized, preferredStyle: UIAlertController.Style.alert)
                     alart.addAction(UIAlertAction(title: "ok", style: .default , handler: nil))
                     self.present(alart, animated: true)
                 
@@ -69,7 +69,7 @@ class SeeMore: UIViewController {
                     self.myFavorite.append(fav)
                     UserApi.addLikes(uid: Auth.auth().currentUser?.uid ?? "", likes: self.myFavorite)
                     
-                    let alart = UIAlertController(title: "", message: "It was successfully added to My Trip", preferredStyle: UIAlertController.Style.alert)
+                    let alart = UIAlertController(title: "", message: "It was successfully added to My Trip".localaized, preferredStyle: UIAlertController.Style.alert)
                     alart.addAction(UIAlertAction(title: "ok", style: .default , handler: nil))
                     self.present(alart, animated: true)
                 }
