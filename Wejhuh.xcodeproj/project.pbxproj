@@ -166,6 +166,7 @@
 				4F5B8B47275E7AD300AEAC0A /* Main.storyboard */,
 				4F5B8B4C275E7AD400AEAC0A /* LaunchScreen.storyboard */,
 				4F5B8B4A275E7AD400AEAC0A /* Assets.xcassets */,
+				4F395B66278D736F000169F9 /* Localizable.strings */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,7 +240,6 @@
 				4F5B8B43275E7AD300AEAC0A /* SceneDelegate.swift */,
 				4F5B8B4F275E7AD400AEAC0A /* Info.plist */,
 				4F653CF0275F61D70002AB9B /* GoogleService-Info.plist */,
-				4F395B66278D736F000169F9 /* Localizable.strings */,
 			);
 			path = Wejhuh;
 			sourceTree = "<group>";

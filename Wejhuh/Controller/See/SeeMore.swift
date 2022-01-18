@@ -13,7 +13,7 @@ import FirebaseFirestore
 class SeeMore: UIViewController {
     
     
-    var selectedData : EventDetails!
+    var selectedData : EventDetails?
     var myFavorite = [String]()
     var curentImageName: String?
     var lat : Double = 0.0
@@ -37,18 +37,18 @@ class SeeMore: UIViewController {
         super.viewDidLoad()
         //Formats for cell
         seeImge.layer.cornerRadius = 35
-        seeImge.image = UIImage(named: selectedData.photo)
-        seeName.text = selectedData.name
-        from.text = selectedData.from
-        to.text = selectedData.to
-        starting.text = selectedData.starting
-        ending.text = selectedData.ending
-        season.text = selectedData.season
-        audience.text = selectedData.audince
-        overview.text = selectedData.overview
+        seeImge.image = UIImage(named: selectedData?.photo ?? "")
+        seeName.text = selectedData?.name
+        from.text = selectedData?.from
+        to.text = selectedData?.to
+        starting.text = selectedData?.starting
+        ending.text = selectedData?.ending
+        season.text = selectedData?.season
+        audience.text = selectedData?.audince
+        overview.text = selectedData?.overview
         
-        lat = selectedData.latitude
-        lon = selectedData.longitude
+        lat = selectedData?.latitude ?? 0.0
+        lon = selectedData?.longitude ?? 0.0
         addPin(latitude: lat, longitude: lon)
     }
     
@@ -76,6 +76,9 @@ class SeeMore: UIViewController {
             }
         }
     }
+    
+    
+    // MARK: -  Mapkit
     
     func addPin(latitude : Double ,longitude : Double ) {
         let annotationn = MKPointAnnotation()

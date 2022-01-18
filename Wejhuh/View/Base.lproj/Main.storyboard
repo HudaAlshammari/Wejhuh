@@ -1108,18 +1108,18 @@ To obtain the visa through the official website:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gms-cf-hCr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1149.2753623188407" y="1043.9732142857142"/>
+            <point key="canvasLocation" x="-1146" y="1044"/>
         </scene>
         <!--See More-->
         <scene sceneID="eLJ-eS-lMt">
             <objects>
                 <viewController id="Tia-1l-LFe" customClass="SeeMore" customModule="Wejhuh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JwJ-Lc-g9m">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1218"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1272"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUJ-d9-XwW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1180"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1185"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N1w-X1-B6F">
                                         <rect key="frame" x="0.0" y="-120" width="414" height="442"/>
@@ -1352,7 +1352,7 @@ To obtain the visa through the official website:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byf-Hp-xBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-813" y="1937"/>
+            <point key="canvasLocation" x="-825" y="1923"/>
         </scene>
         <!--Trip-->
         <scene sceneID="o5Y-fM-r7u">
@@ -1366,7 +1366,7 @@ To obtain the visa through the official website:</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hWX-nc-6If">
-                                <rect key="frame" x="20" y="296" width="374" height="505"/>
+                                <rect key="frame" x="20" y="280.5" width="374" height="520.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tripsCell" rowHeight="134" id="THv-bt-lcd" customClass="FavoritesListCell" customModule="Wejhuh" customModuleProvider="target">
@@ -1412,8 +1412,8 @@ To obtain the visa through the official website:</string>
                                     <outlet property="delegate" destination="suc-1A-KsQ" id="CcS-6b-7Yn"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="your trip to Saudi start here .." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdF-g4-alG">
-                                <rect key="frame" x="20" y="111" width="374" height="105"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your trip to Saudi start here .." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdF-g4-alG">
+                                <rect key="frame" x="20" y="111" width="374" height="80.5"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1424,21 +1424,21 @@ To obtain the visa through the official website:</string>
                         <constraints>
                             <constraint firstItem="B1H-zL-sdO" firstAttribute="leading" secondItem="wy4-Je-Kqy" secondAttribute="leading" id="3NK-A8-LN3"/>
                             <constraint firstAttribute="bottom" secondItem="B1H-zL-sdO" secondAttribute="bottom" constant="34" id="QMI-Rd-vFS"/>
-                            <constraint firstItem="wy4-Je-Kqy" firstAttribute="trailing" secondItem="hWX-nc-6If" secondAttribute="trailing" constant="20" id="QeI-Iw-Frs"/>
                             <constraint firstItem="TdF-g4-alG" firstAttribute="leading" secondItem="wy4-Je-Kqy" secondAttribute="leading" constant="20" id="Uof-Am-jlc"/>
+                            <constraint firstItem="wy4-Je-Kqy" firstAttribute="trailing" secondItem="hWX-nc-6If" secondAttribute="trailing" constant="20" id="dC9-5v-kSd"/>
                             <constraint firstItem="TdF-g4-alG" firstAttribute="top" secondItem="wy4-Je-Kqy" secondAttribute="top" constant="23" id="gWL-bv-sTb"/>
                             <constraint firstItem="wy4-Je-Kqy" firstAttribute="trailing" secondItem="TdF-g4-alG" secondAttribute="trailing" constant="20" id="hWc-Op-oKH"/>
+                            <constraint firstItem="hWX-nc-6If" firstAttribute="top" secondItem="TdF-g4-alG" secondAttribute="bottom" constant="89" id="hdS-G8-ZRh"/>
                             <constraint firstItem="B1H-zL-sdO" firstAttribute="trailing" secondItem="wy4-Je-Kqy" secondAttribute="trailing" id="iAU-Rb-oEp"/>
-                            <constraint firstAttribute="bottom" secondItem="hWX-nc-6If" secondAttribute="bottom" constant="95" id="jMW-Yz-yxz"/>
-                            <constraint firstItem="hWX-nc-6If" firstAttribute="top" secondItem="TdF-g4-alG" secondAttribute="bottom" constant="104.5" id="noh-EV-Bid"/>
-                            <constraint firstItem="hWX-nc-6If" firstAttribute="leading" secondItem="wy4-Je-Kqy" secondAttribute="leading" constant="20" id="t4C-ng-bjz"/>
+                            <constraint firstItem="wy4-Je-Kqy" firstAttribute="bottom" secondItem="hWX-nc-6If" secondAttribute="bottom" constant="12" id="n8z-yQ-akB"/>
+                            <constraint firstItem="hWX-nc-6If" firstAttribute="leading" secondItem="wy4-Je-Kqy" secondAttribute="leading" constant="20" id="tA4-DE-2qo"/>
                             <constraint firstItem="B1H-zL-sdO" firstAttribute="top" secondItem="vlu-YF-cZR" secondAttribute="top" id="uy8-Jy-q0I"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mRE-43-q3D"/>
                     <connections>
                         <outlet property="favotiteList" destination="hWX-nc-6If" id="KPo-zx-YGG"/>
-                        <segue destination="Tia-1l-LFe" kind="showDetail" identifier="toSeeMore" id="IPG-Rk-ROM"/>
+                        <segue destination="Tia-1l-LFe" kind="show" identifier="toSeeMore" id="IPG-Rk-ROM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSk-RY-1JJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
