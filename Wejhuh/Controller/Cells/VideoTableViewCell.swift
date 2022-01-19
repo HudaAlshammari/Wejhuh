@@ -11,9 +11,7 @@ class VideoTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var thumbnailImageView: UIImageView!
-    
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var dateLabel: UILabel!
     
     var item : Item?
@@ -39,25 +37,18 @@ class VideoTableViewCell: UITableViewCell {
         df.dateFormat = "EEEE, MMM d, yyyy"
         self.dateLabel.text = df.string(from: item!.snippet.publishedAt)
         
-        
-        
         guard self.item!.snippet.thumbnails.standard.url != "" else {
             return
         }
         
-        
         let url = URL(string: self.item!.snippet.thumbnails.standard.url)
-        
         let session = URLSession.shared
-        
         let dataTask = session.dataTask(with: url!) { data, response, error in
             if error == nil && data != nil {
-                
                 //immage
                 if url!.absoluteString != self.item?.snippet.thumbnails.standard.url{
                     return
                 }
-                
                 let image = UIImage(data: data!)
                 DispatchQueue.main.async {
                     self.thumbnailImageView.image = image
